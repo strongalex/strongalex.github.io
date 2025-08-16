@@ -2,15 +2,14 @@
   "basics": {
     "name": "Alex Fenwick",
     "label": "Student",
-    "picture": "https://github.com/profilepic.png",
+    "picture": "https://github.com/profilepic.jpg",
     "email": "alexfenladwickner@gmail.com",
     "phone": "860-322-7809",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
-    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "website": "https://strongalex.github.io",
+    "summary": "I am studying for a B.S. in Robotics Engineering and a B.S. in Mechanical Engineering at Worcester Polytechnic Institute. I expect to graduate in May 2027.",
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" }
+      { "network": "github", "username": "mmaluhia", "url": "http://github.com/strongalex" },
+      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/alexander-fenwick" }
     ]
   },
   "interests": [
