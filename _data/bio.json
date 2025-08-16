@@ -8,16 +8,16 @@
     "website": "https://strongalex.github.io",
     "summary": "I am studying for a B.S. in Robotics Engineering and a B.S. in Mechanical Engineering at Worcester Polytechnic Institute. I expect to graduate in May 2027.",
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/strongalex" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/alexander-fenwick" }
+      { "network": "github", "username": "strongalex", "url": "http://github.com/strongalex" },
+      { "network": "linkedin", "username": "Alexander Fenwick", "url": "http://linkedin.com/in/alexander-fenwick" }
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
     { "name": "Robotics" },
-    { "name": "3D Graphics" }
+    { "name": "3D Printing" },
+    { "name": "CNC & Manual Machining" },
+    { "name": "Robotics" },
+    { "name": "CAD" }
   ],
   "skills": [
     {
