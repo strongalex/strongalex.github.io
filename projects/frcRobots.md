@@ -11,7 +11,7 @@ labels:
   - 3D Printing
   - CNC Machining
   - Fabrication & Assembly
-summary: "A series of competitive robitcs that I have helped design over the course of high school and college."
+summary: "A series of competitive robots that I have helped design over the course of high school and college."
 ---
 
 <h1>2025: Redundancy</h1>
