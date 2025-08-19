@@ -1,0 +1,26 @@
+---
+layout: project
+type: project
+image: img/sailboat/sailboat-square.png
+title: "FRC Robots"
+date: 2019-Present
+published: true
+labels:
+  - Solidworks
+  - Onshape
+  - 3D Printing
+  - CNC Machining
+  - Fabrication & Assembly
+summary: "A series of competitive robitcs that I have helped design over the course of high school and college."
+---
+
+<h1>2025: Redundancy
+<img class="imf-fluid" src="../img/frc/1902025.jpeg">
+<img class="imf-fluid" src="../img/frc/19025barge.jpeg">
+<img class="imf-fluid" src="../img/frc/19025isolate.jpeg">
+<img class="imf-fluid" src="../img/frc/19025setup.jpeg">
+
+<p>A robot made for the 2025 FRC game, Reefscape. Its objective was to score pvc pipes onto posts and score large kickballs into a net ~8 ft in the air. It competed at a very high level and made it far into its division at worlds. I worked mostly on the scoreing/claw subystem.
+
+
+<h1>2024: Snapback
