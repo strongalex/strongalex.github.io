@@ -4,7 +4,7 @@ type: project
 image: img/sailboat/sailboat-square.png
 title: "RC Sailboat"
 date: 2025
-published: true
+published: false
 labels:
   - Onshape
   - 3D Printing

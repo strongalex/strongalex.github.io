@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/sailboat/sailboat-square.png
+image: img/frc/1902025.jpeg
 title: "FRC Robots"
 date: 2019-Present
 published: true
@@ -15,10 +15,12 @@ summary: "A series of competitive robitcs that I have helped design over the cou
 ---
 
 <h1>2025: Redundancy
-<img class="imf-fluid" src="../img/frc/1902025.jpeg">
-<img class="imf-fluid" src="../img/frc/19025barge.jpeg">
-<img class="imf-fluid" src="../img/frc/19025isolate.jpeg">
-<img class="imf-fluid" src="../img/frc/19025setup.jpeg">
+<div class="text-center p-4">
+    <img width = "200px" class="imf-fluid" src="../img/frc/19025barge.jpeg">
+    <img width = "200px" class="imf-fluid" src="../img/frc/19025isolate.jpeg">
+    <img width = "200px" class="imf-fluid" src="../img/frc/19025setup.jpeg">
+</div>
+
 
 <p>A robot made for the 2025 FRC game, Reefscape. Its objective was to score pvc pipes onto posts and score large kickballs into a net ~8 ft in the air. It competed at a very high level and made it far into its division at worlds. I worked mostly on the scoreing/claw subystem.
 
