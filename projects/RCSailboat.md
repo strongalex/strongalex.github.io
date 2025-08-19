@@ -2,20 +2,18 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "Cotton"
-date: 2014
+title: "RC Sailboat"
+date: 2025
 published: true
 labels:
-  - Lisp
-  - GitHub
-summary: "A text adventure game that I developed for ICS 313."
+  - Onshape
+  - 3D Printing
+summary: "A 3D printable Sailboat that I modeled and 3D printed over the summer."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
 
-Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
-
-To give you a flavor of the game, here is an excerpt from one run:
+The sailboat is a simple 2 sail design with a mainsail and a job. It uses to some standard RC components and servos to control everything. Here is a link the the onshape file: 
 
 <hr>
 
