@@ -8,108 +8,200 @@
     "website": "https://strongalex.github.io",
     "summary": "I am studying for a B.S. in Robotics Engineering and a B.S. in Mechanical Engineering at Worcester Polytechnic Institute. I expect to graduate in May 2027.",
     "profiles": [
-      { "network": "github", "username": "strongalex", "url": "http://github.com/strongalex" },
-      { "network": "linkedin", "username": "Alexander Fenwick", "url": "http://linkedin.com/in/alexander-fenwick" }
+      {
+        "network": "github",
+        "username": "strongalex",
+        "url": "http://github.com/strongalex"
+      },
+      {
+        "network": "linkedin",
+        "username": "Alexander Fenwick",
+        "url": "http://linkedin.com/in/alexander-fenwick"
+      }
     ]
   },
   "interests": [
-    { "name": "Robotics" },
-    { "name": "3D Printing" },
-    { "name": "CNC & Manual Machining" },
-    { "name": "Robotics" },
-    { "name": "CAD" }
+    {
+      "name": "Robotics"
+    },
+    {
+      "name": "3D Printing"
+    },
+    {
+      "name": "CNC & Manual Machining"
+    },
+    {
+      "name": "Robotics"
+    },
+    {
+      "name": "CAD"
+    }
   ],
   "skills": [
     {
-      "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Common Lisp" ]
+      "name": "Technical Skills",
+      "keywords": [
+        "3D Printing",
+        "Laser Cutting",
+        "CNC Router Experience",
+        "Manual Lathe",
+        "Manual Mill",
+        "Power Tools"
+      ]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
+      "name": "Programs",
+      "keywords": [
+        "SOLIDWORKS",
+        "ONSHAPE",
+        "SOLIDWORKS FEA",
+        "Google Sheets / Excel",
+        "SOLIDWORKS PDM",
+        "Fusion CAM",
+        "MATLAB",
+        "VS Code",
+        "Arduino IDE",
+        "IntelliJ IDEA",
+        "DataGrip",
+        "Microsoft Office",
+        "KiCad"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "keywords": [
+        "Java",
+        "Python",
+        "MATLAB",
+        "Racket",
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Angular",
+        "SQL",
+        "Latex"
+      ]
+    },
+    {
+      "name": "Soft Skills",
+      "keywords": [
+        "Leadership",
+        "Collaboration/Teamwork",
+        "Organization",
+        "Time Management"
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
-      "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
+      "institution": "Worcester Polytechnic Insitute",
+      "area": "Robotics Engineering and Mechanical Engineering",
+      "studyType": "BS",
+      "startDate": "2023-08-01",
+      "endDate": "2027-05-01",
+      "gpa": "3.95/4.0",
       "courses": [
+        "Object Oriented Programming",
+        "Mechanical Analysis",
+        "Design",
+        "Control Theory",
+        "Electrical Circuit Analysis"
+      ],
+      "awards": [
+        "Fall 2023 Dean's List",
+        "Charles O. Thompson Scholar",
+        "Spring 2024 Dean's List",
+        "Fall 2024 Dean's List"
       ]
     }
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
+      "company": "Target",
+      "position": "Guest Advocate",
       "website": "",
-      "startDate": "2015-08-01",
-      "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
-      "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
-      ]
+      "startDate": "2024-04-01",
+      "endDate": "2024-08-01",
+      "summary": "",
+      "highlights": []
     },
     {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
+      "company": "Consolidated School District of New Britain",
+      "position": "Assistant Counselor",
+      "website": "",
+      "startDate": "2023-07-01",
+      "endDate": "2023-07-31",
       "summary": "",
-      "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
-      ]
+      "highlights": []
+    },
+    {
+      "company": "Lake Compounse Amusement Park",
+      "position": "Ride Attendant",
+      "website": "",
+      "startDate": "2021-06-01",
+      "endDate": "2021-09-01",
+      "summary": "",
+      "highlights": []
     }
   ],
   "volunteer": [
     {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
-      "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
-      ]
-    },
-    {
-      "organization": "",
+      "organization": "FIRST Robotics Competition Team 195",
+      "position": "Design & Strategy Lead",
       "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
+      "startDate": "2019-09-01",
+      "endDate": "2023-08-01",
       "summary": "",
       "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "Developed an Angular-based website to efficiently process and display data, enhancing data accessibility for the team.",
+        "Worked with teams from around the world to develop effective strategies.",
+        "Utilized SOLIDWORKS to design a competitive robot with a 3DoF arm."
+      ]
+    },
+    {
+      "organization": "FIRST Robotics Competition Team 190",
+      "position": "Design & Strategy Mentor",
+      "website": "",
+      "startDate": "2023-08-01",
+      "endDate": "2025-08-19",
+      "summary": "",
+      "highlights": [
+        "Utilized SOLIDWORKS PDM and ONSHAPE to work together with my team to design a world class robot.",
+        "Used Fusion CAM to cut parts out of Aluminum, Poly-carbonate, and other composites on CNC machinery.",
+        "Helped coordinate and develop strategy used by the team during competition."
       ]
     }
   ],
-  "awards": [
+  "projects": [
     {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
+      "name": "Andymark Robits FTC Curriculum",
+      "startDate": "2023-11-01",
+      "endDate": "2024-08-01",
+      "description": "Developed mechanical lessons for an adaptable robotics curriculum for middle schoolers based around an existing set of parts.",
+      "highlights": [
+        "Worked with a team of others to integrate lessons into a cohesive curriculum.",
+        "Explained basic mechanical concepts that relate to robotics."
+      ]
     },
     {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
-    }
-  ],
-  "references": [
+      "name": "RBE 1001 - Autonomous Fruit Picking Robot",
+      "startDate": "2023-01-01",
+      "endDate": "2023-03-01",
+      "description": "Collaborated with a team to create a small autonomous robot to collect and deliver 3D printed 'fruit'.",
+      "highlights": [
+        "Designed and Programmed (Python) an four bar, elevator, and unconventional drive train to utilize cameras, gyros, and encoder feedback with state machines.",
+        "Designed and 3D printed parts to interface with a given kit of parts."
+      ]
+    },
     {
-      "name": "Available upon request"
+      "name": "RBE 2001",
+      "startDate": "2024-08-01",
+      "endDate": "2024-10-01",
+      "description": "Utilized SOLIDWORKS FEA to analyze stress and structural integrity.",
+      "highlights": [
+        "Utilized Inverse Kinematics to control a double jointed arm in order to draw different images and move to different points.",
+        "Controlled servos, brushed motors, and brushless motors, ESCs, and read encoder values through an Arduino."
+      ]
     }
   ]
 }
