@@ -16,9 +16,9 @@ summary: "A series of competitive robitcs that I have helped design over the cou
 
 <h1>2025: Redundancy
 <div class="text-center p-4">
-    <img width = "200px" class="imf-fluid" src="../img/frc/19025barge.jpeg">
-    <img width = "200px" class="imf-fluid" src="../img/frc/19025isolate.jpeg">
-    <img width = "200px" class="imf-fluid" src="../img/frc/19025setup.jpeg">
+    <img width = "200px" class="imf-fluid" src="../img/frc/19025barge.jpg">
+    <img width = "200px" class="imf-fluid" src="../img/frc/19025isolate.png">
+    <img width = "200px" class="imf-fluid" src="../img/frc/19025setup.jpg">
 </div>
 
 
