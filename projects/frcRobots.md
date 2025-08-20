@@ -41,7 +41,7 @@ summary: "A series of competitive robots that I have helped design and build thr
 <div class ="text-center p-4">
     <img width = "200px" class="imf-fluid" src="../img/frc/19523CAD.png">
     <img width = "200px" class="imf-fluid" src="../img/frc/19523candid.avif">
-    <img width = "200px" class="imf-fluid" src="../img/frc/19523clash.png">
+    <img width = "200px" class="imf-fluid" src="../img/frc/19523climb.png">
     <img width = "200px" class="imf-fluid" src="../img/frc/19523score.png">
 </div>
 
@@ -51,7 +51,7 @@ summary: "A series of competitive robots that I have helped design and build thr
 <h1>2022: KightTime</h1>
 
 <div class ="text-center p-4">
-    <img width = "200px" class="imf-fluid" src="../img/frc/19522score.png">
+    <img width = "200px" class="imf-fluid" src="../img/frc/19522clash.png">
     <img width = "200px" class="imf-fluid" src="../img/frc/19522climb.png">
 </div>
 
