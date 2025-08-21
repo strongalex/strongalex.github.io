@@ -12,7 +12,8 @@ labels:
   - Sensors
   - C, C++
   - Mechanical Design
+  - MATLAB
 summary: "Multiple robotics team based projects."
 ---
-<img class="img-fluid" src="../img/classes/rbe1001.jpg">
-<br><p>This is a vex robot that my team and I built for our RBE1001 class. It was able to autonomously navigate the 'Orchard' and collect 'fruit'.
+<img class="img-fluid" src="../img/classes/rbe2000.jpg">
+<h1>RBE 2001</h1>
