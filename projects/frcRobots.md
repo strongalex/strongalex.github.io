@@ -24,7 +24,7 @@ summary: "A series of competitive robots that I have helped design and build thr
 
 
 <p>This robot was designed for the 2025 FRC game, "Reefscape." Its primary goals were to score PVC pipes on elevated posts, launch large kickballs into a net approximately 8 feet high, and climb onto a rectangular "cage." The robot performed at a very high level, advancing far into its division at the world championships. My main contributions were to the scoring and claw subsystem. The robot was originally designed in Onshape.
-<a href="https://cad.onshape.com/documents/8c2f88295e883c078405b00a/w/97e82738b100c77464d9b9e1/e/f8fc11fc271681272504e036?renderMode=0&uiState=68a4a6231145026e23bdc979">CAD</a>
+<a href="https://frc190.onshape.com/documents/b6c840749d995b1ac1b29215/w/5eb3125bc19878c175f07023/e/271cc80064eb69c77815f945?configuration=default&renderMode=0&uiState=68ba3b2a2b577176a1982abb">CAD</a>
 <a href="https://www.thebluealliance.com/team/190/2025">TBA</a>
 
 <h1>2024: Snapback</h1>
