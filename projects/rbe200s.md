@@ -14,7 +14,7 @@ labels:
   - Raspberry Pi Pico
   - SOLIDWORKS FEA
   - C, C++
-summary: "Sensors, actuators, and embedded control — driving a double-jointed arm and an autonomous two-wheeled robot."
+summary: "Sensors, actuators, and embedded control: driving a double-jointed arm and an autonomous two-wheeled robot."
 ---
 
 <img width="400px" class="img-fluid" src="../img/classes/rbe2000.jpg">
