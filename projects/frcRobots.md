@@ -18,20 +18,20 @@ summary: "A series of competitive robots that I have helped design and build thr
 <h1>2026: Turnover</h1>
 <div class="row g-2 my-3">
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/190turnoverCAD.png" alt="Turnover full robot CAD">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/190turnoverCAD.png" alt="Turnover full robot CAD">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/190turnoverShoot.jpg" alt="Turnover shooting during a match">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/190turnoverShoot.jpg" alt="Turnover shooting during a match">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/190turnoverTurretISO.png" alt="Isometric CAD view of the Turnover turret and shooter assembly">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/190turnoverTurretISO.png" alt="Isometric CAD view of the Turnover turret and shooter assembly">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/190turnovermove.jpg" alt="Turnover driving during a match">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/190turnovermove.jpg" alt="Turnover driving during a match">
   </div>
 </div>
 
-<p>Our second robot for the 2026 FRC game, "REBUILT." Its primary goals were to shoot yellow foam "Fuel" balls into an alliance Hub that alternates between active and inactive over the course of the match, and to climb the rungs of a ladder-shaped Tower in the endgame. The robot performed at a very high level, advancing far into its division at the world championships. My main contributions were to the turret and shooter subsystem. The robot was originally designed in Onshape.</p>
+<p>Our second robot for the 2026 FRC game, "REBUILT." Its primary goals were to shoot yellow foam "Fuel" balls into an alliance Hub that alternates between active and inactive over the course of the match, and to climb the rungs of a ladder-shaped Tower in the endgame. My main contributions were to the turret and shooter subsystem. The robot was originally designed in Onshape.</p>
 <p>
   <a href="https://frc190.onshape.com/documents/ba8a365713d40fc24cf0b54f/w/d6e4ee38f39fcc9a54144a27/e/f7562994bcc6d5175e8e4e30?configuration=default&renderMode=0&uiState=6a18f291fa835462eeaa4a52">CAD</a>
   &middot;
@@ -41,20 +41,20 @@ summary: "A series of competitive robots that I have helped design and build thr
 <h1>2026: Doomspiral</h1>
 <div class="row g-2 my-3">
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/190doomspiralCAD.png" alt="Doomspiral full robot CAD">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/190doomspiralCAD.png" alt="Doomspiral full robot CAD">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/190doomsprialShot.jpg" alt="Doomspiral shooting during a match">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/190doomsprialShot.jpg" alt="Doomspiral shooting during a match">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/190doomspiralCADshooterISO.png" alt="Isometric CAD view of the Doomspiral shooter assembly">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/190doomspiralCADshooterISO.png" alt="Isometric CAD view of the Doomspiral shooter assembly">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/190doomspiralClimb.jpg" alt="Doomspiral hanging from the climb bar at the end of a match">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/190doomspiralClimb.jpg" alt="Doomspiral hanging from the climb bar at the end of a match">
   </div>
 </div>
 
-<p>Our first robot for the 2026 FRC game, "REBUILT." Its primary goals were to shoot yellow foam "Fuel" balls into an alliance Hub at the center of our side of the field, and to climb the rungs of a ladder-shaped Tower at the end of the match. The robot advanced far into the district championship and qualified the team for the world championships. My main contributions were to the shooter subsystem. The robot was originally designed in Onshape.</p>
+<p>Our first robot for the 2026 FRC game, "REBUILT." Its primary goals were to shoot yellow foam "Fuel" balls into an alliance Hub at the center of our side of the field, and to climb the rungs of a ladder-shaped Tower at the end of the match. The robot advanced far into the district championship and qualified the team for the world championships, where it also performed well. My main contributions were to the shooter subsystem. The robot was originally designed in Onshape.</p>
 <p>
   <a href="https://frc190.onshape.com/documents/b452dd5a31bf95c6384826fb/v/9a4c2c25c61eed3915122777/e/934f62b4a3bd58acfff00615?configuration=default&renderMode=0&uiState=6a18f20ed4512fd9e5239b0f">CAD</a>
   &middot;
@@ -64,16 +64,16 @@ summary: "A series of competitive robots that I have helped design and build thr
 <h1>2025: Redundancy</h1>
 <div class="row g-2 my-3">
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19025isolate.png" alt="Redundancy robot CAD">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19025isolate.png" alt="Redundancy robot CAD">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/1902025.jpeg" alt="Redundancy during a match">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/1902025.jpeg" alt="Redundancy during a match">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19025setup.jpg" alt="Redundancy on the field before a match">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19025setup.jpg" alt="Redundancy on the field before a match">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19025barge.jpg" alt="Redundancy scoring at the barge">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19025barge.jpg" alt="Redundancy scoring at the barge">
   </div>
 </div>
 
@@ -87,13 +87,13 @@ summary: "A series of competitive robots that I have helped design and build thr
 <h1>2024: Snapback</h1>
 <div class="row g-2 my-3">
   <div class="col-6 col-md-4">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19024cad.png" alt="Snapback robot CAD">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19024cad.png" alt="Snapback robot CAD">
   </div>
   <div class="col-6 col-md-4">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19024pickuo.jpg" alt="Snapback intaking a ring during a match">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19024pickuo.jpg" alt="Snapback intaking a ring during a match">
   </div>
   <div class="col-6 col-md-4">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19024iso.png" alt="Isometric CAD view of Snapback">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19024iso.png" alt="Isometric CAD view of Snapback">
   </div>
 </div>
 
@@ -103,16 +103,16 @@ summary: "A series of competitive robots that I have helped design and build thr
 <h1>2023: KnightTime</h1>
 <div class="row g-2 my-3">
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19523CAD.png" alt="KnightTime 2023 robot CAD">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19523CAD.png" alt="KnightTime 2023 robot CAD">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19523score.png" alt="KnightTime 2023 scoring a cone">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19523score.png" alt="KnightTime 2023 scoring a cone">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19523climb.png" alt="KnightTime 2023 balancing on the charge station">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19523climb.png" alt="KnightTime 2023 balancing on the charge station">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19523candid.avif" alt="KnightTime 2023 in the pits">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19523candid.avif" alt="KnightTime 2023 in the pits">
   </div>
 </div>
 
@@ -122,10 +122,10 @@ summary: "A series of competitive robots that I have helped design and build thr
 <h1>2022: KnightTime</h1>
 <div class="row g-2 my-3">
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19522clash.png" alt="KnightTime 2022 during a match">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19522clash.png" alt="KnightTime 2022 during a match">
   </div>
   <div class="col-6 col-md-3">
-    <img class="img-fluid rounded" style="height:190px;width:100%;object-fit:cover;" src="../img/frc/19522climb.png" alt="KnightTime 2022 climbing the hangar bars">
+    <img class="img-fluid rounded" style="height:200px;width:100%;object-fit:contain;" src="../img/frc/19522climb.png" alt="KnightTime 2022 climbing the hangar bars">
   </div>
 </div>
 
