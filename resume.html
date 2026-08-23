@@ -80,6 +80,9 @@ layout: home
             <div class="col-9">
               <p class="m-0"><b>{{ entry.institution }}</b></p>
               <p class="m-0">{{ entry.studyType }}, {{ entry.area }}</p>
+              {% if entry.gpa %}
+                <p class="m-0">GPA: {{ entry.gpa }}</p>
+              {% endif %}
               {% if entry.courses %}
                 <ul>
                   {% for course in entry.courses %}
@@ -172,6 +175,48 @@ layout: home
                   <li>{{ highlight }}</li>
                 {% endfor %}
               </ul>
+              {% endif %}
+            </div>
+            <div class="col-3">
+              <p class="m-0 text-end">
+                {% if entry.startDate %}
+                  {{ entry.startDate | slice: 0,4 }}
+                {% endif %}
+                {% if entry.startDate and entry.startDate != '' and entry.endDate and entry.endDate != '' %}
+                -
+                {% endif %}
+                {% if entry.endDate %}
+                  {% if entry.endDate != "Present" %}
+                    {{ entry.endDate | slice: 0,4 }}
+                  {% else %}
+                    {{ entry.endDate }}
+                  {% endif %}
+                {% endif %}
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if site.data.bio.projects %}
+      <div class="row pt-4 align-items-start">
+        <div class="col-lg-3">
+          <h1 class="display-6 text-start m-0">Projects</h1>
+        </div>
+        <div class="col-lg-9">
+          {% for entry in site.data.bio.projects %}
+          <div class="row mb-3">
+            <div class="col-9">
+              <p class="mb-0"><b>{{ entry.name }}</b></p>
+              <p class="mb-0">{{ entry.description }}</p>
+              {% if entry.highlights %}
+                <ul>
+                  {% for highlight in entry.highlights %}
+                    <li>{{ highlight }}</li>
+                  {% endfor %}
+                </ul>
               {% endif %}
             </div>
             <div class="col-3">

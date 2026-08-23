@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/frc/collage.png
 title: "FRC Robots"
-date: 2019-Present
+date: "2019-Present"
 published: true
 labels:
   - Solidworks
@@ -36,7 +36,7 @@ summary: "A series of competitive robots that I have helped design and build thr
 <p>Designed for the 2024 FRC game, "Crescendo," this robot was built to score orange rings into a goal and climb onto a chain. It won its division at the world championships. My primary role was in developing the intake subsystem. The robot was originally designed in SOLIDWORKS.
 <a href="https://www.thebluealliance.com/team/190/2024">TBA</a>
 
-<h1>2023: KightTime</h1>
+<h1>2023: KnightTime</h1>
 
 <div class ="text-center p-4">
     <img width = "200px" class="imf-fluid" src="../img/frc/19523CAD.png">
@@ -48,7 +48,7 @@ summary: "A series of competitive robots that I have helped design and build thr
 <p>This robot was created for the 2023 FRC game, "Charged Up." Its primary objective was to score cones on poles and cubes on shelves, then balance on a platform with its alliance partners. It competed at a very high level and went far into its division at the world championships. The robot was originally designed in SOLIDWORKS.
 <a href="https://www.thebluealliance.com/team/195/2023">TBA</a>
 
-<h1>2022: KightTime</h1>
+<h1>2022: KnightTime</h1>
 
 <div class ="text-center p-4">
     <img width = "200px" class="imf-fluid" src="../img/frc/19522clash.png">

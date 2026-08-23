@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="SpaceX internship: engineering drawing">
+  <rect width="400" height="300" fill="#101418"/>
+  <g stroke="#232b33" stroke-width="1">
+    <path d="M0 60h400M0 120h400M0 180h400M0 240h400M80 0v300M160 0v300M240 0v300M320 0v300"/>
+  </g>
+  <rect x="24" y="24" width="352" height="252" fill="none" stroke="#4a5560" stroke-width="2"/>
+  <rect x="252" y="228" width="124" height="48" fill="none" stroke="#4a5560" stroke-width="2"/>
+  <path d="M252 252h124M300 228v48" stroke="#4a5560" stroke-width="1.5"/>
+  <g fill="none" stroke="#e9ecef" stroke-width="3" stroke-linejoin="round">
+    <path d="M120 210 L120 128 Q120 84 152 62 Q184 84 184 128 L184 210 Z"/>
+    <path d="M120 172 L92 214 L120 210 M184 172 L212 214 L184 210"/>
+  </g>
+  <circle cx="152" cy="122" r="14" fill="none" stroke="#ff922b" stroke-width="3"/>
+  <g stroke="#ff922b" stroke-width="1.5" fill="none">
+    <path d="M120 236 h64 M120 230v12 M184 230v12"/>
+  </g>
+  <text x="136" y="256" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ff922b">64.0 ±0.2</text>
+  <text x="28" y="52" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#f8f9fa">SpaceX</text>
+</svg>

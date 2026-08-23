@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="RBE 3000s: robot arm and navigation">
+  <rect width="400" height="300" fill="#1f2933"/>
+  <g stroke="#3e4c59" stroke-width="1">
+    <path d="M0 60h400M0 120h400M0 180h400M0 240h400M80 0v300M160 0v300M240 0v300M320 0v300"/>
+  </g>
+  <g fill="none" stroke="#6ea8fe" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M96 232V176l52-44 44 52 40-34"/>
+  </g>
+  <circle cx="96" cy="232" r="12" fill="#6ea8fe"/>
+  <circle cx="148" cy="132" r="9" fill="#9ec5fe"/>
+  <circle cx="192" cy="184" r="9" fill="#9ec5fe"/>
+  <circle cx="232" cy="150" r="14" fill="#ffd43b"/>
+  <g fill="none" stroke="#51cf66" stroke-width="4" stroke-dasharray="10 8" stroke-linecap="round">
+    <path d="M264 246h56l0-56h40"/>
+  </g>
+  <circle cx="360" cy="190" r="8" fill="#51cf66"/>
+  <text x="28" y="52" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#f8f9fa">RBE 3000s</text>
+</svg>

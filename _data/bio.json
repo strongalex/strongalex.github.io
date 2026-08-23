@@ -1,12 +1,19 @@
 {
   "basics": {
     "name": "Alex Fenwick",
-    "label": "Student",
+    "label": "Robotics & Mechanical Engineering Student",
     "picture": "https://raw.githubusercontent.com/strongalex/strongalex.github.io/refs/heads/main/img/profilepic.jpg",
     "email": "alexfenladwickner@gmail.com",
     "phone": "860-322-7809",
     "website": "https://strongalex.github.io",
-    "summary": "I am studying for a B.S. in Robotics Engineering and a B.S. in Mechanical Engineering at Worcester Polytechnic Institute. I expect to graduate in May 2027.",
+    "summary": "I am studying for a B.S. in Robotics Engineering and a B.S. in Mechanical Engineering at Worcester Polytechnic Institute, graduating in May 2027. I most recently worked as a Vehicle Design Intern at SpaceX in Starbase, TX, where I created detail drawings, ran tolerance stack-ups, and wrote GD&T callouts for flight hardware. I care most about the point where mechanical design meets manufacturing.",
+    "location": {
+      "address": "",
+      "city": "Worcester",
+      "region": "MA",
+      "postalCode": "",
+      "countryCode": "USA"
+    },
     "profiles": [
       {
         "network": "github",
@@ -25,13 +32,13 @@
       "name": "Robotics"
     },
     {
+      "name": "Design for Manufacturability"
+    },
+    {
       "name": "3D Printing"
     },
     {
       "name": "CNC & Manual Machining"
-    },
-    {
-      "name": "Robotics"
     },
     {
       "name": "CAD"
@@ -41,9 +48,13 @@
     {
       "name": "Technical Skills",
       "keywords": [
+        "Geometric Dimensioning & Tolerancing (GD&T)",
+        "Tolerance Stack-Ups",
+        "Detail Drawings",
+        "Design for Manufacturability (DFM)",
         "3D Printing",
         "Laser Cutting",
-        "CNC Router Experience",
+        "CNC Router",
         "Manual Lathe",
         "Manual Mill",
         "Power Tools"
@@ -53,33 +64,35 @@
       "name": "Programs",
       "keywords": [
         "SOLIDWORKS",
-        "ONSHAPE",
+        "Onshape",
+        "Siemens NX",
+        "Teamcenter",
         "SOLIDWORKS FEA",
-        "Google Sheets / Excel",
         "SOLIDWORKS PDM",
         "Fusion CAM",
         "MATLAB",
+        "ArcGIS Pro",
+        "ROS 2",
+        "OpenCV",
+        "Linux",
+        "Git",
         "VS Code",
         "Arduino IDE",
-        "IntelliJ IDEA",
-        "DataGrip",
-        "Microsoft Office",
-        "KiCad"
+        "KiCad",
+        "LaTeX",
+        "Google Sheets / Excel",
+        "Microsoft Office"
       ]
     },
     {
       "name": "Programming Languages",
       "keywords": [
+        "C",
+        "C++",
         "Java",
         "Python",
         "MATLAB",
-        "Racket",
-        "CSS",
-        "HTML",
-        "JavaScript",
-        "Angular",
-        "SQL",
-        "Latex"
+        "Racket"
       ]
     },
     {
@@ -87,6 +100,7 @@
       "keywords": [
         "Leadership",
         "Collaboration/Teamwork",
+        "Technical Writing",
         "Organization",
         "Time Management"
       ]
@@ -94,113 +108,159 @@
   ],
   "education": [
     {
-      "institution": "Worcester Polytechnic Insitute",
+      "institution": "Worcester Polytechnic Institute",
       "area": "Robotics Engineering and Mechanical Engineering",
       "studyType": "BS",
       "startDate": "2023-08-01",
       "endDate": "2027-05-01",
-      "gpa": "3.95/4.0",
+      "gpa": "3.91/4.0",
       "courses": [
-        "Object Oriented Programming",
-        "Mechanical Analysis",
-        "Design",
+        "Inverse Kinematics & Manipulator Control",
+        "Autonomous Navigation (ROS 2, SLAM, A*)",
+        "Sensors & Actuators",
         "Control Theory",
+        "Mechanical Analysis & FEA",
+        "Machine Design",
+        "Object Oriented Programming",
         "Electrical Circuit Analysis"
-      ],
-      "awards": [
-        "Fall 2023 Dean's List",
-        "Charles O. Thompson Scholar",
-        "Spring 2024 Dean's List",
-        "Fall 2024 Dean's List"
       ]
     }
   ],
   "work": [
+    {
+      "company": "SpaceX",
+      "position": "Vehicle Design Intern",
+      "website": "https://www.spacex.com",
+      "startDate": "2026-05-01",
+      "endDate": "2026-08-01",
+      "summary": "Starbase, TX",
+      "highlights": [
+        "Created detail drawings from scratch, defining datum schemes, running tolerance stack-ups, and writing GD&T callouts informed by manufacturer capability.",
+        "Used Siemens NX and Teamcenter for CAD modeling and drawing release workflows as part of a larger engineering group.",
+        "Completed initial CAD work on a Foreign Object Debris (FOD) closeout system that interfaces with numerous other vehicle systems, designing an adaptable layout to accommodate future changes.",
+        "Designed avionics mounting and tooling brackets.",
+        "Contributed to Design for Manufacturability (DFM) changes across the Aft, Header Tank, and Prop Hardware assemblies."
+      ]
+    },
+    {
+      "company": "AndyMark",
+      "position": "Curriculum Developer",
+      "website": "https://www.andymark.com",
+      "startDate": "2023-11-01",
+      "endDate": "2024-08-01",
+      "summary": "",
+      "highlights": [
+        "Worked within a team of various disciplines to design example content to best teach basic robotics principles.",
+        "Developed mechanical lessons for an adaptable middle school robotics curriculum built around an existing kit of parts."
+      ]
+    },
     {
       "company": "Target",
       "position": "Guest Advocate",
       "website": "",
       "startDate": "2024-04-01",
       "endDate": "2024-08-01",
-      "summary": "",
-      "highlights": []
-    },
-    {
-      "company": "Consolidated School District of New Britain",
-      "position": "Assistant Counselor",
-      "website": "",
-      "startDate": "2023-07-01",
-      "endDate": "2023-07-31",
-      "summary": "",
-      "highlights": []
-    },
-    {
-      "company": "Lake Compounse Amusement Park",
-      "position": "Ride Attendant",
-      "website": "",
-      "startDate": "2021-06-01",
-      "endDate": "2021-09-01",
-      "summary": "",
+      "summary": "Southington, CT",
       "highlights": []
     }
   ],
   "volunteer": [
     {
+      "organization": "FIRST Robotics Competition Team 190",
+      "position": "Design & Strategy Mentor",
+      "website": "https://www.thebluealliance.com/team/190",
+      "startDate": "2023-08-01",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": [
+        "Led a group of students to design and iterate the intake, end effector, and shooter mechanisms across three competition seasons on a team that has qualified for the FIRST Championship every year and won multiple district events.",
+        "Ran multi-user CAD and version control in SOLIDWORKS PDM and Onshape to keep a large student design team working against a single robot assembly.",
+        "Cut aluminum, polycarbonate, and composite parts on CNC machinery using Fusion CAM.",
+        "Coordinated and developed the competition strategy used by the team during events."
+      ]
+    },
+    {
       "organization": "FIRST Robotics Competition Team 195",
       "position": "Design & Strategy Lead",
-      "website": "",
+      "website": "https://www.thebluealliance.com/team/195",
       "startDate": "2019-09-01",
       "endDate": "2023-08-01",
       "summary": "",
       "highlights": [
-        "Developed an Angular-based website to efficiently process and display data, enhancing data accessibility for the team.",
-        "Worked with teams from around the world to develop effective strategies.",
-        "Utilized SOLIDWORKS to design a competitive robot with a 3DoF arm."
+        "Developed an Angular-based website to efficiently process and display scouting data, improving data accessibility for the team.",
+        "Worked with teams from around the world to develop effective competition strategies.",
+        "Used SOLIDWORKS to design a competitive robot with a 3 DoF arm."
       ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Charles O. Thompson Scholar",
+      "awarder": "Worcester Polytechnic Institute",
+      "date": "2024",
+      "summary": "Awarded for outstanding academic achievement in the first year."
     },
     {
-      "organization": "FIRST Robotics Competition Team 190",
-      "position": "Design & Strategy Mentor",
-      "website": "",
-      "startDate": "2023-08-01",
-      "endDate": "2025-08-19",
-      "summary": "",
-      "highlights": [
-        "Utilized SOLIDWORKS PDM and ONSHAPE to work together with my team to design a world class robot.",
-        "Used Fusion CAM to cut parts out of Aluminum, Poly-carbonate, and other composites on CNC machinery.",
-        "Helped coordinate and develop strategy used by the team during competition."
-      ]
+      "title": "Dean's List",
+      "awarder": "Worcester Polytechnic Institute",
+      "date": "2023-2026",
+      "summary": "Earned in 5 semesters."
     }
   ],
   "projects": [
     {
-      "name": "Andymark Robits FTC Curriculum",
-      "startDate": "2023-11-01",
-      "endDate": "2024-08-01",
-      "description": "Developed mechanical lessons for an adaptable robotics curriculum for middle schoolers based around an existing set of parts.",
+      "name": "RBE 3000s - 4 DOF Inverse Kinematics, ROS 2, and Autonomous Navigation",
+      "startDate": "2026-01-01",
+      "endDate": "2026-05-01",
+      "description": "Manipulator kinematics, computer vision pick-and-place, and autonomous navigation on a TurtleBot3.",
       "highlights": [
-        "Worked with a team of others to integrate lessons into a cohesive curriculum.",
-        "Explained basic mechanical concepts that relate to robotics."
+        "Derived and implemented full forward/inverse kinematics (DH parameterization) and a velocity Jacobian for a 4-DOF manipulator (OpenManipulator-X) in MATLAB, validated against a custom interactive 3D model.",
+        "Built a computer vision pick-and-place pipeline: intrinsic/extrinsic camera calibration, HSV color segmentation, centroid detection, and a geometric height-correction model to autonomously sort colored spheres into bins.",
+        "Designed a layered ROS 2 software architecture combining a Behavior Tree for mission control with a Finite State Machine for navigation and a request-reply Dispatcher node to complete multi-stop delivery tasks with obstacle-triggered replanning.",
+        "Implemented A* path planning with configuration-space obstacle inflation and risk-weighted costing, plus frontier-based SLAM exploration and particle-filter re-localization, on a TurtleBot3 in ROS 2."
+      ]
+    },
+    {
+      "name": "IQP - Honolulu Bike Share Network Optimization",
+      "startDate": "2025-08-01",
+      "endDate": "2025-12-01",
+      "description": "Interactive Qualifying Project with Secure Bike Share in Honolulu, HI.",
+      "highlights": [
+        "Built ArcGIS Pro suitability models layering census, transit, and bike-lane data to identify expansion sites, paired with a ridership-weighted station ranking to flag relocation candidates for the system operator.",
+        "Designed a demographically conditioned user survey distributed through the operator's 20,000-person mailing list under IRB approval, analyzing 233 responses to isolate infrastructure quality and bike supply as the dominant barriers to ridership.",
+        "Authored the team's final technical report and client-facing improvement plan, including a matched control-group methodology for measuring the effect of QR way-finding signage on bus-to-bike transfers."
+      ]
+    },
+    {
+      "name": "RBE 2000s - Sensors and Actuators",
+      "startDate": "2024-08-01",
+      "endDate": "2024-10-01",
+      "description": "Embedded control, actuation, and structural analysis coursework.",
+      "highlights": [
+        "Analyzed stress and structural integrity using SOLIDWORKS FEA.",
+        "Applied inverse kinematics to control a double-jointed arm in order to draw different images and move to different points.",
+        "Controlled servos and brushed/brushless motors with ESCs, read encoder feedback, and built custom embedded circuits on Arduino and Raspberry Pi Pico.",
+        "Used a custom library to control a two-wheeled robot autonomously using various sensors."
+      ]
+    },
+    {
+      "name": "ES 3011 - Novel Car Control Project",
+      "startDate": "2024-10-01",
+      "endDate": "2024-12-01",
+      "description": "Applied classical control theory to a custom-bodied payload-carrying vehicle.",
+      "highlights": [
+        "Tuned PID parameters to carry a stack of 6 blocks through straight-line and 90-degree turn courses.",
+        "Designed the custom vehicle body, streamlining electronics mounting for the design bonus."
       ]
     },
     {
       "name": "RBE 1001 - Autonomous Fruit Picking Robot",
-      "startDate": "2023-01-01",
-      "endDate": "2023-03-01",
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-01",
       "description": "Collaborated with a team to create a small autonomous robot to collect and deliver 3D printed 'fruit'.",
       "highlights": [
-        "Designed and Programmed (Python) an four bar, elevator, and unconventional drive train to utilize cameras, gyros, and encoder feedback with state machines.",
+        "Designed and programmed a four bar, elevator, and unconventional drive train using cameras, gyros, and encoder feedback driven by state machines.",
         "Designed and 3D printed parts to interface with a given kit of parts."
-      ]
-    },
-    {
-      "name": "RBE 2001",
-      "startDate": "2024-08-01",
-      "endDate": "2024-10-01",
-      "description": "Utilized SOLIDWORKS FEA to analyze stress and structural integrity.",
-      "highlights": [
-        "Utilized Inverse Kinematics to control a double jointed arm in order to draw different images and move to different points.",
-        "Controlled servos, brushed motors, and brushless motors, ESCs, and read encoder values through an Arduino."
       ]
     }
   ]

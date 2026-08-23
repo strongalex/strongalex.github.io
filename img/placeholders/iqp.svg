@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="IQP: bike share network map">
+  <rect width="400" height="300" fill="#12303a"/>
+  <g stroke="#1d4d5c" stroke-width="1">
+    <path d="M0 60h400M0 120h400M0 180h400M0 240h400M80 0v300M160 0v300M240 0v300M320 0v300"/>
+  </g>
+  <path d="M0 250 C 80 236, 150 268, 230 244 S 340 220, 400 236 L400 300 L0 300 Z" fill="#0d2731"/>
+  <g fill="none" stroke="#4dd4ac" stroke-width="4" stroke-linecap="round">
+    <path d="M70 214 L130 140 L214 176 L300 108"/>
+  </g>
+  <g fill="#4dd4ac">
+    <circle cx="70" cy="214" r="10"/>
+    <circle cx="130" cy="140" r="10"/>
+    <circle cx="214" cy="176" r="10"/>
+    <circle cx="300" cy="108" r="10"/>
+  </g>
+  <g fill="none" stroke="#ffd43b" stroke-width="3">
+    <circle cx="130" cy="140" r="22"/>
+    <circle cx="300" cy="108" r="22"/>
+  </g>
+  <text x="28" y="52" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#f8f9fa">Honolulu IQP</text>
+</svg>
