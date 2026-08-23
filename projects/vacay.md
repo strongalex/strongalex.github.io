@@ -4,6 +4,7 @@ type: project
 image: img/vacay/vacay-square.png
 title: "Vacay"
 date: "2015"
+weight: 10
 published: false
 labels:
   - Javascript

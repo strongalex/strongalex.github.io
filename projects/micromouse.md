@@ -4,6 +4,7 @@ type: project
 image: img/micromouse/micromouse-square.jpg
 title: "Micromouse"
 date: "2015"
+weight: 9
 published: false
 labels:
   - Robotics

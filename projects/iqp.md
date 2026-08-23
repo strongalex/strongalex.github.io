@@ -1,7 +1,8 @@
 ---
 layout: project
 type: project
-image: img/placeholders/iqp.svg
+image: img\groupIQP.png
+weight: 4
 title: "Honolulu IQP"
 date: "2025"
 published: true
@@ -27,3 +28,6 @@ summary: "An IQP with Secure Bike Share in Honolulu, using GIS suitability model
 
 <h2>Deliverables</h2>
 <p>I authored the team's final technical report and the client-facing improvement plan. That plan included a matched control-group methodology for measuring whether QR way-finding signage actually increases bus-to-bike transfers, so the operator could test the intervention rather than just deploy it.</p>
+
+<a href="../img/classes/IQP Report_ Full Draft.pdf">Read the Full Report</a>
+<a href="../img/classes/Prioritized Improvement Plan _3.pdf">Read the Prioritized Improvement Plan</a>

@@ -1,9 +1,10 @@
 ---
 layout: project
 type: project
-image: img/placeholders/spacex.svg
+image: img\spaceXGroup.png
 title: "SpaceX Vehicle Design Internship"
 date: "2026"
+weight: 1
 published: true
 labels:
   - Siemens NX
@@ -18,7 +19,7 @@ summary: "Vehicle Design Intern at Starbase, TX — detail drawings, GD&T, and D
 <h1>Vehicle Design Intern &mdash; SpaceX, Starbase, TX</h1>
 <p><em>May to Aug. 2026</em></p>
 
-<p>I spent the summer as a Vehicle Design Intern at Starbase, working inside a larger engineering group on vehicle structures and hardware. The scope was mostly the unglamorous, high-consequence part of mechanical design: making sure a part can actually be built, inspected, and installed.</p>
+<p>I spent the summer as a Vehicle Design Intern at Starbase, working inside a larger engineering group on vehicle structures and hardware.</p>
 
 <h2>Drawings and Tolerancing</h2>
 <p>I created detail drawings from scratch &mdash; defining datum schemes, running tolerance stack-ups, and writing GD&amp;T callouts informed by what the manufacturers could realistically hold. Getting a callout right meant talking to the people who would cut the part, not just picking a tight number and hoping.</p>
@@ -33,4 +34,3 @@ summary: "Vehicle Design Intern at Starbase, TX — detail drawings, GD&T, and D
   <li>Contributed Design for Manufacturability (DFM) changes across the Aft, Header Tank, and Prop Hardware assemblies</li>
 </ul>
 
-<p><em>Design details and imagery are omitted here; this page describes the scope of my role only.</em></p>

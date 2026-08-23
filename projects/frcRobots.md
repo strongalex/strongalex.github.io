@@ -4,6 +4,7 @@ type: project
 image: img/frc/collage.png
 title: "FRC Robots"
 date: "2019-Present"
+weight: 2
 published: true
 labels:
   - Solidworks

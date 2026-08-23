@@ -4,6 +4,7 @@ type: project
 image: img/sailboat/sailboat-square.png
 title: "RC Sailboat"
 date: "2025"
+weight: 5
 published: false
 labels:
   - Onshape

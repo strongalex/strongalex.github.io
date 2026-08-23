@@ -209,15 +209,15 @@
   ],
   "projects": [
     {
-      "name": "RBE 3000s - 4 DOF Inverse Kinematics, ROS 2, and Autonomous Navigation",
+      "name": "RBE 3000s - Manipulation, Autonomous Navigation, and Robotics Software Design",
       "startDate": "2026-01-01",
       "endDate": "2026-05-01",
-      "description": "Manipulator kinematics, computer vision pick-and-place, and autonomous navigation on a TurtleBot3.",
+      "description": "Three junior-year robotics courses: RBE 3001 (Manipulation), RBE 3002 (Unified Robotics IV), and RBE 300x (Software Design for Robotics).",
       "highlights": [
-        "Derived and implemented full forward/inverse kinematics (DH parameterization) and a velocity Jacobian for a 4-DOF manipulator (OpenManipulator-X) in MATLAB, validated against a custom interactive 3D model.",
-        "Built a computer vision pick-and-place pipeline: intrinsic/extrinsic camera calibration, HSV color segmentation, centroid detection, and a geometric height-correction model to autonomously sort colored spheres into bins.",
-        "Designed a layered ROS 2 software architecture combining a Behavior Tree for mission control with a Finite State Machine for navigation and a request-reply Dispatcher node to complete multi-stop delivery tasks with obstacle-triggered replanning.",
-        "Implemented A* path planning with configuration-space obstacle inflation and risk-weighted costing, plus frontier-based SLAM exploration and particle-filter re-localization, on a TurtleBot3 in ROS 2."
+        "RBE 3001: Derived and implemented full forward/inverse kinematics (DH parameterization) and a velocity Jacobian for a 4-DOF manipulator (OpenManipulator-X) in MATLAB, validated against a custom interactive 3D model built in Desmos.",
+        "RBE 3001: Built a computer vision pick-and-place pipeline with intrinsic/extrinsic camera calibration, color segmentation, centroid detection, and a geometric height-correction model to autonomously sort colored spheres into bins.",
+        "RBE 3002: Implemented a custom ROS 2 navigation stack on a TurtleBot3 - A* planning over an inflated C-space costmap with risk-weighted costing, frontier-based SLAM exploration, a vector pursuit controller, and particle-filter re-localization to solve the kidnapping problem.",
+        "RBE 300x: Built a robotics middleware from scratch in Python, implementing publish-subscribe and request-reply patterns, then used them in a layered warehouse-delivery architecture combining a Behavior Tree for mission control, a Finite State Machine for navigation, and a Dispatcher node for task assignment."
       ]
     },
     {

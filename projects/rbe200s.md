@@ -4,6 +4,7 @@ type: project
 image: img/classes/rbe2000.jpg
 title: "RBE 2000s"
 date: "2024"
+weight: 7
 published: true
 labels:
   - Robotics
