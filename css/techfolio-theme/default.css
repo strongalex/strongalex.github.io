@@ -54,11 +54,12 @@
   fill: var(--tf-icon-hover);
 }
 
-/* Crop project thumbnails to a consistent frame instead of squashing them. */
+/* Keep project thumbnails a consistent height without stretching or cropping them. */
 .tf-project-thumb {
   width: 100%;
   height: 225px;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--bs-gray-100);
 }
 
 /* Outline-style label chips, tinted with the accent color instead of a flat gray block. */
