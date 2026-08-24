@@ -6,13 +6,38 @@
 /* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
 :root {
   --bs-font-sans-serif: "Open Sans", sans-serif;
-  --bs-link-color: var(--bs-blue);
-  --tf-pill-bg: var(--bs-gray);
+  --tf-accent-color: #510c76;
+  --tf-accent-color-dark: #3a0855;
+  --tf-accent-color-rgb: 81, 12, 118;
+  --bs-link-color: var(--tf-accent-color);
+  --bs-link-hover-color: var(--tf-accent-color-dark);
   --tf-icon-fill: var(--bs-gray);
-  --tf-icon-hover: var(--bs-gray-500);
+  --tf-icon-hover: var(--tf-accent-color);
   --tf-page-bg-color: var(--bs-white);
   --tf-footer-bg-color: var(--bs-gray-200);
   --tf-projects-bg-color: var(--bs-gray-100);
+}
+
+/* Brand accent on the navbar and outline buttons. */
+.navbar-brand {
+  color: var(--tf-accent-color) !important;
+}
+
+.nav-link:hover {
+  color: var(--tf-accent-color) !important;
+}
+
+.btn-outline-dark {
+  color: var(--tf-accent-color);
+  border-color: var(--tf-accent-color);
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active {
+  background-color: var(--tf-accent-color);
+  border-color: var(--tf-accent-color);
+  color: var(--bs-white);
 }
 
 /* Format social media icons */
@@ -27,6 +52,37 @@
 
 .tf-social:hover {
   fill: var(--tf-icon-hover);
+}
+
+/* Crop project thumbnails to a consistent frame instead of squashing them. */
+.tf-project-thumb {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+/* Outline-style label chips, tinted with the accent color instead of a flat gray block. */
+.tf-badge {
+  background-color: rgba(var(--tf-accent-color-rgb), 0.1);
+  color: var(--tf-accent-color);
+  border: 1px solid rgba(var(--tf-accent-color-rgb), 0.3);
+  font-weight: 500;
+}
+
+/* Give cards a little lift on hover instead of sitting flat on the page. */
+.tf-card-hover {
+  border: 1px solid rgba(0, 0, 0, .08);
+  transition: transform .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.tf-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 .5rem 1rem rgba(var(--tf-accent-color-rgb), 0.15);
+}
+
+/* Essay cards have no image, so a top accent bar gives them some color of their own. */
+.tf-card-accent-top {
+  border-top: 3px solid var(--tf-accent-color);
 }
 
 a {

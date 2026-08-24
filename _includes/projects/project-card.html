@@ -1,7 +1,7 @@
-<div class="card mb-3">
+<div class="card mb-3 tf-card-hover">
   <div class="row g-0">
     <div class="col-sm-6 col-md-4">
-      <img src="{{ site.baseurl }}/{{ include.page.image }}" height="225px" class="rounded-start">
+      <img src="{{ site.baseurl }}/{{ include.page.image }}" class="rounded-start tf-project-thumb">
     </div>
     <div class="col-sm-6 col-md-8">
       <div class="card-body">
@@ -9,7 +9,7 @@
         <p class="card-text">{{ include.page.summary }}</p>
         <p>
           {% for label in include.page.labels %}
-          <span style="background-color: var(--tf-pill-bg)" class="badge rounded-pill">{{ label }}</span>
+          <span class="badge rounded-pill tf-badge">{{ label }}</span>
           {% endfor %}
         </p>
         {% if page.projecturl %}
