@@ -6,7 +6,7 @@
     "email": "alexfenladwickner@gmail.com",
     "phone": "860-322-7809",
     "website": "https://strongalex.github.io",
-    "summary": "I am studying for a B.S. in Robotics Engineering and a B.S. in Mechanical Engineering at Worcester Polytechnic Institute, graduating in May 2027. I most recently worked as a Vehicle Design Intern at SpaceX in Starbase, TX, where I created detail drawings, ran tolerance stack-ups, and wrote GD&T callouts for flight hardware. I care most about the point where mechanical design meets manufacturing.",
+    "summary": "I am studying for a B.S. in Robotics Engineering and a B.S. in Mechanical Engineering at Worcester Polytechnic Institute, graduating in May 2027. I most recently worked as a Vehicle Design Intern at SpaceX in Starbase, TX, where I did CAD design work on ship structures, created detail drawings, ran tolerance stack-ups, and wrote GD&T callouts for flight hardware. I care most about the point where mechanical design meets manufacturing.",
     "location": {
       "address": "",
       "city": "Worcester",
@@ -137,9 +137,8 @@
       "highlights": [
         "Created detail drawings from scratch, defining datum schemes, running tolerance stack-ups, and writing GD&T callouts informed by manufacturer capability.",
         "Used Siemens NX and Teamcenter for CAD modeling and drawing release workflows as part of a larger engineering group.",
-        "Completed initial CAD work on a Foreign Object Debris (FOD) closeout system that interfaces with numerous other vehicle systems, designing an adaptable layout to accommodate future changes.",
-        "Designed avionics mounting and tooling brackets.",
-        "Contributed to Design for Manufacturability (DFM) changes across the Aft, Header Tank, and Prop Hardware assemblies."
+        "Completed initial CAD work on ship structures.",
+        "Contributed to Design for Manufacturability (DFM) changes across Ship."
       ]
     },
     {
