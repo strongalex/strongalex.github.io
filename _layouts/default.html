@@ -66,5 +66,8 @@
     {{ content }}
     <script src="{{ '/js/site.js' | prepend: site.baseurl }}" defer></script>
     <script src="{{ '/js/helix.js' | prepend: site.baseurl }}" defer></script>
+    {%- if site.goatcounter and site.goatcounter != "" and jekyll.environment == "production" %}
+    <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    {%- endif %}
   </body>
 </html>
