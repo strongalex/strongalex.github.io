@@ -35,7 +35,7 @@ summary: "Design and manufacturing on WPI's Formula SAE team, building a formula
   <div class="split__text">
     <h2>Redesigning the pedal box</h2>
     <p>The pedal box is how the driver brakes and accelerates. The accelerator and brake pedals are worked by the right and left foot. Sensors at the accelerator's pivot record its position, and the brake pedal's motion is amplified by the master cylinders, which push fluid through the brake lines to the front and rear brakes. All of it sits on a platform that moves toward or away from the driver to fit different heights.</p>
-    <p>The previous car, Moonshine, had its pedal box designed in 2024 and updated in 2025. Its adjustment mechanism was prone to binding, and the pedals and baseplate were bulkier than they needed to be. Those problems, plus EV27's narrower chassis, made this the first chance in several years to redesign the whole thing.</p>
+    <p>The previous car, Moonshine, had its pedal box designed in 2024 and updated in 2025. Its adjustment mechanism was prone to binding, and the pedals and baseplate were bulkier than they needed to be. Those problems, plus EV27's narrower chassis, made this a good oppurtunity to redesign the whole thing.</p>
   </div>
   <div class="split__media">
     <figure>
@@ -103,7 +103,7 @@ summary: "Design and manufacturing on WPI's Formula SAE team, building a formula
 <div class="split">
   <div class="split__text">
     <h2>Working with igus</h2>
-    <p>One key change from Moonshine was moving from custom rails to igus rails. We set up a meeting with igus over email, and they sent a free set of rail samples to test. I checked the samples on the mill with an indicator, and they were straight to within about 0.004 inch.</p>
+    <p>One key change from Moonshine was moving from custom rails to igus rails. We set up a meeting with igus over email, and they sent a free set of rail samples to test.</p>
     <p>The pillow blocks run on self-lubricating polymer liners, so the slide needs no grease and doesn't pick up dirt and debris from drivers' shoes. The liners also tolerate small misalignments and contamination that would make a ball bearing carriage bind or skip, which keeps the adjustment smooth. The rails are hard anodized aluminum to keep the weight down, and the pillow blocks are stainless steel so they resist corrosion in the wet.</p>
     <p>Being off the shelf, the system comes with published load ratings: 3,800 N in lift-off and compression, and lower ratings in the Coz&minus; direction. igus sponsored the rails and pillow blocks, which cut the cost of the slide by about $228.</p>
   </div>
