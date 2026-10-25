@@ -2,13 +2,13 @@
   <div class="container">
     <header class="section__head" data-reveal>
       {% if page.url == '/' %}
-      <h2 class="section__title" data-scramble>Projects</h2>
+      <h2 class="section__title">Projects</h2>
       {% else %}
-      <h1 class="section__title" data-scramble>Projects</h1>
+      <h1 class="section__title">Projects</h1>
       {% endif %}
     </header>
 
-    <div class="cards" data-spotlight-group>
+    <div class="cards">
       {% comment %}
         Project order is controlled by the `weight:` field in each page's front matter
         (projects/*.md). Lower number = higher on the page; weight: 1 shows first.
@@ -33,7 +33,7 @@
     {% endfor %}
 
     {% if not_draft > include.limit %}
-      <p class="section__more"><a class="more-link" data-magnetic href="{{ site.baseurl}}/projects/">See all {{ not_draft }} projects</a></p>
+      <p class="section__more"><a class="more-link" href="{{ site.baseurl}}/projects/">See all {{ not_draft }} projects</a></p>
     {% endif %}
 
   </div>

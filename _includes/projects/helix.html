@@ -1,0 +1,41 @@
+{%- comment -%}
+  Landing-page project gallery: the published projects wrapped around a slowly turning
+  double helix (see js/helix.js). The list below is the real markup; without JavaScript
+  it simply shows as a grid of linked thumbnails.
+{%- endcomment -%}
+{% assign project_pages = site.pages | where: "type", "project" | sort: "weight" %}
+{% assign not_draft = 0 %}
+{% for page in project_pages %}{% unless page.draft %}{% assign not_draft = not_draft | plus: 1 %}{% endunless %}{% endfor %}
+
+<div class="helix" data-helix>
+  <div class="helix__mask">
+    <div class="helix__stage"></div>
+  </div>
+
+  <ul class="helix__source" aria-label="Projects">
+    {% for page in project_pages %}
+      {% unless page.draft %}
+      <li>
+        <a class="helix__card"
+           href="{% if page.projecturl %}{{ page.projecturl }}{% else %}{{ site.baseurl }}{{ page.url }}{% endif %}"
+           draggable="false"
+           data-title="{{ page.title | escape }}"
+           data-date="{{ page.date | escape }}"
+           data-summary="{{ page.summary | escape }}"
+           data-cta="{% if page.projecturl %}Project Site{% else %}Read More{% endif %}">
+          <img src="{% include projects/thumb.html image=page.image %}" alt="{{ page.title | escape }}" draggable="false" decoding="async">
+        </a>
+      </li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+
+  <div class="helix__caption" aria-hidden="true">
+    <p class="helix__caption-date"></p>
+    <p class="helix__caption-title"></p>
+    <p class="helix__caption-summary"></p>
+    <span class="helix__caption-cta"></span>
+  </div>
+
+  <p class="helix__more"><a class="more-link" href="{{ site.baseurl }}/projects/">See all {{ not_draft }} projects</a></p>
+</div>

@@ -1,4 +1,4 @@
-<article class="card card--essay" data-spotlight data-reveal style="--i:{{ include.index }}">
+<article class="card card--essay" data-reveal style="--i:{{ include.index }}">
   <div class="card__body">
     <div class="card__head">
       <h3 class="card__title">
@@ -7,9 +7,9 @@
     </div>
     <span class="card__date">{{ include.page.date | date_to_string }}</span>
     <p class="card__summary">{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}</p>
-    <ul class="chips">
+    <ul class="tags">
       {% for label in include.page.labels %}
-      <li class="chip">{{ label }}</li>
+      <li>{{ label }}</li>
       {% endfor %}
     </ul>
     <span class="card__cta" aria-hidden="true">Read More<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>

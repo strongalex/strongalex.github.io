@@ -1,6 +1,6 @@
-<article class="card" data-spotlight data-reveal style="--i:{{ include.index }}">
+<article class="card" data-reveal style="--i:{{ include.index }}">
   <div class="card__media">
-    <img src="{{ site.baseurl }}/{{ include.page.image }}" alt="">
+    <img src="{% include projects/thumb.html image=include.page.image %}" alt="">
   </div>
   <div class="card__body">
     <div class="card__head">
@@ -14,9 +14,9 @@
       <span class="card__date">{{ include.page.date }}</span>
     </div>
     <p class="card__summary">{{ include.page.summary }}</p>
-    <ul class="chips">
+    <ul class="tags">
       {% for label in include.page.labels %}
-      <li class="chip">{{ label }}</li>
+      <li>{{ label }}</li>
       {% endfor %}
     </ul>
     <span class="card__cta" aria-hidden="true">{% if include.page.projecturl %}Project Site{% else %}Read More{% endif %}<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>

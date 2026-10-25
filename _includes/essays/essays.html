@@ -1,10 +1,10 @@
 <section class="section section--essays" id="essays">
   <div class="container">
     <header class="section__head" data-reveal>
-      <h1 class="section__title" data-scramble>Essays</h1>
+      <h1 class="section__title">Essays</h1>
     </header>
 
-    <div class="cards cards--essays" data-spotlight-group>
+    <div class="cards cards--essays">
       {% assign essay_pages = site.pages | where: "type", "essay" | sort: "date" | reverse %}
       {% for page in essay_pages %}
         {% unless page.draft %}
@@ -24,7 +24,7 @@
     {% endfor %}
 
     {% if not_draft > include.limit %}
-      <p class="section__more"><a class="more-link" data-magnetic href="{{ site.baseurl}}/essays/">See all {{ not_draft }} essays</a></p>
+      <p class="section__more"><a class="more-link" href="{{ site.baseurl}}/essays/">See all {{ not_draft }} essays</a></p>
     {% endif %}
 
   </div>

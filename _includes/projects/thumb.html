@@ -1,0 +1,8 @@
+{%- comment -%}
+  Prints the URL of a project's image. Uses the small version in img/thumbs/ (same file
+  name, .jpg) when one exists, and falls back to the original image otherwise.
+{%- endcomment -%}
+{%- assign thumb_base = include.image | split: '/' | last | split: '.' | first -%}
+{%- assign thumb_path = '/img/thumbs/' | append: thumb_base | append: '.jpg' -%}
+{%- assign thumb_file = site.static_files | where: 'path', thumb_path | first -%}
+{%- if thumb_file -%}{{ thumb_path | prepend: site.baseurl }}{%- else -%}{{ include.image | prepend: '/' | prepend: site.baseurl }}{%- endif -%}
