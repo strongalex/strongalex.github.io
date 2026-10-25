@@ -2,7 +2,11 @@
 layout: home
 ---
 
-<div class="container py-4">
-  <h1 class="display-4">{{ page.title }}</h1>
- {{ content }}
-</div>
+<article class="page">
+  <header class="page__head" data-reveal>
+    <h1 class="page__title">{{ page.title }}</h1>
+  </header>
+  <div class="prose" data-reveal style="--i:1">
+    {{ content }}
+  </div>
+</article>

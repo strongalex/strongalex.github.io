@@ -1,11 +1,24 @@
-<header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{ '/' | prepend: site.baseurl }}">{{ site.data.bio.basics.name }}</a>
-    <div class="ms-auto">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <a class="nav-link" href="{{ '/#projects' | prepend: site.baseurl }}">Projects</a>
-        <a class="nav-link" href="{{ '/resume.html' | prepend: site.baseurl }}">Resume</a>
-      </ul>
-    </div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="{{ '/' | prepend: site.baseurl }}">
+      <span class="brand__led" aria-hidden="true"></span>
+      <span class="brand__name">{{ site.data.bio.basics.name }}</span>
+    </a>
+    <nav class="site-nav">
+      <a class="site-nav__link" href="{{ '/projects/' | prepend: site.baseurl }}"{% if page.url contains '/projects/' %} aria-current="page"{% endif %}>Projects</a>
+      <a class="site-nav__link" href="{{ '/resume.html' | prepend: site.baseurl }}"{% if page.url == '/resume.html' %} aria-current="page"{% endif %}>Resume</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <mask id="theme-toggle-mask">
+            <rect width="24" height="24" fill="#fff" stroke="none"/>
+            <circle class="theme-toggle__bite" cx="12" cy="12" r="5.5" fill="#000" stroke="none"/>
+          </mask>
+          <circle class="theme-toggle__core" cx="12" cy="12" r="4.4" mask="url(#theme-toggle-mask)"/>
+          <g class="theme-toggle__rays">
+            <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/>
+          </g>
+        </svg>
+      </button>
+    </nav>
   </div>
 </header>

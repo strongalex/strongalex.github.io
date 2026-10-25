@@ -1,12 +1,14 @@
-<div style="background-color: var(--tf-projects-bg-color)" class="bg-gradient py-3" id="projects">
+<section class="section section--projects" id="projects">
   <div class="container">
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <h1 class="display-4 text-start">Projects</h1>
-      </div>
-    </div>
+    <header class="section__head" data-reveal>
+      {% if page.url == '/' %}
+      <h2 class="section__title">Projects</h2>
+      {% else %}
+      <h1 class="section__title">Projects</h1>
+      {% endif %}
+    </header>
 
-    <div class="vstack gap-3">
+    <div class="cards">
       {% comment %}
         Project order is controlled by the `weight:` field in each page's front matter
         (projects/*.md). Lower number = higher on the page; weight: 1 shows first.
@@ -15,7 +17,7 @@
       {% assign project_pages = site.pages | where: "type", "project" | sort: "weight" %}
       {% for page in project_pages %}
         {% unless page.draft %}
-          {% include projects/project-card.html page=page %}
+          {% include projects/project-card.html page=page index=forloop.index %}
         {% endunless %}
         {% if forloop.index == include.limit %}
           {% break %}
@@ -31,8 +33,8 @@
     {% endfor %}
 
     {% if not_draft > include.limit %}
-      <p class="text-center pt-4"><a href="{{ site.baseurl}}/projects/">See all {{ not_draft }} projects</a></p>
+      <p class="section__more"><a class="more-link" href="{{ site.baseurl}}/projects/">See all {{ not_draft }} projects</a></p>
     {% endif %}
 
   </div>
-</div>
+</section>
