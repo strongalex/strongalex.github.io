@@ -6,15 +6,17 @@
   cards are actual anchors, keyboard focus rotates a card to the front, and touch /
   reduced-motion visitors get sensible behaviour.
 
-  Two flavours, picked per host element:
-    - vertical (default): the landing page. Cards come from the host's .helix__source list.
-    - horizontal (data-helix-axis="x"): a band across a page. With data-helix-from=".prose"
-      the cards are built from that element's own images, each linking to the heading
-      above it, so the gallery never has to be maintained by hand.
+  Two uses, picked per host element:
+    - Interactive (the landing page): cards come from the host's .helix__source list; drag to
+      spin, hover or focus for details.
+    - Decorative (data-helix-decor, e.g. the FRC page): a large, blurred helix behind the whole
+      page, built from the images in data-helix-from. It is not interactive, is hidden from
+      assistive technology, and drifts with the page's scroll position.
 
   Geometry: every card lives on one of two strands. A card's progress p runs 0..1 along the
-  strand and wraps; its angle around the cylinder is p * TURNS * 2PI (+ PI for strand 2).
-  Cards facing away fade and blur so the front of the helix reads clearly.
+  strand and wraps; its angle around the cylinder is p * TURNS * 2PI (+ PI for strand 2), and
+  it is placed with rotateY(angle) translateZ(radius) translateY(y). Cards facing away fade
+  (and, when interactive, blur) so the front of the helix reads clearly.
 */
 (function () {
   'use strict';
@@ -22,11 +24,11 @@
   var TAU = Math.PI * 2;
   var TURNS = 2;                       // full rotations from one end of a strand to the other
   var STRANDS = 2;
-  var DRIFT = 0.2;                     // cards per second of ambient motion
   var FRICTION = 0.94;                 // per-frame velocity decay after a flick, at 60fps
   var FLOOR = 0.08;                    // minimum opacity of far-side cards
-  var MAX_BLUR = 4;                    // px of blur on far-side cards
+  var MAX_BLUR = 4;                    // px of blur on far-side cards (interactive only)
   var CARD_RATIO = 4 / 3;
+  var PARALLAX = 0.4;                  // decorative helix moves at this fraction of scroll speed
 
   var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
   var coarse = matchMedia('(hover: none)');
@@ -39,9 +41,10 @@
     return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
   }
 
-  // Cards for a horizontal band: every image in the source element, linked to the heading
-  // above it. Only the first image of each heading is exposed to keyboards and screen readers.
-  function itemsFromContent(host) {
+  // Cards built from every image in the source element, each linked to the heading above it.
+  // Only the first image of each heading is exposed to keyboards and screen readers, and none
+  // are when the helix is decorative.
+  function itemsFromContent(host, decor) {
     var root = document.querySelector(host.getAttribute('data-helix-from'));
     if (!root) return [];
     var thumbs = host.getAttribute('data-thumbs') || '';
@@ -77,7 +80,7 @@
       img.addEventListener('error', function onerr() { img.removeEventListener('error', onerr); img.src = original; });
       a.appendChild(img);
 
-      items.push({ el: a, primary: !seen[current.id] });
+      items.push({ el: a, primary: !decor && !seen[current.id] });
       seen[current.id] = true;
     });
     return items;
@@ -94,15 +97,17 @@
   function init(host) {
     if (host.getAttribute('data-helix-ready')) return;
 
+    var decor = host.hasAttribute('data-helix-decor');
     var stage = host.querySelector('.helix__stage');
     var caption = host.querySelector('.helix__caption');
-    var axis = host.getAttribute('data-helix-axis') === 'x' ? 'x' : 'y';
-    var items = host.hasAttribute('data-helix-from') ? itemsFromContent(host) : itemsFromSource(host);
+    var items = host.hasAttribute('data-helix-from') ? itemsFromContent(host, decor) : itemsFromSource(host);
     if (!stage || !items.length) return;
     host.setAttribute('data-helix-ready', '1');
 
+    var DRIFT = decor ? 0.04 : 0.2;                 // cards per second of ambient motion
+    var maxBlur = decor ? 0 : MAX_BLUR;            // the decorative helix is blurred as a whole in CSS
     var N = items.length;
-    var PER = N * Math.max(1, Math.ceil(16 / N)); // cards per strand: each project appears evenly
+    var PER = N * Math.max(1, Math.ceil(16 / N));  // cards per strand: each project appears evenly
 
     /* ----------------------------------------------------------- build cards */
 
@@ -142,27 +147,19 @@
 
     /* --------------------------------------------------------------- metrics */
 
-    var view = { span: 0, radius: 0, persp: 0 };
+    var view = { span: 0, radius: 0 };
 
     function measure() {
-      var w = stage.clientWidth, h = stage.clientHeight, cardW, cardH, radius;
-      if (axis === 'y') {
-        cardW = Math.max(110, Math.min(220, w * 0.27));
-        cardH = cardW / CARD_RATIO;
-        // Keep the whole cylinder (plus perspective growth on the near side) inside the box.
-        radius = Math.max(70, (w / 2 - cardW * 0.46) / 1.08);
-        view.span = h * 1.5;
-      } else {
-        cardH = Math.max(64, Math.min(130, h * 0.32));
-        cardW = cardH * CARD_RATIO;
-        radius = Math.max(50, (h / 2 - cardH * 0.55) / 1.12);
-        view.span = w * 1.5;
-      }
+      var w = stage.clientWidth, h = stage.clientHeight;
+      // Decorative cards are large: the helix is a soft wash of colour, not a gallery.
+      var cardW = decor ? Math.max(150, Math.min(340, w * 0.24)) : Math.max(110, Math.min(220, w * 0.27));
+      // Keep the whole cylinder (plus perspective growth on the near side) inside the box.
+      var radius = Math.max(70, (w / 2 - cardW * 0.46) / 1.08);
       view.radius = radius;
-      view.persp = Math.max(axis === 'y' ? 700 : 480, radius * 3.2);
+      view.span = h * 1.5;
       host.style.setProperty('--card-w', cardW.toFixed(0) + 'px');
-      host.style.setProperty('--card-h', cardH.toFixed(0) + 'px');
-      host.style.setProperty('--perspective', view.persp.toFixed(0) + 'px');
+      host.style.setProperty('--card-h', (cardW / CARD_RATIO).toFixed(0) + 'px');
+      host.style.setProperty('--perspective', Math.max(700, radius * 3.2).toFixed(0) + 'px');
     }
 
     measure();
@@ -171,7 +168,7 @@
 
     /* ----------------------------------------------------------------- state */
 
-    var travel = 0;          // strand progress offset, in cards (drift + drag + focus)
+    var travel = 0;          // strand progress offset, in cards (drift + drag + focus + scroll)
     var driftNow = reduceMotion.matches ? 0 : DRIFT; // eased toward 0 while hovering a card
     var velocity = 0;        // cards per second, from a flick
     var target = null;       // travel value to ease to (keyboard focus)
@@ -183,6 +180,7 @@
     var lastX = 0, lastT = 0;
     var visible = true;
     var last = performance.now();
+    var lastScroll = scrollY;
 
     /* ----------------------------------------------------------------- frame */
 
@@ -192,22 +190,18 @@
         var c = cards[k];
         var p = wrap(c.base + travel, PER) / PER;
         var a = p * TURNS * TAU + c.phase;
-        var along = (p - 0.5) * span;
+        var y = (p - 0.5) * span;
         var d = (Math.cos(a) + 1) / 2;           // 0 far side .. 1 near side
-        if (axis === 'y') {
-          // One shared vanishing point (CSS perspective on the stage) suits a tall, narrow helix.
-          c.el.style.transform = 'translate(-50%,-50%) rotateY(' + a.toFixed(4) + 'rad) translateZ(' + radius.toFixed(1) + 'px) translateY(' + along.toFixed(1) + 'px)';
-        } else {
-          // A wide band needs each card to have its own vanishing point, or cards far from the
-          // centre shear sideways; so perspective is applied per card, and depth is sorted by z-index.
-          c.el.style.transform = 'translate(-50%,-50%) translateX(' + along.toFixed(1) + 'px) perspective(' + view.persp.toFixed(0) + 'px) rotateX(' + a.toFixed(4) + 'rad) translateZ(' + radius.toFixed(1) + 'px)';
-          c.el.style.zIndex = Math.round(d * 100);
-        }
+        c.el.style.transform = 'translate(-50%,-50%) rotateY(' + a.toFixed(4) + 'rad) translateZ(' + radius.toFixed(1) + 'px) translateY(' + y.toFixed(1) + 'px)';
         c.el.style.opacity = (FLOOR + (1 - FLOOR) * d * d).toFixed(3);
-        var blur = (1 - d) * (1 - d) * MAX_BLUR;
-        c.el.style.filter = blur > 0.25 ? 'blur(' + blur.toFixed(2) + 'px)' : 'none';
-        var live = d > 0.5;
-        if (live !== c.live) { c.live = live; c.el.style.pointerEvents = live ? '' : 'none'; }
+        if (maxBlur) {
+          var blur = (1 - d) * (1 - d) * maxBlur;
+          c.el.style.filter = blur > 0.25 ? 'blur(' + blur.toFixed(2) + 'px)' : 'none';
+        }
+        if (!decor) {
+          var live = d > 0.5;
+          if (live !== c.live) { c.live = live; c.el.style.pointerEvents = live ? '' : 'none'; }
+        }
       }
     }
 
@@ -233,6 +227,12 @@
         if (Math.abs(velocity) < 0.02) velocity = 0;
       }
 
+      if (decor) {
+        // Scrolling down carries the helix up, like the page, but more slowly.
+        if (!reduceMotion.matches) travel += (lastScroll - scrollY) * PARALLAX * PER / view.span;
+        lastScroll = scrollY;
+      }
+
       render();
       if (visible) requestAnimationFrame(frame);
     }
@@ -241,18 +241,19 @@
       new IntersectionObserver(function (entries) {
         var was = visible;
         visible = entries[0].isIntersecting;
-        if (visible && !was) { last = performance.now(); requestAnimationFrame(frame); }
+        if (visible && !was) { last = performance.now(); lastScroll = scrollY; requestAnimationFrame(frame); }
       }).observe(host);
     }
     requestAnimationFrame(frame);
 
+    // A decorative helix has no controls; everything below is for the interactive one.
+    if (decor) return;
+
     /* ------------------------------------------------------------------ drag */
 
-    // Pixels of drag -> cards of travel. Vertical: near-side cards follow the pointer ~1:1
-    // as the cylinder turns. Horizontal: cards slide along the band with the pointer.
-    function sensitivity() {
-      return axis === 'y' ? (1 / view.radius) * (PER / (TURNS * TAU)) : PER / view.span;
-    }
+    // Pixels of horizontal drag -> cards of travel, so near-side cards follow the pointer ~1:1
+    // as the cylinder turns.
+    function sensitivity() { return (1 / view.radius) * (PER / (TURNS * TAU)); }
 
     stage.addEventListener('pointerdown', function (e) {
       if (e.pointerType === 'mouse' && e.button !== 0) return;

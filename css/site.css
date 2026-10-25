@@ -4,8 +4,8 @@
   Design language: Apple's restraint (confident type, generous space, frosted header,
   spring easing) with industrial-design discipline in the Dieter Rams / Braun tradition:
   warm neutral "plastic", flat surfaces, hairline rules, honest tight radii, no glow or
-  gradient decoration. Signal orange is the primary accent (marks and actions); purple is
-  the secondary (links, tags, labels, hover states).
+  gradient decoration. Purple is the one accent: links, tags, labels, focus rings, text
+  selection and hover states.
 
   Light and dark themes both come from the single set of light-dark() tokens below.
 */
@@ -29,12 +29,10 @@
   --line: light-dark(rgb(28 26 29 / .1), rgb(255 255 255 / .1));
   --line-strong: light-dark(rgb(28 26 29 / .22), rgb(255 255 255 / .22));
 
-  /* Primary accent: signal orange. Used for marks and actions. */
-  --accent: light-dark(#ff5b14, #ff7a3d);
-  --on-accent: #1c1a1d;
-
-  /* Secondary accent: purple. Used for links, tags, labels and hover states. */
+  /* The accent: purple. Everything that is highlighted or interactive uses it. */
   --violet: light-dark(#5a2d86, #b79cf2);
+  --accent: var(--violet);
+  --on-accent: light-dark(#ffffff, #14101c);
   --violet-soft: color-mix(in srgb, var(--violet) 9%, transparent);
   --violet-line: color-mix(in srgb, var(--violet) 38%, transparent);
 
@@ -988,29 +986,28 @@ html.js .helix:not(.is-live) .helix__source {
   .prose .split__media > img, .prose .split__media > video { max-height: none; }
 }
 
-/* Horizontal helix band across the top of a page (js/helix.js, data-helix-axis="x"). */
-.helix--band {
-  grid-column: auto;
-  width: 100vw;
-  height: clamp(300px, 34vw, 400px);
+/*
+  Decorative helix behind a whole page (data-helix-decor, js/helix.js): big cards, blurred
+  right out of focus and faded, so the images read as a soft wash of colour behind the text.
+*/
+.helix--backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   min-height: 0;
-  margin: 0 0 clamp(28px, 4vw, 48px) calc(50% - 50vw);
+  overflow: hidden;
+  pointer-events: none;
+  opacity: .65;
+  filter: blur(22px);
 }
 
-html:not(.js) .helix--band { display: none; }
+:root[data-theme="dark"] .helix--backdrop { opacity: .55; }
 
-.helix--band .helix__stage { perspective: none; }
-.helix--band .helix__world { transform-style: flat; }
+html:not(.js) .helix--backdrop { display: none; }
 
-.helix--band .helix__mask {
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%);
-}
+.helix--backdrop .helix__stage { cursor: auto; }
 
-.helix--band .helix__caption {
-  left: max(var(--gutter), calc((100vw - var(--maxw)) / 2));
-  bottom: 12px;
-}
+.helix--backdrop .helix__card { box-shadow: none; }
 
 .helix__caption-date:empty,
 .helix__caption-summary:empty,
@@ -1178,7 +1175,7 @@ html:not(.js) .helix--band { display: none; }
 /* ------------------------------------------------------- motion & transitions */
 
 /* Scroll reveal. Gated on html.js so content is never hidden without JavaScript, and
-   the failsafe animation shows everything after 3.5s even if the script never runs. */
+   the failsafe animation shows everything after 2s even if the script never runs. */
 html.js [data-reveal] {
   opacity: 0;
   transform: translateY(12px);
@@ -1189,7 +1186,7 @@ html.js [data-reveal] {
 
 html.js [data-reveal].is-in { opacity: 1; transform: none; }
 
-html.js [data-reveal]:not(.is-in) { animation: reveal-failsafe .01s 3.5s forwards; }
+html.js [data-reveal]:not(.is-in) { animation: reveal-failsafe .01s 2s forwards; }
 
 @keyframes reveal-failsafe { to { opacity: 1; transform: none; } }
 

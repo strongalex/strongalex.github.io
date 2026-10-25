@@ -13,6 +13,10 @@ labels:
   - CNC Machining
   - SOLIDWORKS
 summary: "Design and manufacturing on WPI's Formula SAE team, building a formula-style race car for competition."
+# To attach the full report: put the PDF in img/fsae/ and set report to its path, for example
+#   report: img/fsae/FSAE-MQP-A-Term-Report.pdf
+# (a full URL also works). The button appears at the end of the page once this is set.
+report: ""
 ---
 <div class="split">
   <div class="split__text">

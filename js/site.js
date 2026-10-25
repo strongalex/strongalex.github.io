@@ -69,7 +69,9 @@
           el.removeAttribute('data-reveal');
         });
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -4% 0px' });
+    // threshold 0: reveal as soon as any part is on screen. A fraction of the element would
+    // never be reached by a tall block (a long project page) and it would stay hidden.
+    }, { threshold: 0, rootMargin: '0px 0px -4% 0px' });
     revealed.forEach(function (el) { io.observe(el); });
   }
 
