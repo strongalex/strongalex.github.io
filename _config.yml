@@ -10,6 +10,12 @@ baseurl: ""
 ## Specify the formatting for triple backquote code sections.
 rouge-theme: github.css
 
+## Visitor statistics (optional, off while this is empty). Uses GoatCounter: free for personal
+## sites, no cookies, no consent banner. Create a site at https://www.goatcounter.com/signup, then
+## put its code here (the "yourcode" in yourcode.goatcounter.com). Only the deployed site counts
+## visits; local previews and drafts do not.
+goatcounter: ""
+
 # DON'T CHANGE THE FOLLOWING (unless you know what you're doing)
 markdown: kramdown
 kramdown:
