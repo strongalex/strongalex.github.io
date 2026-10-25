@@ -73,6 +73,35 @@
     revealed.forEach(function (el) { io.observe(el); });
   }
 
+  /* ----------------------------------------------- section links on long pages */
+
+  // Pages with three or more sections get a row of links to them, built from the
+  // headings that are already on the page.
+  var prose = document.querySelector('.page .prose');
+  if (prose) {
+    var heads = Array.prototype.slice.call(prose.querySelectorAll('h1:not(.subtitle), h2'));
+    if (heads.length >= 3) {
+      var jump = document.createElement('nav');
+      jump.className = 'jump';
+      jump.setAttribute('aria-label', 'Sections');
+      var taken = {};
+      heads.forEach(function (h) {
+        if (!h.id) {
+          var base = h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
+          var id = base, n = 2;
+          while (taken[id] || document.getElementById(id)) id = base + '-' + n++;
+          h.id = id;
+        }
+        taken[h.id] = true;
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent.trim();
+        jump.appendChild(a);
+      });
+      prose.parentNode.insertBefore(jump, prose);
+    }
+  }
+
   /* ------------------------------------------- "G" toggles the layout grid */
 
   addEventListener('keydown', function (e) {

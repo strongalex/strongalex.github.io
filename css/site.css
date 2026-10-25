@@ -140,18 +140,9 @@ ul { margin: 0; padding: 0; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   font-weight: 600;
   letter-spacing: -.02em;
   white-space: nowrap;
-}
-
-/* A small status lamp, like the power light on a piece of hardware. */
-.brand__led {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
 }
 
 .site-nav {
@@ -397,6 +388,7 @@ html.show-grid .grid-overlay { opacity: 1; }
   grid-column: 3;
   position: relative;
   min-height: 520px;
+  overflow: clip;
 }
 
 /* Without JavaScript the projects are a plain grid of linked thumbnails. */
@@ -651,10 +643,12 @@ html.js .helix:not(.is-live) .helix__source {
 /* ------------------------------------------------------- project / essay page */
 
 .page {
-  width: min(100% - 2 * var(--gutter), 900px);
+  width: min(100% - 2 * var(--gutter), var(--maxw));
   margin-inline: auto;
   padding-block: clamp(40px, 7vw, 88px) clamp(64px, 10vw, 128px);
 }
+
+.page--essay { width: min(100% - 2 * var(--gutter), 760px); }
 
 .page__head {
   margin-bottom: clamp(24px, 3vw, 40px);
@@ -811,6 +805,188 @@ html.js .helix:not(.is-live) .helix__source {
 }
 
 .row img { margin-block: 0; width: 100%; }
+
+/* --------------------------------------------- project pages: text beside images */
+
+/*
+  Readable line length: running text stays in a comfortable column (about 70 characters)
+  while images, video and galleries are free to use the full width.
+*/
+.prose { --measure: 40rem; }
+.page--essay .prose { --measure: none; }
+
+.prose > p, .prose > ul, .prose > ol, .prose > h1, .prose > h2, .prose > h3, .prose > pre {
+  max-width: var(--measure);
+}
+
+/* Page top: title, then a quieter subtitle, a mono date line and a larger lead paragraph. */
+.prose .subtitle {
+  margin: 0 0 .35em;
+  padding: 0;
+  border: 0;
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -.018em;
+  color: var(--ink);
+}
+
+.prose p.meta { margin: 0 0 1.5rem; }
+.prose p.meta em { font: 500 .875rem/1.5 var(--font-mono); font-style: normal; color: var(--ink-2); }
+
+.prose p.lead {
+  margin-bottom: 1.4em;
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  letter-spacing: -.012em;
+}
+
+/* Report / document links as small outlined buttons. */
+.prose p.doc-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5rem; }
+
+.prose p.doc-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--r-md);
+  box-shadow: inset 0 0 0 1px var(--violet-line);
+  font-size: .9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color .2s;
+}
+
+.prose p.doc-links a:hover { background: var(--violet-soft); }
+
+.prose p.doc-links a::before {
+  content: "";
+  flex: none;
+  width: 14px;
+  height: 16px;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 16'%3E%3Cpath d='M2 .75h6.2L12.5 5v10.25H2zM8 1v4.2h4.2' fill='none' stroke='%23000' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 16'%3E%3Cpath d='M2 .75h6.2L12.5 5v10.25H2zM8 1v4.2h4.2' fill='none' stroke='%23000' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.prose p.links { display: flex; flex-wrap: wrap; gap: .6em; align-items: baseline; color: var(--ink-3); }
+
+/* Section links under the title on pages with several sections. */
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 clamp(28px, 4vw, 44px);
+}
+
+.jump a {
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: color .2s, background-color .2s, box-shadow .2s;
+}
+
+.jump a:hover {
+  color: var(--violet);
+  background: var(--violet-soft);
+  box-shadow: inset 0 0 0 1px var(--violet-line);
+}
+
+/* Text on one side, images on the other. Images stay in view while you read the text. */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+
+.split--wide-media { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+
+.split + .split {
+  margin-top: clamp(48px, 7vw, 88px);
+  padding-top: clamp(48px, 7vw, 88px);
+  border-top: 1px solid var(--line);
+}
+
+.split__text > :first-child { margin-top: 0; }
+
+.prose .split__text > h1:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.split__media {
+  position: sticky;
+  top: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Images fill the column; tall ones are shown whole on a neutral mat instead of cropped. */
+.prose .split__media > img,
+.prose .split__media > video,
+.prose .split__media > iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(78vh, 720px);
+  margin: 0;
+  object-fit: contain;
+}
+
+.prose .split__media > iframe { aspect-ratio: 16 / 9; max-height: none; }
+
+.gallery {
+  column-count: 2;
+  column-gap: 10px;
+}
+
+.prose .gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+  break-inside: avoid;
+}
+
+@media (max-width: 900px) {
+  .split, .split--wide-media { grid-template-columns: minmax(0, 1fr); }
+  .split__media { position: static; }
+  .prose .split__media > img, .prose .split__media > video { max-height: none; }
+}
+
+/* Horizontal helix band across the top of a page (js/helix.js, data-helix-axis="x"). */
+.helix--band {
+  grid-column: auto;
+  width: 100vw;
+  height: clamp(300px, 34vw, 400px);
+  min-height: 0;
+  margin: 0 0 clamp(28px, 4vw, 48px) calc(50% - 50vw);
+}
+
+html:not(.js) .helix--band { display: none; }
+
+.helix--band .helix__stage { perspective: none; }
+.helix--band .helix__world { transform-style: flat; }
+
+.helix--band .helix__mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%);
+}
+
+.helix--band .helix__caption {
+  left: max(var(--gutter), calc((100vw - var(--maxw)) / 2));
+  bottom: 12px;
+}
+
+.helix__caption-date:empty,
+.helix__caption-summary:empty,
+.helix__caption-cta:empty { display: none; }
 
 /* ------------------------------------------------------------------- resume */
 
