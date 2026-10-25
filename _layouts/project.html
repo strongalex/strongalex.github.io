@@ -6,6 +6,25 @@ layout: home
   <header class="page__head" data-reveal>
     <h1 class="page__title">{{ page.title }}</h1>
   </header>
+
+  {%- comment -%}
+    Pages with "helix: true" in their front matter get a horizontal helix gallery across the
+    top, built by js/helix.js from the page's own images (each card links to its section).
+  {%- endcomment -%}
+  {% if page.helix %}
+  <div class="helix helix--band" data-helix data-helix-axis="x" data-helix-from=".prose" data-thumbs="{{ '/img/thumbs/' | prepend: site.baseurl }}">
+    <div class="helix__mask">
+      <div class="helix__stage"></div>
+    </div>
+    <div class="helix__caption" aria-hidden="true">
+      <p class="helix__caption-date"></p>
+      <p class="helix__caption-title"></p>
+      <p class="helix__caption-summary"></p>
+      <span class="helix__caption-cta"></span>
+    </div>
+  </div>
+  {% endif %}
+
   <div class="prose" data-reveal style="--i:1">
     {{ content }}
   </div>
