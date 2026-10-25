@@ -1,5 +1,5 @@
-<a href="{{ include.url }}" target="_blank">
-  <svg class="tf-social">
+<a href="{{ include.url }}" target="_blank" rel="noopener" class="{% if include.label %}contact-link{% else %}icon-btn{% endif %}"{% unless include.label %} aria-label="{{ include.name }}" data-magnetic{% endunless %}>
+  <svg class="tf-social" aria-hidden="true">
     <use xlink:href="{{ '/img/bootstrap-icons.svg' | prepend: site.baseurl }}#{{- include.name -}}"/>
   </svg>
   <span>{{ include.label }}</span>

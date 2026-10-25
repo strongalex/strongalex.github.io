@@ -1,47 +1,52 @@
-<div style="background-color: var(--tf-page-bg-color)" class="bg-gradient py-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <img width="300px" src="{{ site.data.bio.basics.picture }}" class="d-block mx-auto rounded-circle">
-      </div>
-      <div class="col-lg-8">
-        <h1 class="display-4 text-center">{{ site.data.bio.basics.name }}</h1>
-        <p class="lead text-center">{{ site.data.bio.basics.label }}</p>
-        <p class="lead">{{ site.data.bio.basics.summary }}</p>
-        <hr class="my-4">
-        <p class="lead m-0">
-          Interests:
+<section class="hero" id="top">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <h1 class="hero__name" data-scramble data-reveal>{{ site.data.bio.basics.name }}</h1>
+      <p class="hero__label" data-reveal style="--i:1">{{ site.data.bio.basics.label }}</p>
+      <p class="hero__summary" data-reveal style="--i:2">{{ site.data.bio.basics.summary }}</p>
+
+      <div class="hero__interests" data-reveal style="--i:3">
+        <span class="hero__interests-label">Interests:</span>
+        <ul class="chips">
           {% for interest in site.data.bio.interests %}
-          {{ interest.name }}{% if forloop.last != true %}, {% endif %}
+          <li class="chip">{{ interest.name }}</li>
           {% endfor %}
-        </p>
-        <hr class="my-4">
-        <div class="row">
+        </ul>
+      </div>
 
-          {% if site.data.bio.basics.website %}
-            {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name='house' %}
-            </div>
-          {% endif %}
+      <div class="hero__social" data-reveal style="--i:4">
+        {% if site.data.bio.basics.website %}
+          {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
+          {% include about/social.html url=url name='house' %}
+        {% endif %}
 
-          {% if site.data.bio.basics.email %}
-            {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name='envelope' %}
-            </div>
-          {% endif %}
+        {% if site.data.bio.basics.email %}
+          {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
+          {% include about/social.html url=url name='envelope' %}
+        {% endif %}
 
-          {% for profile in site.data.bio.basics.profiles %}
-            {% capture url %}{{ profile.url }}{% endcapture %}
-            {% capture name %}{{ profile.network | downcase }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name=name %}
-            </div>
-          {% endfor %}
+        {% for profile in site.data.bio.basics.profiles %}
+          {% capture url %}{{ profile.url }}{% endcapture %}
+          {% capture name %}{{ profile.network | downcase }}{% endcapture %}
+          {% include about/social.html url=url name=name %}
+        {% endfor %}
+      </div>
+    </div>
 
-        </div>
+    <div class="hero__portrait" data-reveal style="--i:2">
+      <div class="portrait" data-tilt>
+        {%- comment -%}
+          The newline after "<img" keeps this above-the-fold photo from picking up the
+          lazy-loading rewrite that _layouts/home.html applies to every "<img " in the page.
+        {%- endcomment -%}
+        <img
+          src="{{ site.data.bio.basics.picture | prepend: '/' | prepend: site.baseurl }}"
+          alt="{{ site.data.bio.basics.name }}"
+          width="1727" height="1727"
+          decoding="async" fetchpriority="high">
+        <span class="portrait__glare" aria-hidden="true"></span>
       </div>
     </div>
   </div>
-</div>
+</section>

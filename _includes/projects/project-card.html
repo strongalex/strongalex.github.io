@@ -1,23 +1,24 @@
-<div class="card mb-3 tf-card-hover">
-  <div class="row g-0">
-    <div class="col-sm-6 col-md-4">
-      <img src="{{ site.baseurl }}/{{ include.page.image }}" class="rounded-start tf-project-thumb">
-    </div>
-    <div class="col-sm-6 col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{{ include.page.title }} <small class="text-muted float-end">{{ include.page.date }}</small></h5>
-        <p class="card-text">{{ include.page.summary }}</p>
-        <p>
-          {% for label in include.page.labels %}
-          <span class="badge rounded-pill tf-badge">{{ label }}</span>
-          {% endfor %}
-        </p>
-        {% if page.projecturl %}
-        <a href="{{ page.projecturl }}" class="btn btn-outline-dark">Project Site</a>
-        {% else %}
-        <a href="{{ site.baseurl}}{{ include.page.url }}" class="btn btn-outline-dark">Read More</a>
-        {% endif %}
-      </div>
-    </div>
+<article class="card" data-spotlight data-reveal style="--i:{{ include.index }}">
+  <div class="card__media">
+    <img src="{{ site.baseurl }}/{{ include.page.image }}" alt="">
   </div>
-</div>
+  <div class="card__body">
+    <div class="card__head">
+      <h3 class="card__title">
+        {% if include.page.projecturl %}
+        <a class="card__link" href="{{ include.page.projecturl }}">{{ include.page.title }}</a>
+        {% else %}
+        <a class="card__link" href="{{ site.baseurl}}{{ include.page.url }}">{{ include.page.title }}</a>
+        {% endif %}
+      </h3>
+      <span class="card__date">{{ include.page.date }}</span>
+    </div>
+    <p class="card__summary">{{ include.page.summary }}</p>
+    <ul class="chips">
+      {% for label in include.page.labels %}
+      <li class="chip">{{ label }}</li>
+      {% endfor %}
+    </ul>
+    <span class="card__cta" aria-hidden="true">{% if include.page.projecturl %}Project Site{% else %}Read More{% endif %}<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+  </div>
+</article>

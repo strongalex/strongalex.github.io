@@ -1,17 +1,17 @@
-<div class="col-md-6 col-lg-4" xmlns="http://www.w3.org/1999/html">
-  <div class="card h-100 tf-card-hover tf-card-accent-top">
-    <div class="card-body">
-      <h5 class="card-title">{{ include.page.title }}</h5>
-      <p class="card-text"><small class="text-muted">{{ include.page.date | date_to_string }}</small></p>
-      <p class="card-text">{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}</p>
-      <p>
-        {% for label in include.page.labels %}
-        <span class="badge rounded-pill tf-badge">{{ label }}</span>
-        {% endfor %}
-      </p>
+<article class="card card--essay" data-spotlight data-reveal style="--i:{{ include.index }}">
+  <div class="card__body">
+    <div class="card__head">
+      <h3 class="card__title">
+        <a class="card__link" href="{% if page.essayurl %}{{ page.essayurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}">{{ include.page.title }}</a>
+      </h3>
     </div>
-    <div class="card-footer">
-      <div class="text-center"><a href="{% if page.essayurl %}{{ page.essayurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}" class="btn btn-outline-dark">Read More</a></div>
-    </div>
+    <span class="card__date">{{ include.page.date | date_to_string }}</span>
+    <p class="card__summary">{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}</p>
+    <ul class="chips">
+      {% for label in include.page.labels %}
+      <li class="chip">{{ label }}</li>
+      {% endfor %}
+    </ul>
+    <span class="card__cta" aria-hidden="true">Read More<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
   </div>
-</div>
+</article>

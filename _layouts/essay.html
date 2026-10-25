@@ -2,9 +2,12 @@
 layout: home
 ---
 
-<div class="container py-4">
-  <h1 class="display-4">{{ page.title }}</h1>
-  <span class="date">{{ page.date | date_to_string }}</span>
-  <hr>
-  {{ content }}
-</div>
+<article class="page page--essay">
+  <header class="page__head" data-reveal>
+    <h1 class="page__title">{{ page.title }}</h1>
+    <span class="page__date">{{ page.date | date_to_string }}</span>
+  </header>
+  <div class="prose" data-reveal style="--i:1">
+    {{ content }}
+  </div>
+</article>
