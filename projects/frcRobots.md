@@ -13,7 +13,6 @@ labels:
   - CNC Machining
   - Fabrication & Assembly
 summary: "A series of competitive robots that I have helped design and build throughout high school and college."
-helix: true
 ---
 <div class="split split--wide-media">
   <div class="split__text">

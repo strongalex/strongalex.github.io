@@ -986,29 +986,6 @@ html.js .helix:not(.is-live) .helix__source {
   .prose .split__media > img, .prose .split__media > video { max-height: none; }
 }
 
-/*
-  Decorative helix behind a whole page (data-helix-decor, js/helix.js): big cards, blurred
-  right out of focus and faded, so the images read as a soft wash of colour behind the text.
-*/
-.helix--backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  min-height: 0;
-  overflow: hidden;
-  pointer-events: none;
-  opacity: .65;
-  filter: blur(22px);
-}
-
-:root[data-theme="dark"] .helix--backdrop { opacity: .55; }
-
-html:not(.js) .helix--backdrop { display: none; }
-
-.helix--backdrop .helix__stage { cursor: auto; }
-
-.helix--backdrop .helix__card { box-shadow: none; }
-
 .helix__caption-date:empty,
 .helix__caption-summary:empty,
 .helix__caption-cta:empty { display: none; }
