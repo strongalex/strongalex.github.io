@@ -2,19 +2,6 @@
 layout: home
 ---
 
-{%- comment -%}
-  Pages with "helix: true" in their front matter get a large, heavily blurred helix of the
-  page's own images behind the whole page (js/helix.js builds it from the images in the
-  text, and it turns slowly as the page is scrolled). It is decoration only.
-{%- endcomment -%}
-{% if page.helix %}
-<div class="helix helix--backdrop" data-helix data-helix-decor data-helix-from=".prose" data-thumbs="{{ '/img/thumbs/' | prepend: site.baseurl }}" aria-hidden="true">
-  <div class="helix__mask">
-    <div class="helix__stage"></div>
-  </div>
-</div>
-{% endif %}
-
 <article class="page">
   <header class="page__head" data-reveal>
     <h1 class="page__title">{{ page.title }}</h1>
@@ -23,12 +10,13 @@ layout: home
   <div class="prose" data-reveal style="--i:1">
     {{ content }}
     {%- comment -%}
-      Optional report download: set "report" in the page's front matter to a PDF in this
-      site (for example img/fsae/report.pdf) or to a full URL. Nothing shows while it is empty.
+      Optional report link: set "report" in the page's front matter to a PDF in this site
+      (for example img/fsae/report.pdf) or to a full URL such as a Drive view link. It opens
+      in a new tab. Nothing shows while it is empty.
     {%- endcomment -%}
     {% if page.report and page.report != "" %}
     <p class="doc-links">
-      <a href="{% if page.report contains '://' %}{{ page.report }}{% else %}{{ page.report | prepend: '/' | prepend: site.baseurl }}{% endif %}">{{ page.report_label | default: 'Read the Full Report' }}</a>
+      <a href="{% if page.report contains '://' %}{{ page.report }}{% else %}{{ page.report | prepend: '/' | prepend: site.baseurl }}{% endif %}" target="_blank" rel="noopener">{{ page.report_label | default: 'Read the Full Report' }}</a>
     </p>
     {% endif %}
   </div>
