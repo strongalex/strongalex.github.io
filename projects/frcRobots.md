@@ -107,14 +107,14 @@ summary: "A series of competitive robots that I have helped design and build thr
 
 <div class="split split--wide-media">
   <div class="split__text">
-    <h1 id="knighttime-2022">2022: KnightTime</h1>
+    <h1 id="nightwatch-2022">2022: Nightwatch</h1>
     <p>Designed for the 2022 FRC game, "Rapid React," this robot's main objective was to score large tennis balls into a central goal and climb a monkey bar-like structure. It was originally designed in SOLIDWORKS.</p>
     <p class="links"><a href="https://www.thebluealliance.com/team/195/2022">TBA</a></p>
   </div>
   <div class="split__media">
     <div class="gallery">
-        <img src="../img/frc/19522clash.png" alt="KnightTime 2022 during a match">
-        <img src="../img/frc/19522climb.png" alt="KnightTime 2022 climbing the hangar bars">
+        <img src="../img/frc/19522clash.png" alt="Nightwatch 2022 during a match">
+        <img src="../img/frc/19522climb.png" alt="Nightwatch 2022 climbing the hangar bars">
     </div>
   </div>
 </div>
