@@ -1,0 +1,34 @@
+{%- comment -%}
+  Previous / next links between the pages that share this page's parent, in weight order.
+  Pass the parent page as parent=parent_page.
+{%- endcomment -%}
+{%- assign siblings = site.pages | where: 'parent', page.parent | sort: 'weight' -%}
+{%- assign prev_page = nil -%}
+{%- assign next_page = nil -%}
+{%- for sibling in siblings -%}
+  {%- if sibling.url == page.url -%}
+    {%- unless forloop.first -%}
+      {%- assign prev_index = forloop.index0 | minus: 1 -%}
+      {%- assign prev_page = siblings[prev_index] -%}
+    {%- endunless -%}
+    {%- unless forloop.last -%}
+      {%- assign next_page = siblings[forloop.index] -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if prev_page or next_page %}
+<nav class="pager" aria-label="More from {{ include.parent.title | escape }}">
+  {%- if prev_page %}
+  <a class="pager__link pager__link--prev" href="{{ prev_page.url | prepend: site.baseurl }}" rel="prev">
+    <span class="pager__label">Previous</span>
+    <span class="pager__title">{{ prev_page.title }}</span>
+  </a>
+  {%- endif %}
+  {%- if next_page %}
+  <a class="pager__link pager__link--next" href="{{ next_page.url | prepend: site.baseurl }}" rel="next">
+    <span class="pager__label">Next</span>
+    <span class="pager__title">{{ next_page.title }}</span>
+  </a>
+  {%- endif %}
+</nav>
+{%- endif -%}

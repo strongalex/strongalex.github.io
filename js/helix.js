@@ -41,7 +41,7 @@
     host.setAttribute('data-helix-ready', '1');
 
     var N = links.length;
-    var PER = N * Math.max(1, Math.ceil(16 / N)); // cards per strand: each project appears evenly
+    var PER = N * Math.max(1, Math.round(16 / N)); // cards per strand (about 16): each project appears evenly
 
     /* ----------------------------------------------------------- build cards */
 

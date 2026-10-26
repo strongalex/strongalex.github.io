@@ -2,22 +2,45 @@
 layout: home
 ---
 
+{%- comment -%}
+  A project page can belong to another one: set "parent" in its front matter to the other
+  page's file name without the extension (for example parent: frcRobots). Child pages get a
+  link back to the parent and previous / next links between siblings, show up in the landing
+  page helix, and are left off the Projects page. A page that has children lists them as
+  cards after its own text.
+{%- endcomment -%}
+{%- assign parent_page = nil -%}
+{%- if page.parent -%}
+  {%- assign parent_file = page.parent | append: '.md' -%}
+  {%- assign parent_page = site.pages | where: 'name', parent_file | first -%}
+{%- endif -%}
+
 <article class="page">
   <header class="page__head" data-reveal>
+    {%- if parent_page %}
+    <p class="crumb"><a href="{{ parent_page.url | prepend: site.baseurl }}">{{ parent_page.title }}</a></p>
+    {%- endif %}
     <h1 class="page__title">{{ page.title }}</h1>
   </header>
 
   <div class="prose" data-reveal style="--i:1">
     {{ content }}
-    {%- comment -%}
-      Optional report link: set "report" in the page's front matter to a PDF in this site
-      (for example img/fsae/report.pdf) or to a full URL such as a Drive view link. It opens
-      in a new tab. Nothing shows while it is empty.
-    {%- endcomment -%}
-    {% if page.report and page.report != "" %}
+  </div>
+
+  {% include projects/children.html parent=page %}
+
+  {%- comment -%}
+    Optional report link: set "report" in the page's front matter to a PDF in this site
+    (for example img/fsae/report.pdf) or to a full URL such as a Drive view link. It opens
+    in a new tab. Nothing shows while it is empty.
+  {%- endcomment -%}
+  {% if page.report and page.report != "" %}
+  <div class="prose prose--tail">
     <p class="doc-links">
       <a href="{% if page.report contains '://' %}{{ page.report }}{% else %}{{ page.report | prepend: '/' | prepend: site.baseurl }}{% endif %}" target="_blank" rel="noopener">{{ page.report_label | default: 'Read the Full Report' }}</a>
     </p>
-    {% endif %}
   </div>
+  {% endif %}
+
+  {% if parent_page %}{% include projects/pager.html parent=parent_page %}{% endif %}
 </article>
