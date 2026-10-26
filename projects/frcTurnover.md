@@ -2,7 +2,8 @@
 layout: project
 type: project
 parent: frcRobots
-image: img/frc/190turnoverCAD.png
+helix: rare
+image: img/frc/190turnoverreallife.jpg
 title: "Turnover"
 date: "2026"
 weight: 2.1

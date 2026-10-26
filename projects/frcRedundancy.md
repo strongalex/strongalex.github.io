@@ -2,7 +2,8 @@
 layout: project
 type: project
 parent: frcRobots
-image: img/frc/19025isolate.png
+helix: rare
+image: img/frc/19025setup.jpg
 title: "Redundancy"
 date: "2025"
 weight: 2.3
@@ -36,8 +37,8 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
 
 <div class="gallery">
   <figure>
-    <img src="../img/frc/1902025.jpeg" alt="Redundancy during a match">
-    <figcaption>Redundancy during a match</figcaption>
+    <img src="../img/frc/1902025.jpeg" alt="Redundancy CAD, isometric view">
+    <figcaption>Redundancy CAD, isometric view</figcaption>
   </figure>
   <figure>
     <img src="../img/frc/19025setup.jpg" alt="Redundancy on the field before a match">
