@@ -2,7 +2,8 @@
 layout: project
 type: project
 parent: frcRobots
-image: img/frc/19523CAD.png
+helix: rare
+image: img/frc/19523score.png
 title: "KnightTime"
 date: "2023"
 weight: 2.5

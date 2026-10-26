@@ -2,7 +2,8 @@
 layout: project
 type: project
 parent: frcRobots
-image: img/frc/19024cad.png
+helix: rare
+image: img/frc/19024pickuo.jpg
 title: "Snapback"
 date: "2024"
 weight: 2.4

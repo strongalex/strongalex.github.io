@@ -4,6 +4,8 @@
   it simply shows as a grid of linked thumbnails. Pages that belong to another project
   (a `parent:` in their front matter, like each FRC robot) are included here, with their
   parent's name in front of the date; the "See all" count only counts top-level projects.
+  A page with `helix: rare` in its front matter (each FRC robot) is marked data-rare: js/helix.js
+  puts it on the helix once, spread out among the other projects, which appear several times.
 {%- endcomment -%}
 {% assign project_pages = site.pages | where: "type", "project" | sort: "weight" %}
 {% assign not_draft = 0 %}
@@ -24,7 +26,7 @@
         {%- assign caption_date = parent_page.title | append: ' · ' | append: page.date -%}
       {%- endif -%}
       <li>
-        <a class="helix__card"
+        <a class="helix__card"{% if page.helix == 'rare' %} data-rare{% endif %}
            href="{% if page.projecturl %}{{ page.projecturl }}{% else %}{{ site.baseurl }}{{ page.url }}{% endif %}"
            draggable="false"
            data-title="{{ page.title | escape }}"

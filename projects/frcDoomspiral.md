@@ -2,7 +2,8 @@
 layout: project
 type: project
 parent: frcRobots
-image: img/frc/190doomspiralCAD.png
+helix: rare
+image: img/frc/190doomsprialShot.jpg
 title: "Doomspiral"
 date: "2026"
 weight: 2.2

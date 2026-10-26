@@ -2,6 +2,7 @@
 layout: project
 type: project
 parent: frcRobots
+helix: rare
 image: img/frc/19522clash.png
 title: "Nightwatch"
 date: "2022"

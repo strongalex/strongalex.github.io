@@ -18,6 +18,7 @@
   var TAU = Math.PI * 2;
   var TURNS = 2;                       // full rotations from the top of a strand to the bottom
   var STRANDS = 2;
+  var RARE_GAP = 5;                    // one rare card per this many cards in the helix
   var DRIFT = 0.2;                     // cards per second of ambient motion
   var FRICTION = 0.94;                 // per-frame velocity decay after a flick, at 60fps
   var FLOOR = 0.08;                    // minimum opacity of far-side cards
@@ -41,7 +42,32 @@
     host.setAttribute('data-helix-ready', '1');
 
     var N = links.length;
-    var PER = N * Math.max(1, Math.round(16 / N)); // cards per strand (about 16): each project appears evenly
+
+    /* ------------------------------------------------------------ the deal */
+
+    // Which project sits in each slot of each strand. Normally the projects repeat evenly
+    // along both strands. Projects marked data-rare (the individual FRC robots) go in just
+    // once, with about RARE_GAP - 1 other cards between one and the next, so they turn up
+    // now and then instead of crowding the helix; the rest repeat to fill the gaps.
+    var rare = links.filter(function (a) { return a.hasAttribute('data-rare'); });
+    var common = links.filter(function (a) { return !a.hasAttribute('data-rare'); });
+    var layout = [[], []];
+
+    if (rare.length && common.length) {
+      // Enough cards for the gap, and for every other project to appear at least twice.
+      var total = Math.max(rare.length * RARE_GAP, rare.length + 2 * common.length);
+      total += total % 2;                         // an even deck deals the same count to each strand
+      var deck = new Array(total), taken = 0;
+      rare.forEach(function (a, k) { deck[Math.floor((k + 0.5) * total / rare.length)] = a; });
+      for (var d = 0; d < total; d++) if (!deck[d]) deck[d] = common[taken++ % common.length];
+      // Dealing alternately sends neighbouring rare cards to opposite strands.
+      deck.forEach(function (a, d) { layout[d % 2].push(a); });
+    } else {
+      var each = N * Math.max(1, Math.round(16 / N)); // about 16 per strand, each project evenly
+      for (var t = 0; t < STRANDS; t++) for (var j = 0; j < each; j++) layout[t].push(links[j % N]);
+    }
+
+    var PER = layout[0].length;                   // cards per strand
 
     /* ----------------------------------------------------------- build cards */
 
@@ -50,21 +76,27 @@
     stage.appendChild(world);
 
     var cards = [];
+    var shown = [];                               // projects that already have their real link on the helix
+    var repeats = [];
     for (var s = 0; s < STRANDS; s++) {
       for (var i = 0; i < PER; i++) {
-        var link = links[i % N];
-        var primary = s === 0 && i < N;
+        var link = layout[s][i];
+        var primary = shown.indexOf(link) < 0;
+        if (primary) shown.push(link);
         var el = primary ? link : link.cloneNode(true);
         if (!primary) {
           // Repeats are decoration; only one real link per project is exposed to keyboards
           // and assistive technology.
           el.setAttribute('aria-hidden', 'true');
           el.setAttribute('tabindex', '-1');
+          repeats.push(el);
         }
-        world.appendChild(el);
         cards.push({ el: el, base: i, phase: s * Math.PI, strand: s, live: true });
       }
     }
+    // Real links go in first, in list order, so tabbing visits the projects in that order.
+    links.forEach(function (a) { world.appendChild(a); });
+    repeats.forEach(function (a) { world.appendChild(a); });
     host.classList.add('is-live');
 
     // Crop an image to the card only when that costs little; otherwise show it whole so
@@ -254,19 +286,19 @@
     // Keyboard: focusing a card spins it round to the front of the helix.
     function bringToFront(card) {
       var cur = wrap(card.base + travel, PER) / PER;
-      // Progress values at which this strand faces the viewer (angle = 0 mod 2PI).
+      // Progress values at which this strand faces the viewer (angle = 0 mod 2PI). The second
+      // strand faces front a quarter of the way down and up, which is inside the faded ends,
+      // so those cards stop a little short, turned about 35 degrees, where they stay clear.
       var offset = card.strand ? 0.5 / TURNS : 0;
       var best = null;
-      [[0.3, 0.7], [0.2, 0.8]].some(function (range) {
-        for (var m = -1; m <= TURNS + 1; m++) {
-          var p = m / TURNS + offset;
-          if (p < range[0] || p > range[1]) continue; // stay clear of the faded ends
-          var delta = p - cur;
-          delta -= Math.round(delta);
-          if (best === null || Math.abs(delta) < Math.abs(best)) best = delta;
-        }
-        return best !== null;
-      });
+      for (var m = -1; m <= TURNS + 1; m++) {
+        var p = m / TURNS + offset;
+        if (p < 0.2 || p > 0.8) continue;
+        p = Math.min(0.7, Math.max(0.3, p));
+        var delta = p - cur;
+        delta -= Math.round(delta);
+        if (best === null || Math.abs(delta) < Math.abs(best)) best = delta;
+      }
       if (best === null) return;
       var goal = travel + best * PER;
       if (reduceMotion.matches) travel = goal; else target = goal;
