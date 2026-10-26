@@ -924,6 +924,7 @@ html.js .helix:not(.is-live) .helix__source {
 
 .split + .split,
 .prose > .split + h2,
+.prose > .split + .collage,
 .prose > :not(.split):not(hr) + .split {
   margin-top: clamp(48px, 7vw, 88px);
   padding-top: clamp(48px, 7vw, 88px);
@@ -979,6 +980,27 @@ html.js .helix:not(.is-live) .helix__source {
 .prose .gallery--stack { column-count: 1; }
 .prose .gallery figure { break-inside: avoid; margin: 0 0 14px; }
 .prose .gallery figure img { margin: 0; }
+
+/*
+  Photo collage: rows of mixed portrait and landscape photos that share one height, so the
+  edges line up and nothing is cropped. Each photo's --ratio (width / height) sets its width.
+*/
+.collage { display: grid; gap: 10px; }
+.collage__row { display: flex; gap: 10px; }
+
+.prose .collage__row img {
+  flex: var(--ratio, 1) 1 0;
+  min-width: 0;
+  width: 0;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+}
+
+@media (max-width: 560px) {
+  .collage__row { flex-direction: column; }
+  .prose .collage__row img { flex: none; width: 100%; }
+}
 
 @media (max-width: 900px) {
   .split, .split--wide-media { grid-template-columns: minmax(0, 1fr); }
