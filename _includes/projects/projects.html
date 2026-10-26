@@ -13,10 +13,12 @@
         Project order is controlled by the `weight:` field in each page's front matter
         (projects/*.md). Lower number = higher on the page; weight: 1 shows first.
         A page with no weight sorts to the very top, so give every new project one.
+        Pages with a `parent:` (for example each FRC robot) are shown on their parent's page
+        and in the landing-page helix, not in this list.
       {% endcomment %}
       {% assign project_pages = site.pages | where: "type", "project" | sort: "weight" %}
       {% for page in project_pages %}
-        {% unless page.draft %}
+        {% unless page.draft or page.parent %}
           {% include projects/project-card.html page=page index=forloop.index %}
         {% endunless %}
         {% if forloop.index == include.limit %}
@@ -27,7 +29,7 @@
 
     {% assign not_draft = 0 %}
       {% for page in project_pages %}
-      {% unless page.draft %}
+      {% unless page.draft or page.parent %}
         {% assign not_draft = not_draft | plus: 1 %}
       {% endunless %}
     {% endfor %}

@@ -16,7 +16,9 @@ layout: default
       <ul>
         {% assign project_pages = site.pages | where: "type", "project" | sort: "title" %}
         {% for page in project_pages %}
+        {% unless page.parent %}
         <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+        {% endunless %}
         {% endfor %}
       </ul>
     </div>

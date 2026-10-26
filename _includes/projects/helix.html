@@ -1,11 +1,13 @@
 {%- comment -%}
   Landing-page project gallery: the published projects wrapped around a slowly turning
   double helix (see js/helix.js). The list below is the real markup; without JavaScript
-  it simply shows as a grid of linked thumbnails.
+  it simply shows as a grid of linked thumbnails. Pages that belong to another project
+  (a `parent:` in their front matter, like each FRC robot) are included here, with their
+  parent's name in front of the date; the "See all" count only counts top-level projects.
 {%- endcomment -%}
 {% assign project_pages = site.pages | where: "type", "project" | sort: "weight" %}
 {% assign not_draft = 0 %}
-{% for page in project_pages %}{% unless page.draft %}{% assign not_draft = not_draft | plus: 1 %}{% endunless %}{% endfor %}
+{% for page in project_pages %}{% unless page.draft or page.parent %}{% assign not_draft = not_draft | plus: 1 %}{% endunless %}{% endfor %}
 
 <div class="helix" data-helix>
   <div class="helix__mask">
@@ -15,12 +17,18 @@
   <ul class="helix__source" aria-label="Projects">
     {% for page in project_pages %}
       {% unless page.draft %}
+      {%- assign caption_date = page.date -%}
+      {%- if page.parent -%}
+        {%- assign parent_file = page.parent | append: '.md' -%}
+        {%- assign parent_page = site.pages | where: 'name', parent_file | first -%}
+        {%- assign caption_date = parent_page.title | append: ' · ' | append: page.date -%}
+      {%- endif -%}
       <li>
         <a class="helix__card"
            href="{% if page.projecturl %}{{ page.projecturl }}{% else %}{{ site.baseurl }}{{ page.url }}{% endif %}"
            draggable="false"
            data-title="{{ page.title | escape }}"
-           data-date="{{ page.date | escape }}"
+           data-date="{{ caption_date | escape }}"
            data-summary="{{ page.summary | escape }}"
            data-cta="{% if page.projecturl %}Project Site{% else %}Read More{% endif %}">
           <img src="{% include projects/thumb.html image=page.image %}" alt="{{ page.title | escape }}" draggable="false" decoding="async">

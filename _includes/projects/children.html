@@ -1,0 +1,17 @@
+{%- comment -%}
+  Cards for the pages that name this page as their parent, in weight order. Prints nothing
+  when there are none. Pass the page as parent=page.
+{%- endcomment -%}
+{%- assign parent_slug = include.parent.name | remove: '.md' -%}
+{%- assign kids = site.pages | where: 'parent', parent_slug | sort: 'weight' -%}
+{%- if kids.size > 0 %}
+<div class="page__children">
+  <div class="cards">
+    {%- for kid in kids %}
+      {%- unless kid.draft %}
+      {% include projects/project-card.html page=kid index=forloop.index %}
+      {%- endunless %}
+    {%- endfor %}
+  </div>
+</div>
+{%- endif -%}
