@@ -53,3 +53,16 @@ summary: "Our second robot for the 2026 game, REBUILT, built to shoot Fuel into 
     <figcaption>Turnover driving during a match</figcaption>
   </figure>
 </div>
+
+<div class="split">
+  <div class="split__text">
+    <h2>Turret</h2>
+    <p>We used the custom shooter prototype from Doomspiral to inform design decisions for Turnover's turret. <a href="frcDoomspiral.html#custom-prototype">Read about the prototype on the Doomspiral page.</a></p>
+  </div>
+  <div class="split__media">
+    <figure>
+      <img src="../img/frc/190turnoverTurretCartoon.jpg" alt="Cartoon-style CAD of the Turnover turret: shooter motors, gears and a Limelight camera on a round turntable base">
+      <figcaption>Turnover turret, cartoon CAD</figcaption>
+    </figure>
+  </div>
+</div>
