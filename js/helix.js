@@ -18,7 +18,7 @@
   var TAU = Math.PI * 2;
   var TURNS = 2;                       // full rotations from the top of a strand to the bottom
   var STRANDS = 2;
-  var RARE_GAP = 5;                    // one rare card per this many cards in the helix
+  var COMMON_REPEATS = 2;              // times each ordinary project appears on a strand (rare ones: once)
   var DRIFT = 0.2;                     // cards per second of ambient motion
   var FRICTION = 0.94;                 // per-frame velocity decay after a flick, at 60fps
   var FLOOR = 0.08;                    // minimum opacity of far-side cards
@@ -45,29 +45,36 @@
 
     /* ------------------------------------------------------------ the deal */
 
-    // Which project sits in each slot of each strand. Normally the projects repeat evenly
-    // along both strands. Projects marked data-rare (the individual FRC robots) go in just
-    // once, with about RARE_GAP - 1 other cards between one and the next, so they turn up
-    // now and then instead of crowding the helix; the rest repeat to fill the gaps.
+    // Which project sits in each slot of each strand. Every project is on both strands.
+    // Normally they repeat evenly. Projects marked data-rare (the individual FRC robots)
+    // appear once per strand while the others appear COMMON_REPEATS times, so the robots
+    // turn up only now and then, evenly spaced with the other projects between them.
     var rare = links.filter(function (a) { return a.hasAttribute('data-rare'); });
     var common = links.filter(function (a) { return !a.hasAttribute('data-rare'); });
     var layout = [[], []];
 
     if (rare.length && common.length) {
-      // Enough cards for the gap, and for every other project to appear at least twice.
-      var total = Math.max(rare.length * RARE_GAP, rare.length + 2 * common.length);
-      total += total % 2;                         // an even deck deals the same count to each strand
-      var deck = new Array(total), taken = 0;
-      rare.forEach(function (a, k) { deck[Math.floor((k + 0.5) * total / rare.length)] = a; });
-      for (var d = 0; d < total; d++) if (!deck[d]) deck[d] = common[taken++ % common.length];
-      // Dealing alternately sends neighbouring rare cards to opposite strands.
-      deck.forEach(function (a, d) { layout[d % 2].push(a); });
+      var length = rare.length + COMMON_REPEATS * common.length;
+      for (var t = 0; t < STRANDS; t++) {
+        var slots = new Array(length), next = t * Math.floor(common.length / STRANDS);
+        // The rare projects go evenly along the strand; the second strand starts its list
+        // part-way round so the two strands do not show the same project at the same height.
+        rare.forEach(function (a, k) {
+          slots[Math.floor((k + 0.5) * length / rare.length)] = rare[(k + t * Math.floor(rare.length / STRANDS)) % rare.length];
+        });
+        for (var d = 0; d < length; d++) if (!slots[d]) slots[d] = common[next++ % common.length];
+        layout[t] = slots;
+      }
     } else {
       var each = N * Math.max(1, Math.round(16 / N)); // about 16 per strand, each project evenly
-      for (var t = 0; t < STRANDS; t++) for (var j = 0; j < each; j++) layout[t].push(links[j % N]);
+      for (var u = 0; u < STRANDS; u++) for (var j = 0; j < each; j++) layout[u].push(links[j % N]);
     }
 
     var PER = layout[0].length;                   // cards per strand
+    // A longer strand packs the cards closer together: shrink them a little, and drift faster
+    // in cards per second so the helix still turns at the same speed.
+    var crowd = Math.min(1, Math.sqrt(16 / PER));
+    var drift = DRIFT * PER / 16;
 
     /* ----------------------------------------------------------- build cards */
 
@@ -117,7 +124,7 @@
 
     function measure() {
       var w = stage.clientWidth, h = stage.clientHeight;
-      var cardW = Math.max(110, Math.min(220, w * 0.27));
+      var cardW = Math.max(100, Math.min(220, w * 0.27) * crowd);
       // Keep the whole cylinder (plus perspective growth on the near side) inside the box.
       var radius = Math.max(70, (w / 2 - cardW * 0.46) / 1.08);
       view.radius = radius;
@@ -134,7 +141,7 @@
     /* ----------------------------------------------------------------- state */
 
     var travel = 0;          // strand progress offset, in cards (drift + drag + focus)
-    var driftNow = reduceMotion.matches ? 0 : DRIFT; // eased toward 0 while hovering a card
+    var driftNow = reduceMotion.matches ? 0 : drift; // eased toward 0 while hovering a card
     var velocity = 0;        // cards per second, from a flick
     var target = null;       // travel value to ease to (keyboard focus)
     var hovered = null;
@@ -170,7 +177,7 @@
       last = now;
 
       var holding = hovered || focused || tapped || dragging;
-      var goal = (holding || reduceMotion.matches) ? 0 : DRIFT;
+      var goal = (holding || reduceMotion.matches) ? 0 : drift;
       driftNow += (goal - driftNow) * Math.min(1, dt * 6);
 
       if (target !== null) {
