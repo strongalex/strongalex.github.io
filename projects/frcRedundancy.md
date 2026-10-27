@@ -81,6 +81,21 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
         <figcaption>X-wing prototype, with horizontal wheels</figcaption>
       </figure>
     </div>
+
+    <div class="media-row" style="--sum:2.34;--row-h:460px">
+      <figure style="--ratio:1.7778">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/vertical-l4.jpg" aria-label="Vertical-wheel prototype scoring on an L4 post">
+          <source src="../img/frc/redundancy/vertical-l4.mp4" type="video/mp4">
+        </video>
+        <figcaption>Vertical-wheel prototype scoring on an L4 post</figcaption>
+      </figure>
+      <figure style="--ratio:0.5625">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/xwing-l4.jpg" aria-label="X-wing prototype scoring on an L4 post">
+          <source src="../img/frc/redundancy/xwing-l4.mp4" type="video/mp4">
+        </video>
+        <figcaption>X-wing prototype scoring on an L4 post</figcaption>
+      </figure>
+    </div>
   </div>
 </div>
 
@@ -89,13 +104,7 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
     <h2 id="scoring-on-l4">Scoring on L4</h2>
   </div>
   <div class="split__media">
-    <div class="media-row" style="--sum:1.6875;--row-h:560px">
-      <figure style="--ratio:0.5625">
-        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/xwing-l4.jpg" aria-label="X-wing prototype scoring on an L4 post">
-          <source src="../img/frc/redundancy/xwing-l4.mp4" type="video/mp4">
-        </video>
-        <figcaption>X-wing prototype scoring on an L4 post</figcaption>
-      </figure>
+    <div class="media-row" style="--sum:1.125;--row-h:620px">
       <figure style="--ratio:0.5625">
         <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/robot-l4.jpg" aria-label="Redundancy scoring on L4">
           <source src="../img/frc/redundancy/robot-l4.mp4" type="video/mp4">
