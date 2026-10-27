@@ -290,14 +290,6 @@ html.show-grid .grid-overlay { opacity: 1; }
   color: var(--ink-2);
 }
 
-.hero__interests {
-  margin-top: 20px;
-  font-size: .9375rem;
-  color: var(--ink-2);
-}
-
-.hero__interests-label { font-weight: 600; color: var(--ink); }
-
 .hero__social {
   display: flex;
   flex-wrap: wrap;
@@ -978,6 +970,20 @@ html.js .helix:not(.is-live) .helix__source {
 }
 
 .prose .split__media > iframe { aspect-ratio: 16 / 9; max-height: none; }
+
+/*
+  Silent looping clip (see js/site.js): the box is sized to the square video up front, so
+  nothing jumps when it loads, and it never shows letterbox bars. Click to pause.
+*/
+.prose .split__media > video.loop {
+  width: min(100%, 78vh, 720px);
+  max-height: none;
+  aspect-ratio: 1;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.prose video.loop:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 .gallery {
   column-count: 2;

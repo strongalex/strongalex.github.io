@@ -37,8 +37,8 @@ summary: "Our second robot for the 2026 game, REBUILT, built to shoot Fuel into 
 
 <div class="gallery">
   <figure>
-    <img src="../img/frc/190turnoverreallife.jpg" alt="Turnover on its bumpers">
-    <figcaption>Turnover on its bumpers</figcaption>
+    <img src="../img/frc/190turnoverreallife.jpg" alt="Turnover photoshoot image">
+    <figcaption>Turnover photoshoot image</figcaption>
   </figure>
   <figure>
     <img src="../img/frc/190turnoverShoot.jpg" alt="Turnover shooting during a match">
