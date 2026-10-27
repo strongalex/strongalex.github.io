@@ -23,7 +23,7 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
     <p class="meta"><em>2026-2027 season</em></p>
 
     <p class="lead">Formula SAE is an intercollegiate competition where student teams design, build, and race a formula-style car. WPI's team runs a full season, from concept through fabrication to competition.</p>
-    <p>I am working on design and manufacturing this year. Most of my work has been on the pedal box for EV27, Goat Fast Racing's new car, and in particular the pedal slide: the rails, carriage, and mounts that let the pedals move to fit each driver.</p>
+    <p>I am working on design and manufacturing this year. The pedal box for EV27, Goat Fast Racing's new car, is the first project I am working on, and more will follow. Most of my work on it has been on the pedal slide: the rails, carriage, and mounts that let the pedals move to fit each driver.</p>
   </div>
   <div class="split__media">
     <img src="../img/fsae/fsae2026.jpg" alt="WPI Formula SAE car running at a test session on campus">
