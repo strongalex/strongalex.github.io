@@ -1,7 +1,15 @@
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="brand" href="{{ '/' | prepend: site.baseurl }}">
-      <span class="brand__name">{{ site.data.bio.basics.name }}</span>
+    {%- comment -%}
+      The AF. logo (the same artwork as img/logo.svg), drawn inline so its colours follow the
+      site's light / dark theme. The link's label keeps the name for screen readers.
+    {%- endcomment %}
+    <a class="brand" href="{{ '/' | prepend: site.baseurl }}" aria-label="{{ site.data.bio.basics.name }}, home">
+      <svg class="brand__logo" viewBox="0 0 3304 1498" aria-hidden="true" focusable="false">
+        <path class="brand__ink" d="M0 1490H455L528 1245H1026L1097 1490H1565L1060 0H500ZM624 925 628 912C682 732 732 558 781 377C829 558 878 732 930 912L934 925Z"/>
+        <path class="brand__ink" d="M1655 1490H2071V954H2734V616H2071V352H2774V0H1655Z"/>
+        <circle class="brand__dot" cx="3084" cy="1278" r="220"/>
+      </svg>
     </a>
     <nav class="site-nav">
       <a class="site-nav__link" href="{{ '/projects/' | prepend: site.baseurl }}"{% if page.url contains '/projects/' %} aria-current="page"{% endif %}>Projects</a>

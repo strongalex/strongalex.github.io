@@ -53,28 +53,30 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
   </figure>
 </div>
 
-<div class="split">
+<div class="split split--stack">
   <div class="split__text">
     <h2 id="prototyping-the-shooter">Prototyping the shooter</h2>
     <p>Before settling on the V1 shooter, we tested it on prototypes. Prototype 1 was built before the season started. The custom prototype is the one we made ourselves, described below.</p>
   </div>
   <div class="split__media">
-    <figure>
-      <video class="loop" muted loop playsinline controls preload="none" style="--ratio:1.7778" poster="../img/frc/doomspiral/prototype-1.jpg" aria-label="Prototype 1, built before the season started">
-        <source src="../img/frc/doomspiral/prototype-1.mp4" type="video/mp4">
-      </video>
-      <figcaption>Prototype 1, built before the season started</figcaption>
-    </figure>
-    <figure>
-      <video class="loop" muted loop playsinline controls preload="none" style="--ratio:1.7778" poster="../img/frc/doomspiral/mass-prototype-1.jpg" aria-label="Mass prototype 1">
-        <source src="../img/frc/doomspiral/mass-prototype-1.mp4" type="video/mp4">
-      </video>
-      <figcaption>Mass prototype 1</figcaption>
-    </figure>
+    <div class="media-row" style="--sum:3.5556">
+      <figure style="--ratio:1.7778">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/doomspiral/prototype-1.jpg" aria-label="Prototype 1, built before the season started">
+          <source src="../img/frc/doomspiral/prototype-1.mp4" type="video/mp4">
+        </video>
+        <figcaption>Prototype 1, built before the season started</figcaption>
+      </figure>
+      <figure style="--ratio:1.7778">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/doomspiral/mass-prototype-1.jpg" aria-label="Mass prototype 1">
+          <source src="../img/frc/doomspiral/mass-prototype-1.mp4" type="video/mp4">
+        </video>
+        <figcaption>Mass prototype 1</figcaption>
+      </figure>
+    </div>
   </div>
 </div>
 
-<div class="split">
+<div class="split split--stack">
   <div class="split__text">
     <h2 id="custom-prototype">Custom prototype</h2>
     <p>The custom prototype had three adjustments:</p>
@@ -86,43 +88,49 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
     <p>It was built mainly from CNC-cut plywood and 3D printed parts so we could iterate quickly. We used it to inform the amount of compression and the hood angle the real version needed.</p>
   </div>
   <div class="split__media">
-    <figure>
-      <img src="../img/frc/doomspiral/custom-prototype-divider.jpg" alt="CAD of the custom prototype with its divider installed">
-      <figcaption>Custom prototype CAD, with the divider</figcaption>
-    </figure>
-    <figure>
-      <img src="../img/frc/doomspiral/custom-prototype-no-divider.jpg" alt="CAD of the custom prototype without the divider">
-      <figcaption>Custom prototype CAD, without the divider</figcaption>
-    </figure>
-    <figure>
-      <video class="loop" muted loop playsinline controls preload="none" style="--ratio:1.7778" poster="../img/frc/doomspiral/custom-prototype-1.jpg" aria-label="Custom prototype shooting">
-        <source src="../img/frc/doomspiral/custom-prototype-1.mp4" type="video/mp4">
-      </video>
-      <figcaption>Custom prototype shooting</figcaption>
-    </figure>
-    <figure>
-      <video class="loop" muted loop playsinline controls preload="none" style="--ratio:1.7778" poster="../img/frc/doomspiral/custom-prototype-2.jpg" aria-label="Custom prototype shooting, wider view">
-        <source src="../img/frc/doomspiral/custom-prototype-2.mp4" type="video/mp4">
-      </video>
-      <figcaption>Custom prototype shooting, wider view</figcaption>
-    </figure>
+    <div class="media-row" style="--sum:2.3838;--row-h:420px">
+      <figure style="--ratio:1.0983">
+        <img src="../img/frc/doomspiral/custom-prototype-divider.jpg" alt="CAD of the custom prototype with its divider installed">
+        <figcaption>Custom prototype CAD, with the divider</figcaption>
+      </figure>
+      <figure style="--ratio:1.2855">
+        <img src="../img/frc/doomspiral/custom-prototype-no-divider.jpg" alt="CAD of the custom prototype without the divider">
+        <figcaption>Custom prototype CAD, without the divider</figcaption>
+      </figure>
+    </div>
+    <div class="media-row" style="--sum:3.5556">
+      <figure style="--ratio:1.7778">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/doomspiral/custom-prototype-1.jpg" aria-label="Custom prototype shooting">
+          <source src="../img/frc/doomspiral/custom-prototype-1.mp4" type="video/mp4">
+        </video>
+        <figcaption>Custom prototype shooting</figcaption>
+      </figure>
+      <figure style="--ratio:1.7778">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/doomspiral/custom-prototype-2.jpg" aria-label="Custom prototype shooting, wider view">
+          <source src="../img/frc/doomspiral/custom-prototype-2.mp4" type="video/mp4">
+        </video>
+        <figcaption>Custom prototype shooting, wider view</figcaption>
+      </figure>
+    </div>
   </div>
 </div>
 
-<div class="split">
+<div class="split split--stack">
   <div class="split__text">
     <h2>Early hood concept</h2>
     <p>An early concept for the hood, shown in cartoon-style CAD.</p>
   </div>
   <div class="split__media">
-    <figure>
-      <img src="../img/frc/doomspiral/hood-concept-1.jpg" alt="Cartoon-style CAD of an early hood concept">
-      <figcaption>Early hood concept</figcaption>
-    </figure>
-    <figure>
-      <img src="../img/frc/doomspiral/hood-concept-2.jpg" alt="Cartoon-style CAD of the early hood concept in a second position">
-      <figcaption>Early hood concept, second view</figcaption>
-    </figure>
+    <div class="media-row" style="--sum:3.2386">
+      <figure style="--ratio:1.5246">
+        <img src="../img/frc/doomspiral/hood-concept-1.jpg" alt="Cartoon-style CAD of an early hood concept">
+        <figcaption>Early hood concept</figcaption>
+      </figure>
+      <figure style="--ratio:1.714">
+        <img src="../img/frc/doomspiral/hood-concept-2.jpg" alt="Cartoon-style CAD of the early hood concept in a second position">
+        <figcaption>Early hood concept, second view</figcaption>
+      </figure>
+    </div>
   </div>
 </div>
 

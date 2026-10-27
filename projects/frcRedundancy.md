@@ -49,3 +49,65 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
     <figcaption>Redundancy scoring at the barge</figcaption>
   </figure>
 </div>
+
+<div class="split">
+  <div class="split__text">
+    <h2 id="end-effector">End effector</h2>
+    <p>The goal of the end effector was to score on all four levels without adding another degree of freedom. The key was getting the coral to flip up onto the vertical L4 posts, and the position of the wheels is what let us tune that.</p>
+  </div>
+  <div class="split__media">
+    <figure style="--ratio:1.9672">
+      <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/pov-l4.jpg" aria-label="Scoring on L4, from the robot's point of view">
+        <source src="../img/frc/redundancy/pov-l4.mp4" type="video/mp4">
+      </video>
+      <figcaption>Scoring on L4, from the robot's point of view</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="split split--stack">
+  <div class="split__text">
+    <h2 id="prototypes">Prototypes</h2>
+    <p>We built two prototypes, one with the wheels vertical and one with the wheels horizontal, which we called the X-wing. Both had movable wheels, so we could adjust the wheel position and the compression.</p>
+  </div>
+  <div class="split__media">
+    <div class="media-row" style="--sum:2.5628;--row-h:440px">
+      <figure style="--ratio:1.1869">
+        <img src="../img/frc/redundancy/vertical-wheels-cad.jpg" alt="CAD of the prototype with vertical wheels, gripping a pipe that stands in for the coral">
+        <figcaption>Prototype with vertical wheels</figcaption>
+      </figure>
+      <figure style="--ratio:1.3759">
+        <img src="../img/frc/redundancy/xwing-cad.jpg" alt="CAD of the X-wing prototype, with its wheels horizontal on vertical shafts">
+        <figcaption>X-wing prototype, with horizontal wheels</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="split split--stack">
+  <div class="split__text">
+    <h2 id="scoring-on-l4">Scoring on L4</h2>
+  </div>
+  <div class="split__media">
+    <div class="media-row" style="--sum:1.6875;--row-h:560px">
+      <figure style="--ratio:0.5625">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/xwing-l4.jpg" aria-label="X-wing prototype scoring on an L4 post">
+          <source src="../img/frc/redundancy/xwing-l4.mp4" type="video/mp4">
+        </video>
+        <figcaption>X-wing prototype scoring on an L4 post</figcaption>
+      </figure>
+      <figure style="--ratio:0.5625">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/robot-l4.jpg" aria-label="Redundancy scoring on L4">
+          <source src="../img/frc/redundancy/robot-l4.mp4" type="video/mp4">
+        </video>
+        <figcaption>Redundancy scoring on L4</figcaption>
+      </figure>
+      <figure style="--ratio:0.5625">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/robot-l4-2.jpg" aria-label="Redundancy scoring on L4, second view">
+          <source src="../img/frc/redundancy/robot-l4-2.mp4" type="video/mp4">
+        </video>
+        <figcaption>Redundancy scoring on L4, second view</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>

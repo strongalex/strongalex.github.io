@@ -37,6 +37,7 @@
   --violet-line: color-mix(in srgb, var(--violet) 38%, transparent);
 
   --shadow-color: light-dark(rgb(40 30 20 / .22), rgb(0 0 0 / .6));
+  --logo-dot: light-dark(#7440c8, #b79cf2); /* the period in the AF. logo */
 
   --r-sm: 6px;
   --r-md: 10px;
@@ -138,10 +139,20 @@ ul { margin: 0; padding: 0; }
 .brand {
   display: inline-flex;
   align-items: center;
-  font-weight: 600;
-  letter-spacing: -.02em;
-  white-space: nowrap;
+  height: 36px;
 }
+
+.brand__logo { display: block; height: 22px; width: auto; overflow: visible; }
+.brand__ink { fill: var(--ink); }
+
+.brand__dot {
+  fill: var(--logo-dot);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform .5s var(--spring);
+}
+
+.brand:hover .brand__dot { transform: scale(1.18); }
 
 .site-nav {
   display: flex;
@@ -188,7 +199,6 @@ ul { margin: 0; padding: 0; }
 @media (max-width: 420px) {
   .site-header__inner { gap: 8px; }
   .site-nav__link { padding: 8px 10px; }
-  .brand { font-size: .9375rem; }
 }
 
 /* Press "G" to overlay the 12-column layout grid (designer easter egg). */
@@ -988,6 +998,42 @@ html.js .helix:not(.is-live) .helix__source {
 }
 
 .prose video.loop:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/*
+  A section with several images or clips gives them the full width instead of a tall column
+  beside a short block of text: .split--stack puts the text on top, and each .media-row lays
+  its figures side by side at one shared height. Every figure sets --ratio (width / height of
+  its picture); the row sets --sum (the ratios added up) and, optionally, --row-h, the tallest
+  the row may get. On narrow screens the figures stack.
+*/
+.split--stack { grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 3vw, 32px); }
+.split--stack .split__text { max-width: var(--measure); }
+.split--stack .split__media { position: static; }
+
+.media-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: calc(var(--row-h, 640px) * var(--sum, 3));
+}
+
+.media-row > figure { flex: var(--ratio, 1) 1 0; min-width: 0; margin: 0; }
+
+.prose .media-row figure img,
+.prose .media-row figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+}
+
+.prose .media-row figure video.loop { width: 100%; max-height: none; aspect-ratio: var(--ratio, 1); }
+
+@media (max-width: 700px) {
+  .media-row { flex-direction: column; align-items: stretch; max-width: none; }
+  .media-row > figure { flex: none; width: min(100%, calc(70vh * var(--ratio, 1))); }
+}
 
 .gallery {
   column-count: 2;
