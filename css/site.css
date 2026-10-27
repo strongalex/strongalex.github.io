@@ -37,6 +37,7 @@
   --violet-line: color-mix(in srgb, var(--violet) 38%, transparent);
 
   --shadow-color: light-dark(rgb(40 30 20 / .22), rgb(0 0 0 / .6));
+  --logo-dot: light-dark(#7440c8, #b79cf2); /* the period in the AF. logo */
 
   --r-sm: 6px;
   --r-md: 10px;
@@ -138,10 +139,20 @@ ul { margin: 0; padding: 0; }
 .brand {
   display: inline-flex;
   align-items: center;
-  font-weight: 600;
-  letter-spacing: -.02em;
-  white-space: nowrap;
+  height: 36px;
 }
+
+.brand__logo { display: block; height: 22px; width: auto; overflow: visible; }
+.brand__ink { fill: var(--ink); }
+
+.brand__dot {
+  fill: var(--logo-dot);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform .5s var(--spring);
+}
+
+.brand:hover .brand__dot { transform: scale(1.18); }
 
 .site-nav {
   display: flex;
@@ -188,7 +199,6 @@ ul { margin: 0; padding: 0; }
 @media (max-width: 420px) {
   .site-header__inner { gap: 8px; }
   .site-nav__link { padding: 8px 10px; }
-  .brand { font-size: .9375rem; }
 }
 
 /* Press "G" to overlay the 12-column layout grid (designer easter egg). */
