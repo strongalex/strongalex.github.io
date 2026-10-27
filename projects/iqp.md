@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/groupIQP.png
 weight: 4
-title: "Honolulu IQP"
+title: "Optimizing the Honolulu bike share System for First/Last Mile Infrastructure"
 date: "2025"
 published: true
 labels:
@@ -16,10 +16,13 @@ summary: "An IQP with Secure Bike Share in Honolulu, using GIS suitability model
 ---
 <div class="split">
   <div class="split__text">
-    <h1 class="subtitle">Honolulu Bike Share Network Optimization</h1>
-    <p class="meta"><em>Interactive Qualifying Project &middot; Secure Bike Share, Honolulu, HI &middot; Aug. to Dec. 2025</em></p>
+    <h1 class="subtitle">Interactive Qualifying Project</h1>
+    <p class="meta"><em>Secure Bike Share, Honolulu, HI &middot; Aug. to Dec. 2025</em></p>
 
     <p class="lead">My team spent a term in Honolulu working with Secure Bike Share, the operator of the city's bike share system, on where the network should grow and why ridership was lower than it could be.</p>
+
+    <h2>What is an IQP?</h2>
+    <p>The Interactive Qualifying Project is a nine-credit-hour degree requirement at WPI and a signature part of its project-based curriculum. Students work in teams with classmates outside their major on a problem where science, engineering, and technology meet society, and sustainability is a common theme. Projects run on campus, in local communities, or at project centers around the world, and ours took us to Honolulu. <a href="https://www.wpi.edu/project-based-learning/project-based-education/interactive-qualifying-project">WPI describes the IQP in more detail here.</a></p>
 
     <h2>Where the Stations Should Go</h2>
     <p>I built suitability models in ArcGIS Pro that layered census demographics, transit access, and existing bike-lane coverage into a single continuous surface across Honolulu. Warmer areas score higher, meaning the underlying demand and infrastructure are already there to support a station.</p>
