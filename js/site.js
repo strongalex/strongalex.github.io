@@ -75,6 +75,41 @@
     revealed.forEach(function (el) { io.observe(el); });
   }
 
+  /* ------------------------------------------------------------ looping clips */
+
+  // Silent looping clips (video with the autoplay attribute) play on their own, but only while
+  // they are on screen. Click, or press Space or Enter, to pause and resume. Visitors who ask
+  // for less motion get the still poster and the browser's own controls instead.
+  Array.prototype.forEach.call(document.querySelectorAll('video[autoplay]'), function (v) {
+    if (reduceMotion) {
+      v.removeAttribute('autoplay');
+      v.removeAttribute('tabindex');
+      v.pause();
+      v.controls = true;
+      return;
+    }
+
+    var stoppedByVisitor = false;
+    function play() { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    function toggle() {
+      stoppedByVisitor = !v.paused;
+      if (v.paused) play(); else v.pause();
+    }
+
+    v.addEventListener('click', toggle);
+    v.addEventListener('keydown', function (e) {
+      if (e.key !== ' ' && e.key !== 'Enter') return;
+      e.preventDefault();
+      toggle();
+    });
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        if (entries[entries.length - 1].isIntersecting) { if (!stoppedByVisitor) play(); } else v.pause();
+      }, { threshold: 0.25 }).observe(v);
+    }
+  });
+
   /* ----------------------------------------------- section links on long pages */
 
   // Pages with three or more sections get a row of links to them, built from the

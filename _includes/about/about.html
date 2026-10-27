@@ -15,19 +15,7 @@
     <p class="hero__label" data-reveal style="--i:2">{{ site.data.bio.basics.label }}</p>
     <p class="hero__summary" data-reveal style="--i:3">{{ site.data.bio.basics.summary }}</p>
 
-    <p class="hero__interests" data-reveal style="--i:4">
-      <span class="hero__interests-label">Interests:</span>
-      {% for interest in site.data.bio.interests %}
-      {{ interest.name }}{% if forloop.last != true %}, {% endif %}
-      {% endfor %}
-    </p>
-
-    <div class="hero__social" data-reveal style="--i:5">
-      {% if site.data.bio.basics.website %}
-        {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
-        {% include about/social.html url=url name='house' %}
-      {% endif %}
-
+    <div class="hero__social" data-reveal style="--i:4">
       {% if site.data.bio.basics.email %}
         {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
         {% include about/social.html url=url name='envelope' %}
