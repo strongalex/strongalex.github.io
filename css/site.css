@@ -683,6 +683,8 @@ html.js .helix:not(.is-live) .helix__source {
   border-top: 0;
 }
 
+.prose h1, .prose h2 { scroll-margin-top: 88px; }
+
 .prose h2 {
   margin: 2em 0 .5em;
   font-size: 1.5rem;

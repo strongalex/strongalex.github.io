@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/groupIQP.png
-weight: 4
+weight: 5
 title: "Optimizing the Honolulu bike share System for First/Last Mile Infrastructure"
 date: "2025"
 published: true

@@ -55,7 +55,7 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
 
 <div class="split">
   <div class="split__text">
-    <h2>Prototyping the shooter</h2>
+    <h2 id="prototyping-the-shooter">Prototyping the shooter</h2>
     <p>Before settling on the V1 shooter, we tested it on prototypes. Prototype 1 was built before the season started. The custom prototype is the one we made ourselves, described below.</p>
   </div>
   <div class="split__media">
@@ -76,7 +76,7 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
 
 <div class="split">
   <div class="split__text">
-    <h2>Custom prototype</h2>
+    <h2 id="custom-prototype">Custom prototype</h2>
     <p>The custom prototype had three adjustments:</p>
     <ul>
       <li>An adjustable hood angle</li>

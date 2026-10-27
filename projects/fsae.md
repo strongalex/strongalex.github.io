@@ -4,7 +4,7 @@ type: project
 image: img/fsae/fsae2026.jpg
 title: "Formula SAE"
 date: "2026-Present"
-weight: 5
+weight: 3
 published: true
 labels:
   - Formula SAE

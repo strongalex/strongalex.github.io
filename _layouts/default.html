@@ -32,7 +32,9 @@
     <meta property="og:title" content="{{ title | xml_escape }}">
     <meta property="og:description" content="{{ description | xml_escape }}">
     <meta property="og:image" content="{{ picture }}">
-    <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
+    <link rel="icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}" sizes="32x32">
+    <link rel="icon" href="{{ '/favicon.svg' | prepend: site.baseurl }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | prepend: site.baseurl }}">
 
     <!-- Resolve the saved theme and flag JS before first paint so there is no flash of the wrong theme. -->
     <script>
