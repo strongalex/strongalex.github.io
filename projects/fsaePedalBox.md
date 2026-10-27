@@ -5,7 +5,7 @@ parent: fsae
 image: img/fsae/pedal-box.jpg
 title: "EV27 Pedal Box"
 date: "2026"
-weight: 5.1
+weight: 3.1
 published: true
 labels:
   - Formula SAE
