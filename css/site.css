@@ -960,6 +960,7 @@ html.js .helix:not(.is-live) .helix__source {
 .prose .split__media > img,
 .prose .split__media > figure > img,
 .prose .split__media > video,
+.prose .split__media > figure > video,
 .prose .split__media > iframe {
   display: block;
   width: 100%;
@@ -972,13 +973,14 @@ html.js .helix:not(.is-live) .helix__source {
 .prose .split__media > iframe { aspect-ratio: 16 / 9; max-height: none; }
 
 /*
-  Silent looping clip (see js/site.js): the box is sized to the square video up front, so
-  nothing jumps when it loads, and it never shows letterbox bars. Click to pause.
+  Silent looping clip (see js/site.js). --ratio is the video's width / height, set inline;
+  the box is sized to it up front, so nothing jumps when the video loads and there are no
+  letterbox bars. Click to pause.
 */
-.prose .split__media > video.loop {
-  width: min(100%, 78vh, 720px);
+.prose .split__media video.loop {
+  width: min(100%, calc(min(78vh, 720px) * var(--ratio, 1)));
   max-height: none;
-  aspect-ratio: 1;
+  aspect-ratio: var(--ratio, 1);
   object-fit: cover;
   cursor: pointer;
 }
