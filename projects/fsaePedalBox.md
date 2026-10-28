@@ -178,43 +178,43 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
 <div class="split split--stack">
   <div class="split__text">
     <h2 id="manufacturing">Manufacturing</h2>
-    <p>I machined parts for the pedal box on a CNC mill from aluminum bar stock. These photos and the video follow some of that work, from raw stock to finished parts.</p>
+    <p>I machined the pin blocks on a CNC mill from 6061-T6 aluminum billet. These photos and the video follow some of that work, from raw stock to finished pin blocks.</p>
   </div>
   <div class="split__media">
     <div class="media-row" style="--sum:2.6667">
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/raw-stock.jpg" alt="Two lengths of aluminum bar stock beside a hand sketch with dimensions">
-        <figcaption>Raw stock and a hand sketch of the part</figcaption>
+        <img src="../img/fsae/manufacturing/raw-stock.jpg" alt="Two lengths of aluminum billet beside a hand sketch with dimensions">
+        <figcaption>Raw billet and a hand sketch</figcaption>
       </figure>
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/stock-squared.jpg" alt="Aluminum stock squared up and held in a vise in the mill">
-        <figcaption>Stock squared up in the vise</figcaption>
+        <img src="../img/fsae/manufacturing/stock-squared.jpg" alt="Aluminum billet squared up and held in a vise in the mill">
+        <figcaption>Billet squared up in the vise</figcaption>
       </figure>
     </div>
     <div class="media-row" style="--sum:3.1111">
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/probing.jpg" alt="A touch probe reading the part held in the vise">
-        <figcaption>Probing the part in the machine</figcaption>
+        <img src="../img/fsae/manufacturing/probing.jpg" alt="A touch probe reading the pin block held in the vise">
+        <figcaption>Probing the pin block in the machine</figcaption>
       </figure>
       <figure style="--ratio:1.7778">
-        <video class="loop" muted loop playsinline controls preload="none" poster="../img/fsae/manufacturing/machining.jpg" aria-label="A part being machined on the mill">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/fsae/manufacturing/machining.jpg" aria-label="A pin block being machined on the mill">
           <source src="../img/fsae/manufacturing/machining.mp4" type="video/mp4">
         </video>
-        <figcaption>A part being machined on the mill</figcaption>
+        <figcaption>A pin block being machined on the mill</figcaption>
       </figure>
     </div>
     <div class="media-row" style="--sum:4">
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/pockets.jpg" alt="Aluminum part in the vise with three pockets machined">
-        <figcaption>Pockets machined</figcaption>
+        <img src="../img/fsae/manufacturing/pockets.jpg" alt="Aluminum pin block in the vise with three pockets machined">
+        <figcaption>Pin block with its pockets machined</figcaption>
       </figure>
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/finished-in-vise.jpg" alt="Finished aluminum part in the vise with two counterbored holes">
-        <figcaption>Finished part in the vise</figcaption>
+        <img src="../img/fsae/manufacturing/finished-in-vise.jpg" alt="Finished aluminum pin block in the vise with two counterbored holes">
+        <figcaption>Finished pin block in the vise</figcaption>
       </figure>
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/finished-parts.jpg" alt="Two finished aluminum parts on a bench, one assembled with quick-release pins">
-        <figcaption>Finished parts, one assembled with quick-release pins</figcaption>
+        <img src="../img/fsae/manufacturing/finished-parts.jpg" alt="Finished aluminum pin blocks on a bench, one assembled with quick-release pins">
+        <figcaption>Finished pin blocks, with quick-release pins fitted</figcaption>
       </figure>
     </div>
   </div>
