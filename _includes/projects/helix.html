@@ -34,7 +34,7 @@
            data-date="{{ caption_date | escape }}"
            data-summary="{{ page.summary | escape }}"
            data-cta="{% if page.projecturl %}Project Site{% else %}Read More{% endif %}">
-          <img src="{% include projects/thumb.html image=page.image size="sm" %}" alt="{{ page.title | escape }}" draggable="false" decoding="async">
+          <img data-ready src="{% include projects/thumb.html image=page.image size="sm" %}" alt="{{ page.title | escape }}" draggable="false" decoding="async">
         </a>
       </li>
       {% endunless %}
