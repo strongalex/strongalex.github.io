@@ -75,6 +75,28 @@
     revealed.forEach(function (el) { io.observe(el); });
   }
 
+  /* ------------------------------------------------------- images appear whole */
+
+  // A big photo paints in line by line while it downloads. The stylesheet keeps every image
+  // invisible until it carries data-ready; this marks the ones that are already loaded straight
+  // away, and the rest once they have finished loading and decoding, fading them in. (The helix
+  // calls this for its own cards.)
+  function showWhenLoaded(img) {
+    if (img.complete) { img.setAttribute('data-ready', ''); return; }   // cached, or failed: nothing to wait for
+    img.classList.add('is-loading');
+    function show() {
+      img.classList.remove('is-loading');
+      img.setAttribute('data-ready', '');
+      if (!reduceMotion && img.animate) img.animate({ opacity: [0, 1] }, { duration: 350, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    }
+    img.addEventListener('load', function () {
+      if (img.decode) img.decode().then(show, show); else show();
+    }, { once: true });
+    img.addEventListener('error', show, { once: true });
+  }
+  window.showWhenLoaded = showWhenLoaded;
+  Array.prototype.forEach.call(document.querySelectorAll('main img:not([data-ready])'), showWhenLoaded);
+
   /* ------------------------------------------------------------ looping clips */
 
   // Silent clips (video.loop) start on their own, but only while they are on screen, and stop

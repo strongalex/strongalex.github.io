@@ -494,6 +494,17 @@ html.js .helix:not(.is-live) .helix__source {
   .helix__more { left: var(--gutter); bottom: 20px; }
 }
 
+/*
+  An image stays invisible (its box shows the mat) until js/site.js has seen it finish loading,
+  and is then faded in, so a big photo never paints in line by line. Without JavaScript nothing
+  is held back, and if the script is slow or fails the image appears anyway after a few seconds.
+  The helix marks its own thumbnails ready; it holds the ones still loading with .is-loading.
+  ([src] only raises the specificity above the scroll-reveal rules that some images also carry.)
+*/
+html.js main img[src]:not([data-ready]),
+html.js img.is-loading[src] { opacity: 0; animation: img-failsafe .01s 8s forwards; }
+@keyframes img-failsafe { to { opacity: 1; } }
+
 /* ---------------------------------------------------------------- sections */
 
 .section {

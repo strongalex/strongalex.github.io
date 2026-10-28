@@ -22,8 +22,7 @@
   var RARE_GAP = 5;                    // narrow screens: one rare card per this many cards
   var DRIFT = 0.2;                     // cards per second of ambient motion
   var FRICTION = 0.94;                 // per-frame velocity decay after a flick, at 60fps
-  var FLOOR = 0.05;                    // minimum opacity of far-side cards
-  var CULL = 0.075;                    // cards fainter than this are not drawn at all
+  var FLOOR = 0.08;                    // minimum opacity of far-side cards
   var MAX_BLUR = 4;                    // px of blur on far-side cards
   var CARD_RATIO = 4 / 3;
 
@@ -92,8 +91,9 @@
     }
 
     var PER = layout[0].length;                   // cards per strand
-    // A longer strand packs the cards closer together, so drift faster in cards per second to
-    // keep the helix turning at the same speed.
+    // A longer strand packs the cards closer together: shrink them a little, and drift faster
+    // in cards per second so the helix still turns at the same speed.
+    var crowd = Math.min(1, Math.sqrt(16 / PER));
     var drift = DRIFT * PER / 16;
 
     /* ----------------------------------------------------------- build cards */
@@ -126,6 +126,14 @@
     repeats.forEach(function (a) { world.appendChild(a); });
     host.classList.add('is-live');
 
+    // Fade each thumbnail in once it has loaded rather than letting it paint in line by line.
+    if (window.showWhenLoaded) {
+      cards.forEach(function (c) {
+        var img = c.el.querySelector('img');
+        if (img) window.showWhenLoaded(img);
+      });
+    }
+
     // Crop an image to the card only when that costs little; otherwise show it whole so
     // photos and diagrams are never clipped through the middle.
     cards.forEach(function (c) {
@@ -144,14 +152,14 @@
 
     function measure() {
       var w = stage.clientWidth, h = stage.clientHeight;
-      var cardW = Math.min(220, w * 0.27);
+      var cardW = Math.min(220, w * 0.27) * crowd;
       // Keep the whole cylinder (plus perspective growth on the near side) inside the box.
       var radius = (w / 2 - cardW * 0.46) / 1.08;
-      // Neighbours on a strand are TURNS * 360 / PER degrees apart. A card wider than about
-      // 2 * radius * tan(half that angle) cuts through the next one, so keep within a little
-      // of it (cards are also offset vertically, which hides some overlap).
+      // Safety net for small cylinders: neighbours on a strand are TURNS * 360 / PER degrees
+      // apart, and a card much wider than 2 * radius * tan(half that angle) would cut through
+      // the next one.
       var limit = 1.3 * 2 * radius * Math.tan(Math.PI * TURNS / PER);
-      cardW = Math.max(90, Math.min(cardW, limit));
+      cardW = Math.max(100, Math.min(cardW, limit));
       radius = Math.max(70, (w / 2 - cardW * 0.46) / 1.08);
       view.radius = radius;
       view.span = h * 1.5;
@@ -185,7 +193,7 @@
     var frames = 0;
 
     // Only touch what changed: a card's transform moves every frame, but its opacity and blur
-    // change in small steps, and the faint far side of the helix is not drawn at all.
+    // change in small steps, so they are only rewritten when they actually do.
     function render() {
       var look = view.radius + ':' + view.span;
       if (travel === lastTravel && look === lastLook) return;   // nothing moved (hovering, reduced motion)
@@ -196,30 +204,15 @@
         var c = cards[k];
         var p = wrap(c.base + travel, PER) / PER;
         var a = p * TURNS * TAU + c.phase;
-        var d = (Math.cos(a) + 1) / 2;           // 0 far side .. 1 near side
-        var opacity = FLOOR + (1 - FLOOR) * d * d;
-
-        // Too faint to see: stop updating it. (Opacity 0, not visibility: hidden, so a real link
-        // can still take keyboard focus and be turned round to the front.)
-        if (opacity < CULL) {
-          if (!c.hidden) {
-            c.hidden = true;
-            c.opacity = '0';
-            c.el.style.opacity = '0';
-            if (c.live) { c.live = false; c.el.style.pointerEvents = 'none'; }
-          }
-          continue;
-        }
-        c.hidden = false;
-
         var y = (p - 0.5) * span;
+        var d = (Math.cos(a) + 1) / 2;           // 0 far side .. 1 near side
         c.el.style.transform = 'translate(-50%,-50%) rotateY(' + a.toFixed(4) + 'rad) translateZ(' + radius.toFixed(1) + 'px) translateY(' + y.toFixed(1) + 'px)';
 
-        var o = opacity.toFixed(2);
+        var o = (FLOOR + (1 - FLOOR) * d * d).toFixed(2);
         if (o !== c.opacity) { c.opacity = o; c.el.style.opacity = o; }
 
-        var blur = Math.round((1 - d) * (1 - d) * MAX_BLUR * 2) / 2;
-        var f = blur >= 0.5 && d > 0.3 ? 'blur(' + blur + 'px)' : 'none';
+        var blur = Math.round((1 - d) * (1 - d) * MAX_BLUR * 4) / 4;
+        var f = blur > 0.25 ? 'blur(' + blur + 'px)' : 'none';
         if (f !== c.filter) { c.filter = f; c.el.style.filter = f; }
 
         var live = d > 0.5;
