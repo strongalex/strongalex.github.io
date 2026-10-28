@@ -24,7 +24,7 @@ summary: "Our 2024 robot for Crescendo, which won its division at the world cham
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/frc/19024cad.png" alt="Snapback robot CAD">
+      <img src="../img/frc/19024cad-web.jpg" alt="Snapback robot CAD">
       <figcaption>Snapback robot CAD</figcaption>
     </figure>
   </div>
@@ -32,7 +32,7 @@ summary: "Our 2024 robot for Crescendo, which won its division at the world cham
 
 <div class="gallery">
   <figure>
-    <img src="../img/frc/19024pickuo.jpg" alt="Snapback intaking a ring during a match">
+    <img src="../img/frc/19024pickuo-web.jpg" alt="Snapback intaking a ring during a match">
     <figcaption>Snapback intaking a ring during a match</figcaption>
   </figure>
   <figure>

@@ -31,11 +31,11 @@ summary: "Our 2023 robot for Charged Up, which scored cones and cubes and went f
 
 <div class="gallery">
   <figure>
-    <img src="../img/frc/19523score.png" alt="KnightTime 2023 scoring a cone">
+    <img src="../img/frc/19523score-web.jpg" alt="KnightTime 2023 scoring a cone">
     <figcaption>KnightTime 2023 scoring a cone</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/19523climb.png" alt="KnightTime 2023 balancing on the charge station">
+    <img src="../img/frc/19523climb-web.jpg" alt="KnightTime 2023 balancing on the charge station">
     <figcaption>KnightTime 2023 balancing on the charge station</figcaption>
   </figure>
   <figure>

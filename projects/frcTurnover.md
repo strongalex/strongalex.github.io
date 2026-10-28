@@ -29,7 +29,7 @@ summary: "Our second robot for the 2026 game, REBUILT, built to shoot Fuel into 
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/frc/190turnoverCAD.png" alt="Turnover full robot CAD">
+      <img src="../img/frc/190turnoverCAD-web.jpg" alt="Turnover full robot CAD">
       <figcaption>Turnover full robot CAD</figcaption>
     </figure>
   </div>
@@ -41,15 +41,15 @@ summary: "Our second robot for the 2026 game, REBUILT, built to shoot Fuel into 
     <figcaption>Turnover photoshoot image</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190turnoverShoot.jpg" alt="Turnover shooting during a match">
+    <img src="../img/frc/190turnoverShoot-web.jpg" alt="Turnover shooting during a match">
     <figcaption>Turnover shooting during a match</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190turnoverTurretISO.png" alt="Isometric CAD view of the Turnover turret and shooter assembly">
+    <img src="../img/frc/190turnoverTurretISO-web.jpg" alt="Isometric CAD view of the Turnover turret and shooter assembly">
     <figcaption>Isometric CAD view of the Turnover turret and shooter assembly</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190turnovermove.jpg" alt="Turnover driving during a match">
+    <img src="../img/frc/190turnovermove-web.jpg" alt="Turnover driving during a match">
     <figcaption>Turnover driving during a match</figcaption>
   </figure>
 </div>

@@ -19,9 +19,11 @@
   var TURNS = 2;                       // full rotations from the top of a strand to the bottom
   var STRANDS = 2;
   var COMMON_REPEATS = 2;              // times each ordinary project appears on a strand (rare ones: once)
+  var RARE_GAP = 5;                    // narrow screens: one rare card per this many cards
   var DRIFT = 0.2;                     // cards per second of ambient motion
   var FRICTION = 0.94;                 // per-frame velocity decay after a flick, at 60fps
-  var FLOOR = 0.08;                    // minimum opacity of far-side cards
+  var FLOOR = 0.05;                    // minimum opacity of far-side cards
+  var CULL = 0.075;                    // cards fainter than this are not drawn at all
   var MAX_BLUR = 4;                    // px of blur on far-side cards
   var CARD_RATIO = 4 / 3;
 
@@ -43,6 +45,13 @@
 
     var N = links.length;
 
+    // The thumbnails are small, and a card turning round to the front should never show up
+    // empty, so load them all now instead of waiting for each to scroll into view.
+    links.forEach(function (a) {
+      var img = a.querySelector('img');
+      if (img) img.setAttribute('loading', 'eager');
+    });
+
     /* ------------------------------------------------------------ the deal */
 
     // Which project sits in each slot of each strand. Every project is on both strands.
@@ -53,7 +62,19 @@
     var common = links.filter(function (a) { return !a.hasAttribute('data-rare'); });
     var layout = [[], []];
 
-    if (rare.length && common.length) {
+    // On a narrow screen the cylinder is small, so a long strand packs the cards so tightly that
+    // their flat faces cut through each other, and every card is more work for a phone. There
+    // the strands are shorter and the rare projects go in once in total (alternating strands).
+    var compact = stage.clientWidth < 520;
+
+    if (rare.length && common.length && compact) {
+      var total = Math.max(rare.length * RARE_GAP, rare.length + 2 * common.length);
+      total += total % 2;                         // an even deck deals the same count to each strand
+      var deck = new Array(total), taken = 0;
+      rare.forEach(function (a, k) { deck[Math.floor((k + 0.5) * total / rare.length)] = a; });
+      for (var q = 0; q < total; q++) if (!deck[q]) deck[q] = common[taken++ % common.length];
+      deck.forEach(function (a, q) { layout[q % 2].push(a); });
+    } else if (rare.length && common.length) {
       var length = rare.length + COMMON_REPEATS * common.length;
       for (var t = 0; t < STRANDS; t++) {
         var slots = new Array(length), next = t * Math.floor(common.length / STRANDS);
@@ -71,9 +92,8 @@
     }
 
     var PER = layout[0].length;                   // cards per strand
-    // A longer strand packs the cards closer together: shrink them a little, and drift faster
-    // in cards per second so the helix still turns at the same speed.
-    var crowd = Math.min(1, Math.sqrt(16 / PER));
+    // A longer strand packs the cards closer together, so drift faster in cards per second to
+    // keep the helix turning at the same speed.
     var drift = DRIFT * PER / 16;
 
     /* ----------------------------------------------------------- build cards */
@@ -124,9 +144,15 @@
 
     function measure() {
       var w = stage.clientWidth, h = stage.clientHeight;
-      var cardW = Math.max(100, Math.min(220, w * 0.27) * crowd);
+      var cardW = Math.min(220, w * 0.27);
       // Keep the whole cylinder (plus perspective growth on the near side) inside the box.
-      var radius = Math.max(70, (w / 2 - cardW * 0.46) / 1.08);
+      var radius = (w / 2 - cardW * 0.46) / 1.08;
+      // Neighbours on a strand are TURNS * 360 / PER degrees apart. A card wider than about
+      // 2 * radius * tan(half that angle) cuts through the next one, so keep within a little
+      // of it (cards are also offset vertically, which hides some overlap).
+      var limit = 1.3 * 2 * radius * Math.tan(Math.PI * TURNS / PER);
+      cardW = Math.max(90, Math.min(cardW, limit));
+      radius = Math.max(70, (w / 2 - cardW * 0.46) / 1.08);
       view.radius = radius;
       view.span = h * 1.5;
       host.style.setProperty('--card-w', cardW.toFixed(0) + 'px');
@@ -155,18 +181,47 @@
 
     /* ----------------------------------------------------------------- frame */
 
+    var lastTravel = NaN, lastLook = '';
+    var frames = 0;
+
+    // Only touch what changed: a card's transform moves every frame, but its opacity and blur
+    // change in small steps, and the faint far side of the helix is not drawn at all.
     function render() {
+      var look = view.radius + ':' + view.span;
+      if (travel === lastTravel && look === lastLook) return;   // nothing moved (hovering, reduced motion)
+      lastTravel = travel; lastLook = look;
+
       var radius = view.radius, span = view.span;
       for (var k = 0; k < cards.length; k++) {
         var c = cards[k];
         var p = wrap(c.base + travel, PER) / PER;
         var a = p * TURNS * TAU + c.phase;
-        var y = (p - 0.5) * span;
         var d = (Math.cos(a) + 1) / 2;           // 0 far side .. 1 near side
+        var opacity = FLOOR + (1 - FLOOR) * d * d;
+
+        // Too faint to see: stop updating it. (Opacity 0, not visibility: hidden, so a real link
+        // can still take keyboard focus and be turned round to the front.)
+        if (opacity < CULL) {
+          if (!c.hidden) {
+            c.hidden = true;
+            c.opacity = '0';
+            c.el.style.opacity = '0';
+            if (c.live) { c.live = false; c.el.style.pointerEvents = 'none'; }
+          }
+          continue;
+        }
+        c.hidden = false;
+
+        var y = (p - 0.5) * span;
         c.el.style.transform = 'translate(-50%,-50%) rotateY(' + a.toFixed(4) + 'rad) translateZ(' + radius.toFixed(1) + 'px) translateY(' + y.toFixed(1) + 'px)';
-        c.el.style.opacity = (FLOOR + (1 - FLOOR) * d * d).toFixed(3);
-        var blur = (1 - d) * (1 - d) * MAX_BLUR;
-        c.el.style.filter = blur > 0.25 ? 'blur(' + blur.toFixed(2) + 'px)' : 'none';
+
+        var o = opacity.toFixed(2);
+        if (o !== c.opacity) { c.opacity = o; c.el.style.opacity = o; }
+
+        var blur = Math.round((1 - d) * (1 - d) * MAX_BLUR * 2) / 2;
+        var f = blur >= 0.5 && d > 0.3 ? 'blur(' + blur + 'px)' : 'none';
+        if (f !== c.filter) { c.filter = f; c.el.style.filter = f; }
+
         var live = d > 0.5;
         if (live !== c.live) { c.live = live; c.el.style.pointerEvents = live ? '' : 'none'; }
       }
@@ -194,7 +249,8 @@
         if (Math.abs(velocity) < 0.02) velocity = 0;
       }
 
-      render();
+      // On a touch screen, drawing every other frame while it drifts is invisible and halves the work.
+      if (dragging || !coarse.matches || (++frames % 2)) render();
       if (visible) requestAnimationFrame(frame);
     }
 

@@ -126,6 +126,15 @@ ul { margin: 0; padding: 0; }
   view-transition-name: site-header;
 }
 
+/* A blurred backdrop is costly to redraw under a moving helix, so phones get a plain bar. */
+@media (max-width: 700px) {
+  .site-header {
+    background: color-mix(in srgb, var(--bg) 96%, transparent);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
 .site-header__inner {
   display: flex;
   align-items: center;
@@ -442,7 +451,7 @@ html.js .helix:not(.is-live) .helix__source {
   border-radius: var(--r-sm);
   background: var(--stage);
   box-shadow: 0 0 0 2px var(--bg), 0 14px 28px -16px var(--shadow-color);
-  will-change: transform, opacity, filter;
+  will-change: transform, opacity;
   -webkit-user-drag: none;
 }
 

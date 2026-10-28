@@ -30,9 +30,9 @@ summary: "An IQP with Secure Bike Share in Honolulu, using GIS suitability model
     <p>From that surface I produced a shortlist of specific intersections for the operator to evaluate, paired with a ridership-weighted ranking of existing stations that flagged relocation candidates. The result is a concrete list of sites with reasoning attached to each one.</p>
   </div>
   <div class="split__media">
-    <img src="../img/groupIQP.png" alt="IQP team in Honolulu">
-    <img src="../img/classes/suitibilty_map.png" alt="ArcGIS Pro suitability surface for Honolulu with existing bike facilities and station locations overlaid">
-    <img src="../img/classes/bikinewlocations.png" alt="Close-up maps of four recommended station siting areas in Honolulu with numbered candidate locations">
+    <img src="../img/groupIQP-web.jpg" alt="IQP team in Honolulu">
+    <img src="../img/classes/suitibilty_map-web.jpg" alt="ArcGIS Pro suitability surface for Honolulu with existing bike facilities and station locations overlaid">
+    <img src="../img/classes/bikinewlocations-web.jpg" alt="Close-up maps of four recommended station siting areas in Honolulu with numbered candidate locations">
   </div>
 </div>
 

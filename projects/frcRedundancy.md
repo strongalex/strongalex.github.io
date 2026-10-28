@@ -29,7 +29,7 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/frc/19025isolate.png" alt="Redundancy robot CAD">
+      <img src="../img/frc/19025isolate-web.jpg" alt="Redundancy robot CAD">
       <figcaption>Redundancy robot CAD</figcaption>
     </figure>
   </div>
@@ -41,11 +41,11 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
     <figcaption>Redundancy CAD, isometric view</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/19025setup.jpg" alt="Redundancy on the field before a match">
+    <img src="../img/frc/19025setup-web.jpg" alt="Redundancy on the field before a match">
     <figcaption>Redundancy on the field before a match</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/19025barge.jpg" alt="Redundancy scoring at the barge">
+    <img src="../img/frc/19025barge-web.jpg" alt="Redundancy scoring at the barge">
     <figcaption>Redundancy scoring at the barge</figcaption>
   </figure>
 </div>

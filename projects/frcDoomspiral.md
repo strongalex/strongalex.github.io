@@ -28,7 +28,7 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/frc/190doomspiralCAD.png" alt="Doomspiral full robot CAD">
+      <img src="../img/frc/190doomspiralCAD-web.jpg" alt="Doomspiral full robot CAD">
       <figcaption>Doomspiral full robot CAD</figcaption>
     </figure>
   </div>
@@ -36,19 +36,19 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
 
 <div class="gallery">
   <figure>
-    <img src="../img/frc/190doomspiralreallifeclimb.jpeg" alt="Doomspiral hanging from the Tower rungs">
+    <img src="../img/frc/190doomspiralreallifeclimb-web.jpg" alt="Doomspiral hanging from the Tower rungs">
     <figcaption>Doomspiral hanging from the Tower rungs</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190doomsprialShot.jpg" alt="Doomspiral shooting during a match">
+    <img src="../img/frc/190doomsprialShot-web.jpg" alt="Doomspiral shooting during a match">
     <figcaption>Doomspiral shooting during a match</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190doomspiralCADshooterISO.png" alt="Isometric CAD view of the Doomspiral shooter assembly">
+    <img src="../img/frc/190doomspiralCADshooterISO-web.jpg" alt="Isometric CAD view of the Doomspiral shooter assembly">
     <figcaption>Isometric CAD view of the Doomspiral shooter assembly</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190doomspiralClimb.jpg" alt="Doomspiral hanging from the climb bar at the end of a match">
+    <img src="../img/frc/190doomspiralClimb-web.jpg" alt="Doomspiral hanging from the climb bar at the end of a match">
     <figcaption>Doomspiral hanging from the climb bar at the end of a match</figcaption>
   </figure>
 </div>
