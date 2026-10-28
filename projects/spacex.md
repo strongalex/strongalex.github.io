@@ -15,6 +15,10 @@ labels:
   - DFM
 summary: "Vehicle Design Intern at Starbase, TX, working on CAD design, detail drawings, GD&T, and DFM for flight hardware."
 ---
+<aside class="notice" role="note">
+  <p><strong>Disclaimer</strong> Because of a non-disclosure agreement (NDA), I can't go into detail about my work at SpaceX.</p>
+</aside>
+
 <div class="split">
   <div class="split__text">
     <h1 class="subtitle">Vehicle Design Intern, SpaceX Starbase</h1>
