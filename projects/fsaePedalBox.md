@@ -183,8 +183,8 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
   <div class="split__media">
     <div class="media-row" style="--sum:2.6667">
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/raw-stock.jpg" alt="Two lengths of aluminum billet beside a hand sketch with dimensions">
-        <figcaption>Raw billet and a hand sketch</figcaption>
+        <img src="../img/fsae/manufacturing/raw-stock.jpg" alt="Two lengths of aluminum billet on a bench">
+        <figcaption>Raw billet</figcaption>
       </figure>
       <figure style="--ratio:1.3333">
         <img src="../img/fsae/manufacturing/stock-squared.jpg" alt="Aluminum billet squared up and held in a vise in the mill">
