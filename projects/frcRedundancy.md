@@ -35,21 +35,6 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
   </div>
 </div>
 
-<div class="gallery">
-  <figure>
-    <img src="../img/frc/1902025.jpeg" alt="Redundancy CAD, isometric view">
-    <figcaption>Redundancy CAD, isometric view</figcaption>
-  </figure>
-  <figure>
-    <img src="../img/frc/19025setup-web.jpg" alt="Redundancy on the field before a match">
-    <figcaption>Redundancy on the field before a match</figcaption>
-  </figure>
-  <figure>
-    <img src="../img/frc/19025barge-web.jpg" alt="Redundancy scoring at the barge">
-    <figcaption>Redundancy scoring at the barge</figcaption>
-  </figure>
-</div>
-
 <div class="split">
   <div class="split__text">
     <h2 id="end-effector">End effector</h2>
@@ -119,4 +104,19 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
       </figure>
     </div>
   </div>
+</div>
+
+<div class="gallery">
+  <figure>
+    <img src="../img/frc/1902025.jpeg" alt="Redundancy CAD, isometric view">
+    <figcaption>Redundancy CAD, isometric view</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/frc/19025setup-web.jpg" alt="Redundancy on the field before a match">
+    <figcaption>Redundancy on the field before a match</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/frc/19025barge-web.jpg" alt="Redundancy scoring at the barge">
+    <figcaption>Redundancy scoring at the barge</figcaption>
+  </figure>
 </div>

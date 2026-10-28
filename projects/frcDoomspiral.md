@@ -34,25 +34,6 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
   </div>
 </div>
 
-<div class="gallery">
-  <figure>
-    <img src="../img/frc/190doomspiralreallifeclimb-web.jpg" alt="Doomspiral hanging from the Tower rungs">
-    <figcaption>Doomspiral hanging from the Tower rungs</figcaption>
-  </figure>
-  <figure>
-    <img src="../img/frc/190doomsprialShot-web.jpg" alt="Doomspiral shooting during a match">
-    <figcaption>Doomspiral shooting during a match</figcaption>
-  </figure>
-  <figure>
-    <img src="../img/frc/190doomspiralCADshooterISO-web.jpg" alt="Isometric CAD view of the Doomspiral shooter assembly">
-    <figcaption>Isometric CAD view of the Doomspiral shooter assembly</figcaption>
-  </figure>
-  <figure>
-    <img src="../img/frc/190doomspiralClimb-web.jpg" alt="Doomspiral hanging from the climb bar at the end of a match">
-    <figcaption>Doomspiral hanging from the climb bar at the end of a match</figcaption>
-  </figure>
-</div>
-
 <div class="split split--stack">
   <div class="split__text">
     <h2 id="prototyping-the-shooter">Prototyping the shooter</h2>
@@ -147,4 +128,23 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
       <figcaption>Doomspiral shooting</figcaption>
     </figure>
   </div>
+</div>
+
+<div class="gallery">
+  <figure>
+    <img src="../img/frc/190doomspiralreallifeclimb-web.jpg" alt="Doomspiral hanging from the Tower rungs">
+    <figcaption>Doomspiral hanging from the Tower rungs</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/frc/190doomsprialShot-web.jpg" alt="Doomspiral shooting during a match">
+    <figcaption>Doomspiral shooting during a match</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/frc/190doomspiralCADshooterISO-web.jpg" alt="Isometric CAD view of the Doomspiral shooter assembly">
+    <figcaption>Isometric CAD view of the Doomspiral shooter assembly</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/frc/190doomspiralClimb-web.jpg" alt="Doomspiral hanging from the climb bar at the end of a match">
+    <figcaption>Doomspiral hanging from the climb bar at the end of a match</figcaption>
+  </figure>
 </div>
