@@ -15,6 +15,10 @@ labels:
   - DFM
 summary: "Vehicle Design Intern at Starbase, TX, working on CAD design, detail drawings, GD&T, and DFM for flight hardware."
 ---
+<aside class="notice" role="note">
+  <p><strong>Disclaimer</strong> Because of a non-disclosure agreement (NDA), I can't go into detail about my work at SpaceX.</p>
+</aside>
+
 <div class="split">
   <div class="split__text">
     <h1 class="subtitle">Vehicle Design Intern, SpaceX Starbase</h1>
@@ -32,17 +36,17 @@ summary: "Vehicle Design Intern at Starbase, TX, working on CAD design, detail d
     <p>I also contributed Design for Manufacturability changes across Ship, revising geometry so parts could be built and assembled more easily without giving up what they needed to do.</p>
   </div>
   <div class="split__media">
-    <img src="../img/spaceXGroup.png" alt="SpaceX intern group at Starbase">
+    <img src="../img/spaceXGroup-web.jpg" alt="SpaceX intern group at Starbase">
   </div>
 </div>
 
 <div class="collage">
   <div class="collage__row">
     <img src="../img/spacex/booster-display.jpg" style="--ratio:0.75" alt="Falcon 9 booster with its landing legs deployed, standing on display behind a glass barrier">
-    <img src="../img/spacex/gateway-to-mars.jpg" style="--ratio:1.333" alt="Starship on the launch tower beside a sign reading Gateway to Mars">
+    <img src="../img/spacex/gateway-to-mars-web.jpg" style="--ratio:1.333" alt="Starship on the launch tower beside a sign reading Gateway to Mars">
   </div>
   <div class="collage__row">
-    <img src="../img/spacex/spacex-737.jpg" style="--ratio:1.333" alt="SpaceX-liveried Boeing 737 parked on an airport apron">
+    <img src="../img/spacex/spacex-737-web.jpg" style="--ratio:1.333" alt="SpaceX-liveried Boeing 737 parked on an airport apron">
     <img src="../img/spacex/launch-viewing.jpg" style="--ratio:0.75" alt="Crowd watching a rocket launch from a grassy viewing area">
   </div>
 </div>

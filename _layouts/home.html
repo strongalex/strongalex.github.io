@@ -3,6 +3,6 @@ layout: default
 ---
 {% include header.html %}
 <main id="main">
-{{ content | replace: '<img ', '<img loading="lazy" decoding="async" ' | replace: '<video ', '<video preload="metadata" ' }}
+{{ content | replace: '<img ', '<img loading="lazy" decoding="async" ' }}
 </main>
 {% include footer.html %}

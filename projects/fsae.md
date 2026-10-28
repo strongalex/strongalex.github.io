@@ -26,6 +26,6 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
     <p>I am working on design and manufacturing this year. The pedal box for EV27, Goat Fast Racing's new car, is the first project I am working on, and more will follow. Most of my work on it has been on the pedal slide: the rails, carriage, and mounts that let the pedals move to fit each driver.</p>
   </div>
   <div class="split__media">
-    <img src="../img/fsae/fsae2026.jpg" alt="WPI Formula SAE car running at a test session on campus">
+    <img src="../img/fsae/fsae2026-web.jpg" alt="WPI Formula SAE car running at a test session on campus">
   </div>
 </div>

@@ -1,8 +1,16 @@
 {%- comment -%}
   Prints the URL of a project's image. Uses the small version in img/thumbs/ (same file
-  name, .jpg) when one exists, and falls back to the original image otherwise.
+  name, .jpg) when one exists, and falls back to the original image otherwise. Pass
+  size="sm" for the smaller copy in img/thumbs/sm/ (used by the helix, whose cards are
+  drawn small and many at a time).
 {%- endcomment -%}
 {%- assign thumb_base = include.image | split: '/' | last | split: '.' | first -%}
-{%- assign thumb_path = '/img/thumbs/' | append: thumb_base | append: '.jpg' -%}
+{%- assign thumb_dir = '/img/thumbs/' -%}
+{%- if include.size == 'sm' -%}
+  {%- assign sm_path = '/img/thumbs/sm/' | append: thumb_base | append: '.jpg' -%}
+  {%- assign sm_file = site.static_files | where: 'path', sm_path | first -%}
+  {%- if sm_file -%}{%- assign thumb_dir = '/img/thumbs/sm/' -%}{%- endif -%}
+{%- endif -%}
+{%- assign thumb_path = thumb_dir | append: thumb_base | append: '.jpg' -%}
 {%- assign thumb_file = site.static_files | where: 'path', thumb_path | first -%}
 {%- if thumb_file -%}{{ thumb_path | prepend: site.baseurl }}{%- else -%}{{ include.image | prepend: '/' | prepend: site.baseurl }}{%- endif -%}
