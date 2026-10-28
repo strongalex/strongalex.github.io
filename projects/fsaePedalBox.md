@@ -173,4 +173,49 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
 <h2>The rest of the pedal box</h2>
 <p>Around the slide, the team worked out the pedals and brake hardware. Moonshine's drivers liked the gas pedal but wanted a stiffer brake pedal, so EV27's brake pedal ratio dropped from 4.3 to 4.04. The rules require two springs on the accelerator where Moonshine had one gas strut, so the accelerator ratio went from 2.32 to 4.61 to keep the same feel.</p>
 <p>Tilton 78-series master cylinders (7/10-inch front, 15/16-inch rear) and a Tilton 900-series balance bar, with ISR calipers, are sized to hit a 65% brake bias. The pedal footprint came down by 0.33 inch so that a 95th-percentile male still fits behind EV27's shorter nose. FEA at 2,000 N gave minimum factors of safety of 5.42 on the brake pedal, 4.2 on the accelerator pedal, and 3.9 on the accelerator hard stop.</p>
-<p>The result is a compact, lightweight pedal box that meets the rules and is easy to adjust. Manufacturing starts in B-term.</p>
+<p>The result is a compact, lightweight pedal box that meets the rules and is easy to adjust. Manufacturing started in B-term.</p>
+
+<div class="split split--stack">
+  <div class="split__text">
+    <h2 id="manufacturing">Manufacturing</h2>
+    <p>I machined the pin blocks on a Haas VF-4SS CNC mill from 6061-T6 aluminum billet. These photos and the video follow some of that work, from raw stock to finished pin blocks.</p>
+  </div>
+  <div class="split__media">
+    <div class="media-row" style="--sum:2.6667">
+      <figure style="--ratio:1.3333">
+        <img src="../img/fsae/manufacturing/raw-stock.jpg" alt="Two lengths of aluminum billet beside a hand sketch with dimensions">
+        <figcaption>Raw billet and a hand sketch</figcaption>
+      </figure>
+      <figure style="--ratio:1.3333">
+        <img src="../img/fsae/manufacturing/stock-squared.jpg" alt="Aluminum billet squared up and held in a vise in the mill">
+        <figcaption>Billet squared up in the vise</figcaption>
+      </figure>
+    </div>
+    <div class="media-row" style="--sum:3.1111">
+      <figure style="--ratio:1.3333">
+        <img src="../img/fsae/manufacturing/probing.jpg" alt="A touch probe reading the pin block held in the vise">
+        <figcaption>Probing the pin block in the machine</figcaption>
+      </figure>
+      <figure style="--ratio:1.7778">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/fsae/manufacturing/machining.jpg" aria-label="A pin block being machined on the mill">
+          <source src="../img/fsae/manufacturing/machining.mp4" type="video/mp4">
+        </video>
+        <figcaption>A pin block being machined on the mill</figcaption>
+      </figure>
+    </div>
+    <div class="media-row" style="--sum:4">
+      <figure style="--ratio:1.3333">
+        <img src="../img/fsae/manufacturing/pockets.jpg" alt="Aluminum pin block in the vise with three pockets machined">
+        <figcaption>Pin block with its pockets machined</figcaption>
+      </figure>
+      <figure style="--ratio:1.3333">
+        <img src="../img/fsae/manufacturing/finished-in-vise.jpg" alt="Finished aluminum pin block in the vise with two counterbored holes">
+        <figcaption>Finished pin block in the vise</figcaption>
+      </figure>
+      <figure style="--ratio:1.3333">
+        <img src="../img/fsae/manufacturing/finished-parts.jpg" alt="Finished aluminum pin blocks on a bench, one assembled with quick-release pins">
+        <figcaption>Finished pin blocks, with quick-release pins fitted</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
