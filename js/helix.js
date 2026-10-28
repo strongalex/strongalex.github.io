@@ -22,8 +22,9 @@
   var RARE_GAP = 5;                    // narrow screens: one rare card per this many cards
   var DRIFT = 0.2;                     // cards per second of ambient motion
   var FRICTION = 0.94;                 // per-frame velocity decay after a flick, at 60fps
-  var FLOOR = 0.08;                    // minimum opacity of far-side cards
-  var MAX_BLUR = 4;                    // px of blur on far-side cards
+  var FLOOR = 0.3;                     // minimum opacity of far-side cards: the back strand stays visible
+  var MAX_BLUR = 3;                    // px of blur on far-side cards
+  var CARD_SCALE = 0.78;               // overall card size, relative to the space available
   var CARD_RATIO = 4 / 3;
 
   var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -152,14 +153,14 @@
 
     function measure() {
       var w = stage.clientWidth, h = stage.clientHeight;
-      var cardW = Math.min(220, w * 0.27) * crowd;
+      var cardW = Math.min(220, w * 0.27) * crowd * CARD_SCALE;
       // Keep the whole cylinder (plus perspective growth on the near side) inside the box.
       var radius = (w / 2 - cardW * 0.46) / 1.08;
       // Safety net for small cylinders: neighbours on a strand are TURNS * 360 / PER degrees
       // apart, and a card much wider than 2 * radius * tan(half that angle) would cut through
       // the next one.
       var limit = 1.3 * 2 * radius * Math.tan(Math.PI * TURNS / PER);
-      cardW = Math.max(100, Math.min(cardW, limit));
+      cardW = Math.max(72, Math.min(cardW, limit));
       radius = Math.max(70, (w / 2 - cardW * 0.46) / 1.08);
       view.radius = radius;
       view.span = h * 1.5;
