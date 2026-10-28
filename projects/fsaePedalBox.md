@@ -178,7 +178,7 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
 <div class="split split--stack">
   <div class="split__text">
     <h2 id="manufacturing">Manufacturing</h2>
-    <p>I machined the pin blocks on a CNC mill from 6061-T6 aluminum billet. These photos and the video follow some of that work, from raw stock to finished pin blocks.</p>
+    <p>I machined the pin blocks on a Haas VF-4SS CNC mill from 6061-T6 aluminum billet. These photos and the video follow some of that work, from raw stock to finished pin blocks.</p>
   </div>
   <div class="split__media">
     <div class="media-row" style="--sum:2.6667">
