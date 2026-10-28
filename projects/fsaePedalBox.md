@@ -194,13 +194,13 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
     <div class="media-row" style="--sum:3.1111">
       <figure style="--ratio:1.3333">
         <img src="../img/fsae/manufacturing/probing.jpg" alt="A touch probe reading the pin block held in the vise">
-        <figcaption>Probing the pin block in the machine</figcaption>
+        <figcaption>Touch probe over the pin block</figcaption>
       </figure>
       <figure style="--ratio:1.7778">
-        <video class="loop" muted loop playsinline controls preload="none" poster="../img/fsae/manufacturing/machining.jpg" aria-label="A pin block being machined on the mill">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/fsae/manufacturing/machining.jpg" aria-label="The pin block being probed">
           <source src="../img/fsae/manufacturing/machining.mp4" type="video/mp4">
         </video>
-        <figcaption>A pin block being machined on the mill</figcaption>
+        <figcaption>The pin block being probed</figcaption>
       </figure>
     </div>
     <div class="media-row" style="--sum:4">
