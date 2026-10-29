@@ -28,7 +28,7 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/frc/190doomspiralCAD-web.jpg" alt="Doomspiral full robot CAD">
+      <img width="1400" height="919" src="../img/frc/190doomspiralCAD-web.jpg" alt="Doomspiral full robot CAD">
       <figcaption>Doomspiral full robot CAD</figcaption>
     </figure>
   </div>
@@ -71,11 +71,11 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
   <div class="split__media">
     <div class="media-row" style="--sum:2.3838;--row-h:420px">
       <figure style="--ratio:1.0983">
-        <img src="../img/frc/doomspiral/custom-prototype-divider.jpg" alt="CAD of the custom prototype with its divider installed">
+        <img width="816" height="743" src="../img/frc/doomspiral/custom-prototype-divider.jpg" alt="CAD of the custom prototype with its divider installed">
         <figcaption>Custom prototype CAD, with the divider</figcaption>
       </figure>
       <figure style="--ratio:1.2855">
-        <img src="../img/frc/doomspiral/custom-prototype-no-divider.jpg" alt="CAD of the custom prototype without the divider">
+        <img width="923" height="718" src="../img/frc/doomspiral/custom-prototype-no-divider.jpg" alt="CAD of the custom prototype without the divider">
         <figcaption>Custom prototype CAD, without the divider</figcaption>
       </figure>
     </div>
@@ -104,11 +104,11 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
   <div class="split__media">
     <div class="media-row" style="--sum:3.2386">
       <figure style="--ratio:1.5246">
-        <img src="../img/frc/doomspiral/hood-concept-1.jpg" alt="Cartoon-style CAD of an early hood concept">
+        <img width="1084" height="711" src="../img/frc/doomspiral/hood-concept-1.jpg" alt="Cartoon-style CAD of an early hood concept">
         <figcaption>Early hood concept</figcaption>
       </figure>
       <figure style="--ratio:1.714">
-        <img src="../img/frc/doomspiral/hood-concept-2.jpg" alt="Cartoon-style CAD of the early hood concept in a second position">
+        <img width="1061" height="619" src="../img/frc/doomspiral/hood-concept-2.jpg" alt="Cartoon-style CAD of the early hood concept in a second position">
         <figcaption>Early hood concept, second view</figcaption>
       </figure>
     </div>
@@ -132,19 +132,19 @@ summary: "Our first robot for the 2026 game, REBUILT. It qualified the team for 
 
 <div class="gallery">
   <figure>
-    <img src="../img/frc/190doomspiralreallifeclimb-web.jpg" alt="Doomspiral hanging from the Tower rungs">
+    <img width="934" height="1400" src="../img/frc/190doomspiralreallifeclimb-web.jpg" alt="Doomspiral hanging from the Tower rungs">
     <figcaption>Doomspiral hanging from the Tower rungs</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190doomsprialShot-web.jpg" alt="Doomspiral shooting during a match">
+    <img width="1400" height="933" src="../img/frc/190doomsprialShot-web.jpg" alt="Doomspiral shooting during a match">
     <figcaption>Doomspiral shooting during a match</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190doomspiralCADshooterISO-web.jpg" alt="Isometric CAD view of the Doomspiral shooter assembly">
+    <img width="1400" height="932" src="../img/frc/190doomspiralCADshooterISO-web.jpg" alt="Isometric CAD view of the Doomspiral shooter assembly">
     <figcaption>Isometric CAD view of the Doomspiral shooter assembly</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190doomspiralClimb-web.jpg" alt="Doomspiral hanging from the climb bar at the end of a match">
+    <img width="1400" height="933" src="../img/frc/190doomspiralClimb-web.jpg" alt="Doomspiral hanging from the climb bar at the end of a match">
     <figcaption>Doomspiral hanging from the climb bar at the end of a match</figcaption>
   </figure>
 </div>

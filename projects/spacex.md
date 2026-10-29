@@ -36,17 +36,17 @@ summary: "Vehicle Design Intern at Starbase, TX, working on CAD design, detail d
     <p>I also contributed Design for Manufacturability changes across Ship, revising geometry so parts could be built and assembled more easily without giving up what they needed to do.</p>
   </div>
   <div class="split__media">
-    <img src="../img/spaceXGroup-web.jpg" alt="SpaceX intern group at Starbase">
+    <img width="929" height="1239" src="../img/spaceXGroup-web.jpg" alt="SpaceX intern group at Starbase">
   </div>
 </div>
 
 <div class="collage">
   <div class="collage__row">
-    <img src="../img/spacex/booster-display.jpg" style="--ratio:0.75" alt="Falcon 9 booster with its landing legs deployed, standing on display behind a glass barrier">
-    <img src="../img/spacex/gateway-to-mars-web.jpg" style="--ratio:1.333" alt="Starship on the launch tower beside a sign reading Gateway to Mars">
+    <img width="929" height="1239" src="../img/spacex/booster-display.jpg" style="--ratio:0.75" alt="Falcon 9 booster with its landing legs deployed, standing on display behind a glass barrier">
+    <img width="1400" height="1051" src="../img/spacex/gateway-to-mars-web.jpg" style="--ratio:1.333" alt="Starship on the launch tower beside a sign reading Gateway to Mars">
   </div>
   <div class="collage__row">
-    <img src="../img/spacex/spacex-737-web.jpg" style="--ratio:1.333" alt="SpaceX-liveried Boeing 737 parked on an airport apron">
-    <img src="../img/spacex/launch-viewing.jpg" style="--ratio:0.75" alt="Crowd watching a rocket launch from a grassy viewing area">
+    <img width="1400" height="1051" src="../img/spacex/spacex-737-web.jpg" style="--ratio:1.333" alt="SpaceX-liveried Boeing 737 parked on an airport apron">
+    <img width="929" height="1239" src="../img/spacex/launch-viewing.jpg" style="--ratio:0.75" alt="Crowd watching a rocket launch from a grassy viewing area">
   </div>
 </div>

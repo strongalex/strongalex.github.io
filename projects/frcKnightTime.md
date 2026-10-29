@@ -23,7 +23,7 @@ summary: "Our 2023 robot for Charged Up, which scored cones and cubes and went f
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/frc/19523CAD.png" alt="KnightTime 2023 robot CAD">
+      <img width="837" height="730" src="../img/frc/19523CAD.png" alt="KnightTime 2023 robot CAD">
       <figcaption>KnightTime 2023 robot CAD</figcaption>
     </figure>
   </div>
@@ -31,15 +31,15 @@ summary: "Our 2023 robot for Charged Up, which scored cones and cubes and went f
 
 <div class="gallery">
   <figure>
-    <img src="../img/frc/19523score-web.jpg" alt="KnightTime 2023 scoring a cone">
+    <img width="879" height="495" src="../img/frc/19523score-web.jpg" alt="KnightTime 2023 scoring a cone">
     <figcaption>KnightTime 2023 scoring a cone</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/19523climb-web.jpg" alt="KnightTime 2023 balancing on the charge station">
+    <img width="725" height="879" src="../img/frc/19523climb-web.jpg" alt="KnightTime 2023 balancing on the charge station">
     <figcaption>KnightTime 2023 balancing on the charge station</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/19523candid.avif" alt="KnightTime 2023 in the pits">
+    <img width="576" height="638" src="../img/frc/19523candid.avif" alt="KnightTime 2023 in the pits">
     <figcaption>KnightTime 2023 in the pits</figcaption>
   </figure>
 </div>

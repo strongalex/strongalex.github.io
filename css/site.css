@@ -714,7 +714,8 @@ html.js img.is-loading[src] { opacity: 0; animation: img-failsafe .01s 8s forwar
   border-top: 0;
 }
 
-.prose h1, .prose h2 { scroll-margin-top: 88px; }
+/* html's scroll-padding-top already clears the sticky header; this adds a little air above the heading. */
+.prose h1, .prose h2 { scroll-margin-top: 12px; }
 
 .prose h2 {
   margin: 2em 0 .5em;
