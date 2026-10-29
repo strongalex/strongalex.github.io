@@ -29,7 +29,7 @@ summary: "Our second robot for the 2026 game, REBUILT, built to shoot Fuel into 
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/frc/190turnoverCAD-web.jpg" alt="Turnover full robot CAD">
+      <img width="1214" height="850" src="../img/frc/190turnoverCAD-web.jpg" alt="Turnover full robot CAD">
       <figcaption>Turnover full robot CAD</figcaption>
     </figure>
   </div>
@@ -43,7 +43,7 @@ summary: "Our second robot for the 2026 game, REBUILT, built to shoot Fuel into 
   <div class="split__media">
     <div class="media-row" style="--sum:3.1943;--row-h:420px">
       <figure style="--ratio:1.4164">
-        <img src="../img/frc/190turnoverTurretCartoon.jpg" alt="Cartoon-style CAD of the Turnover turret: shooter motors, gears and a Limelight camera on a round turntable base">
+        <img width="898" height="634" src="../img/frc/190turnoverTurretCartoon.jpg" alt="Cartoon-style CAD of the Turnover turret: shooter motors, gears and a Limelight camera on a round turntable base">
         <figcaption>Turnover turret, cartoon CAD</figcaption>
       </figure>
       <figure style="--ratio:1.7778">
@@ -58,19 +58,19 @@ summary: "Our second robot for the 2026 game, REBUILT, built to shoot Fuel into 
 
 <div class="gallery">
   <figure>
-    <img src="../img/frc/190turnoverreallife.jpg" alt="Turnover photoshoot image">
+    <img width="1600" height="1295" src="../img/frc/190turnoverreallife.jpg" alt="Turnover photoshoot image">
     <figcaption>Turnover photoshoot image</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190turnoverShoot-web.jpg" alt="Turnover shooting during a match">
+    <img width="1400" height="933" src="../img/frc/190turnoverShoot-web.jpg" alt="Turnover shooting during a match">
     <figcaption>Turnover shooting during a match</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190turnoverTurretISO-web.jpg" alt="Isometric CAD view of the Turnover turret and shooter assembly">
+    <img width="1227" height="833" src="../img/frc/190turnoverTurretISO-web.jpg" alt="Isometric CAD view of the Turnover turret and shooter assembly">
     <figcaption>Isometric CAD view of the Turnover turret and shooter assembly</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/190turnovermove-web.jpg" alt="Turnover driving during a match">
+    <img width="1400" height="933" src="../img/frc/190turnovermove-web.jpg" alt="Turnover driving during a match">
     <figcaption>Turnover driving during a match</figcaption>
   </figure>
 </div>

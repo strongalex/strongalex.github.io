@@ -28,6 +28,6 @@ summary: "Sensors, actuators, and embedded control: driving a double-jointed arm
     </ul>
   </div>
   <div class="split__media">
-    <img src="../img/classes/rbe2000-web.jpg" alt="">
+    <img width="1050" height="1400" src="../img/classes/rbe2000-web.jpg" alt="">
   </div>
 </div>

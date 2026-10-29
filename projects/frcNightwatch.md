@@ -23,11 +23,11 @@ summary: "Our 2022 robot for Rapid React, which scored large tennis balls into a
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/frc/19522clash-web.jpg" alt="Nightwatch 2022 during a match">
+      <img width="879" height="879" src="../img/frc/19522clash-web.jpg" alt="Nightwatch 2022 during a match">
       <figcaption>Nightwatch 2022 during a match</figcaption>
     </figure>
     <figure>
-      <img src="../img/frc/19522climb-web.jpg" alt="Nightwatch 2022 climbing the hangar bars">
+      <img width="703" height="879" src="../img/frc/19522climb-web.jpg" alt="Nightwatch 2022 climbing the hangar bars">
       <figcaption>Nightwatch 2022 climbing the hangar bars</figcaption>
     </figure>
   </div>

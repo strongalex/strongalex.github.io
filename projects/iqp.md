@@ -30,9 +30,9 @@ summary: "An IQP with Secure Bike Share in Honolulu, using GIS suitability model
     <p>From that surface I produced a shortlist of specific intersections for the operator to evaluate, paired with a ridership-weighted ranking of existing stations that flagged relocation candidates. The result is a concrete list of sites with reasoning attached to each one.</p>
   </div>
   <div class="split__media">
-    <img src="../img/groupIQP-web.jpg" alt="IQP team in Honolulu">
-    <img src="../img/classes/suitibilty_map-web.jpg" alt="ArcGIS Pro suitability surface for Honolulu with existing bike facilities and station locations overlaid">
-    <img src="../img/classes/bikinewlocations-web.jpg" alt="Close-up maps of four recommended station siting areas in Honolulu with numbered candidate locations">
+    <img width="754" height="566" src="../img/groupIQP-web.jpg" alt="IQP team in Honolulu">
+    <img width="453" height="480" src="../img/classes/suitibilty_map-web.jpg" alt="ArcGIS Pro suitability surface for Honolulu with existing bike facilities and station locations overlaid">
+    <img width="945" height="946" src="../img/classes/bikinewlocations-web.jpg" alt="Close-up maps of four recommended station siting areas in Honolulu with numbered candidate locations">
   </div>
 </div>
 
@@ -44,8 +44,8 @@ summary: "An IQP with Secure Bike Share in Honolulu, using GIS suitability model
     <p>Cross-tabulating bike share usage against bus usage showed that people who avoid the bus are just as likely to prefer biking as people who ride it regularly. Bike share attracts riders across the transit spectrum, which supports treating bus stops as a way to reach new riders.</p>
   </div>
   <div class="split__media">
-    <img src="../img/classes/bikigraph2.png" alt="Pie chart of reported barriers to bike share ridership">
-    <img src="../img/classes/bikigraph.png" alt="Bar chart cross-tabulating bike share usage against bus usage">
+    <img width="906" height="315" src="../img/classes/bikigraph2.png" alt="Pie chart of reported barriers to bike share ridership">
+    <img width="906" height="561" src="../img/classes/bikigraph.png" alt="Bar chart cross-tabulating bike share usage against bus usage">
   </div>
 </div>
 

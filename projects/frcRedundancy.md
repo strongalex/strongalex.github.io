@@ -29,7 +29,7 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/frc/19025isolate-web.jpg" alt="Redundancy robot CAD">
+      <img width="743" height="716" src="../img/frc/19025isolate-web.jpg" alt="Redundancy robot CAD">
       <figcaption>Redundancy robot CAD</figcaption>
     </figure>
   </div>
@@ -58,11 +58,11 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
   <div class="split__media">
     <div class="media-row" style="--sum:2.5628;--row-h:440px">
       <figure style="--ratio:1.1869">
-        <img src="../img/frc/redundancy/vertical-wheels-cad.jpg" alt="CAD of the prototype with vertical wheels, gripping a pipe that stands in for the coral">
+        <img width="851" height="717" src="../img/frc/redundancy/vertical-wheels-cad.jpg" alt="CAD of the prototype with vertical wheels, gripping a pipe that stands in for the coral">
         <figcaption>Prototype with vertical wheels</figcaption>
       </figure>
       <figure style="--ratio:1.3759">
-        <img src="../img/frc/redundancy/xwing-cad.jpg" alt="CAD of the X-wing prototype, with its wheels horizontal on vertical shafts">
+        <img width="948" height="689" src="../img/frc/redundancy/xwing-cad.jpg" alt="CAD of the X-wing prototype, with its wheels horizontal on vertical shafts">
         <figcaption>X-wing prototype, with horizontal wheels</figcaption>
       </figure>
     </div>
@@ -108,15 +108,15 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
 
 <div class="gallery">
   <figure>
-    <img src="../img/frc/1902025.jpeg" alt="Redundancy CAD, isometric view">
+    <img width="1476" height="1361" src="../img/frc/1902025.jpeg" alt="Redundancy CAD, isometric view">
     <figcaption>Redundancy CAD, isometric view</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/19025setup-web.jpg" alt="Redundancy on the field before a match">
+    <img width="640" height="960" src="../img/frc/19025setup-web.jpg" alt="Redundancy on the field before a match">
     <figcaption>Redundancy on the field before a match</figcaption>
   </figure>
   <figure>
-    <img src="../img/frc/19025barge-web.jpg" alt="Redundancy scoring at the barge">
+    <img width="640" height="960" src="../img/frc/19025barge-web.jpg" alt="Redundancy scoring at the barge">
     <figcaption>Redundancy scoring at the barge</figcaption>
   </figure>
 </div>

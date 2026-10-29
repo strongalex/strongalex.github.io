@@ -29,11 +29,11 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/fsae/pedal-box.jpg" alt="CAD render of the EV27 pedal box on its slide">
+      <img width="1025" height="777" src="../img/fsae/pedal-box.jpg" alt="CAD render of the EV27 pedal box on its slide">
       <figcaption>The EV27 pedal box</figcaption>
     </figure>
     <figure>
-      <img src="../img/fsae/pedal-box-moonshine.jpg" alt="CAD render of Moonshine's pedal box">
+      <img width="960" height="747" src="../img/fsae/pedal-box-moonshine.jpg" alt="CAD render of Moonshine's pedal box">
       <figcaption>Moonshine's pedal box</figcaption>
     </figure>
   </div>
@@ -66,11 +66,11 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/fsae/pedal-slide.jpg" alt="CAD render of the pedal slide: carriage plate on rails, with quick-release pins">
+      <img width="1096" height="614" src="../img/fsae/pedal-slide.jpg" alt="CAD render of the pedal slide: carriage plate on rails, with quick-release pins">
       <figcaption>The pedal slide</figcaption>
     </figure>
     <figure>
-      <img src="../img/fsae/slide-integration.jpg" alt="CAD render of the slide with the carrier plate and the fore and aft tabs">
+      <img width="1186" height="732" src="../img/fsae/slide-integration.jpg" alt="CAD render of the slide with the carrier plate and the fore and aft tabs">
       <figcaption>The slide with its carrier plate and tabs</figcaption>
     </figure>
   </div>
@@ -84,11 +84,11 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/fsae/carriage-assembly.jpg" alt="CAD render of the carriage assembly with its slot handle and quick-release pins">
+      <img width="1037" height="703" src="../img/fsae/carriage-assembly.jpg" alt="CAD render of the carriage assembly with its slot handle and quick-release pins">
       <figcaption>Carriage assembly</figcaption>
     </figure>
     <figure>
-      <img src="../img/fsae/pin-block-section.jpg" alt="Section view through the pin blocks showing the pins passing through the carrier plate">
+      <img width="955" height="523" src="../img/fsae/pin-block-section.jpg" alt="Section view through the pin blocks showing the pins passing through the carrier plate">
       <figcaption>Section through the pin blocks</figcaption>
     </figure>
   </div>
@@ -103,11 +103,11 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
   </div>
   <div class="split__media">
     <figure>
-      <img src="../img/fsae/igus-samples.jpg" alt="Box of rail samples from igus, opened on a workshop bench">
+      <img width="1400" height="1050" src="../img/fsae/igus-samples.jpg" alt="Box of rail samples from igus, opened on a workshop bench">
       <figcaption>Samples from igus</figcaption>
     </figure>
     <figure>
-      <img src="../img/fsae/igus-rail.jpg" alt="Close-up of a drylin W single rail">
+      <img width="1050" height="700" src="../img/fsae/igus-rail.jpg" alt="Close-up of a drylin W single rail">
       <figcaption>drylin W single rail, WS-10</figcaption>
     </figure>
   </div>
@@ -147,33 +147,28 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
   <div class="split__media">
     <div class="gallery gallery--stack">
       <figure>
-        <img src="../img/fsae/fea-carriage-plate.jpg" alt="FEA factor of safety plot of the carriage plate">
+        <img width="1236" height="625" src="../img/fsae/fea-carriage-plate.jpg" alt="FEA factor of safety plot of the carriage plate">
         <figcaption>Carriage plate: minimum factor of safety 11</figcaption>
       </figure>
       <figure>
-        <img src="../img/fsae/fea-pin-block.jpg" alt="FEA factor of safety plot of a pin block">
+        <img width="938" height="460" src="../img/fsae/fea-pin-block.jpg" alt="FEA factor of safety plot of a pin block">
         <figcaption>Pin block: 8.8</figcaption>
       </figure>
       <figure>
-        <img src="../img/fsae/fea-carrier-plate.jpg" alt="FEA factor of safety plot of the carrier plate">
+        <img width="1271" height="746" src="../img/fsae/fea-carrier-plate.jpg" alt="FEA factor of safety plot of the carrier plate">
         <figcaption>Carrier plate: 3.8</figcaption>
       </figure>
       <figure>
-        <img src="../img/fsae/fea-fore-tab.jpg" alt="FEA factor of safety plot of a fore tab with its weld">
+        <img width="891" height="622" src="../img/fsae/fea-fore-tab.jpg" alt="FEA factor of safety plot of a fore tab with its weld">
         <figcaption>Fore tab: 2.0</figcaption>
       </figure>
       <figure>
-        <img src="../img/fsae/fea-aft-tab.jpg" alt="FEA factor of safety plot of an aft tab with its weld">
+        <img width="1066" height="599" src="../img/fsae/fea-aft-tab.jpg" alt="FEA factor of safety plot of an aft tab with its weld">
         <figcaption>Aft tab: 3.8</figcaption>
       </figure>
     </div>
   </div>
 </div>
-
-<h2>The rest of the pedal box</h2>
-<p>Around the slide, the team worked out the pedals and brake hardware. Moonshine's drivers liked the gas pedal but wanted a stiffer brake pedal, so EV27's brake pedal ratio dropped from 4.3 to 4.04. The rules require two springs on the accelerator where Moonshine had one gas strut, so the accelerator ratio went from 2.32 to 4.61 to keep the same feel.</p>
-<p>Tilton 78-series master cylinders (7/10-inch front, 15/16-inch rear) and a Tilton 900-series balance bar, with ISR calipers, are sized to hit a 65% brake bias. The pedal footprint came down by 0.33 inch so that a 95th-percentile male still fits behind EV27's shorter nose. FEA at 2,000 N gave minimum factors of safety of 5.42 on the brake pedal, 4.2 on the accelerator pedal, and 3.9 on the accelerator hard stop.</p>
-<p>The result is a compact, lightweight pedal box that meets the rules and is easy to adjust. Manufacturing started in B-term.</p>
 
 <div class="split split--stack">
   <div class="split__text">
@@ -183,17 +178,17 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
   <div class="split__media">
     <div class="media-row" style="--sum:2.6667">
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/raw-stock.jpg" alt="Two lengths of aluminum billet on a bench">
+        <img width="1400" height="1050" src="../img/fsae/manufacturing/raw-stock.jpg" alt="Two lengths of aluminum billet on a bench">
         <figcaption>Raw billet</figcaption>
       </figure>
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/stock-squared.jpg" alt="Aluminum billet squared up and held in a vise in the mill">
+        <img width="1400" height="1050" src="../img/fsae/manufacturing/stock-squared.jpg" alt="Aluminum billet squared up and held in a vise in the mill">
         <figcaption>Billet squared up in the vise</figcaption>
       </figure>
     </div>
     <div class="media-row" style="--sum:3.1111">
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/probing.jpg" alt="A touch probe reading the pin block held in the vise">
+        <img width="1400" height="1050" src="../img/fsae/manufacturing/probing.jpg" alt="A touch probe reading the pin block held in the vise">
         <figcaption>Touch probe over the pin block</figcaption>
       </figure>
       <figure style="--ratio:1.7778">
@@ -205,17 +200,22 @@ report: "https://drive.google.com/file/d/1NY4Khb5JBtzJENFECw4i1LVWxYvGauaG/view?
     </div>
     <div class="media-row" style="--sum:4">
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/pockets.jpg" alt="Aluminum pin block in the vise with three pockets machined">
+        <img width="1400" height="1050" src="../img/fsae/manufacturing/pockets.jpg" alt="Aluminum pin block in the vise with three pockets machined">
         <figcaption>Pin block with its pockets machined</figcaption>
       </figure>
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/finished-in-vise.jpg" alt="Finished aluminum pin block in the vise with two counterbored holes">
+        <img width="1400" height="1050" src="../img/fsae/manufacturing/finished-in-vise.jpg" alt="Finished aluminum pin block in the vise with two counterbored holes">
         <figcaption>Finished pin block in the vise</figcaption>
       </figure>
       <figure style="--ratio:1.3333">
-        <img src="../img/fsae/manufacturing/finished-parts.jpg" alt="Finished aluminum pin blocks on a bench, one assembled with quick-release pins">
+        <img width="1400" height="1050" src="../img/fsae/manufacturing/finished-parts.jpg" alt="Finished aluminum pin blocks on a bench, one assembled with quick-release pins">
         <figcaption>Finished pin blocks, with quick-release pins fitted</figcaption>
       </figure>
     </div>
   </div>
 </div>
+
+<h2>The rest of the pedal box</h2>
+<p>Around the slide, the team worked out the pedals and brake hardware. Moonshine's drivers liked the gas pedal but wanted a stiffer brake pedal, so EV27's brake pedal ratio dropped from 4.3 to 4.04. The rules require two springs on the accelerator where Moonshine had one gas strut, so the accelerator ratio went from 2.32 to 4.61 to keep the same feel.</p>
+<p>Tilton 78-series master cylinders (7/10-inch front, 15/16-inch rear) and a Tilton 900-series balance bar, with ISR calipers, are sized to hit a 65% brake bias. The pedal footprint came down by 0.33 inch so that a 95th-percentile male still fits behind EV27's shorter nose. FEA at 2,000 N gave minimum factors of safety of 5.42 on the brake pedal, 4.2 on the accelerator pedal, and 3.9 on the accelerator hard stop.</p>
+<p>The result is a compact, lightweight pedal box that meets the rules and is easy to adjust. Manufacturing started in B-term.</p>
