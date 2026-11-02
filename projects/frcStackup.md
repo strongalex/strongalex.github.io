@@ -3,7 +3,7 @@ layout: project
 type: project
 parent: frcRobots
 helix: rare
-image: img/frc/stackup/stackup-closeup.jpg
+image: img/frc/stackup/stackup.jpg
 title: "Stackup"
 date: "2025"
 weight: 2.35
@@ -151,15 +151,25 @@ summary: "The first version of our 2025 robot for Reefscape. My role was lead me
   </div>
 </div>
 
-<div class="split split--stack">
+<div class="split">
   <div class="split__text">
     <h2 id="assembly">Assembly and implementation</h2>
     <p>Final assembly had to be organized, and we checked quality as it went together: Loctite, spacers, and accuracy.</p>
     <p>Putting the end effector on the robot meant double-checking clearance, optimizing weight, and integrating it with the rest of the robot.</p>
   </div>
+  <div class="split__media">
+    <figure>
+      <img width="683" height="911" src="../img/frc/stackup/early-assembly.jpg" alt="The Stackup robot partway through assembly on a workbench, with the elevator, end effector and wiring visible">
+      <figcaption>Stackup early in assembly</figcaption>
+    </figure>
+  </div>
 </div>
 
 <div class="gallery">
+  <figure>
+    <img width="1024" height="1024" src="../img/frc/stackup/stackup.jpg" alt="The finished Stackup robot with its blue bumpers, on a plain white background">
+    <figcaption>Stackup</figcaption>
+  </figure>
   <figure>
     <img width="1280" height="853" src="../img/frc/stackup/stackup-closeup.jpg" alt="Close-up of the Stackup robot at an event, with its end effector and the team number on the bumpers">
     <figcaption>Stackup at an event, close up</figcaption>
