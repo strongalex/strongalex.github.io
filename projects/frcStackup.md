@@ -3,7 +3,7 @@ layout: project
 type: project
 parent: frcRobots
 helix: rare
-image: img/frc/stackup-cad.jpg
+image: img/frc/stackup/stackup-closeup.jpg
 title: "Stackup"
 date: "2025"
 weight: 2.35
@@ -13,7 +13,7 @@ labels:
   - End Effector
   - Prototyping
   - CNC Machining
-summary: "The first version of our 2025 robot for Reefscape. I was the lead mentor for the design, manufacturing, and assembly of its end effector."
+summary: "The first version of our 2025 robot for Reefscape. My role was lead mentor for the design, manufacturing, and assembly of its end effector."
 ---
 <div class="split">
   <div class="split__text">
@@ -21,7 +21,7 @@ summary: "The first version of our 2025 robot for Reefscape. I was the lead ment
     <p class="meta"><em>2025 season</em></p>
 
     <p class="lead">Stackup was the first version of our robot for the 2025 FRC game, "Reefscape."</p>
-    <p>I was the lead mentor for the design, manufacturing, and assembly of its end effector. The second version, <a href="frcRedundancy.html">Redundancy</a>, kept a similar structure for coral and added an algae claw.</p>
+    <p>My role was lead mentor for the design, manufacturing, and assembly of its end effector. The second version, <a href="frcRedundancy.html">Redundancy</a>, kept a similar structure for coral and added an algae claw.</p>
     <p class="links"><a href="https://www.thebluealliance.com/team/190/2025">TBA</a></p>
   </div>
   <div class="split__media">
@@ -90,18 +90,21 @@ summary: "The first version of our 2025 robot for Reefscape. I was the lead ment
 
 <div class="split split--stack">
   <div class="split__text">
-    <h2 id="design">Design</h2>
-    <p>I designed the end effector in Onshape, working from a master sketch. It uses lots of long belts, had tight space constraints, and needed gearing worked out.</p>
+    <h2 id="scoring-on-l4">Scoring on L4</h2>
   </div>
   <div class="split__media">
-    <div class="media-row" style="--sum:2.0594;--row-h:460px">
-      <figure style="--ratio:0.8613">
-        <img width="658" height="764" src="../img/frc/stackup/master-sketch-1.jpg" alt="Onshape master sketch of the end effector">
-        <figcaption>Master sketch of the end effector</figcaption>
+    <div class="media-row" style="--sum:1.125;--row-h:620px">
+      <figure style="--ratio:0.5625">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/stackup/robot-l4.jpg" aria-label="Stackup scoring on L4">
+          <source src="../img/frc/stackup/robot-l4.mp4" type="video/mp4">
+        </video>
+        <figcaption>Stackup scoring on L4</figcaption>
       </figure>
-      <figure style="--ratio:1.1981">
-        <img width="895" height="747" src="../img/frc/stackup/master-sketch-2.jpg" alt="Onshape master sketch of the end effector with the elevator and the reef posts">
-        <figcaption>Master sketch with the elevator and the reef posts</figcaption>
+      <figure style="--ratio:0.5625">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/stackup/robot-l4-2.jpg" aria-label="Stackup scoring on L4, second view">
+          <source src="../img/frc/stackup/robot-l4-2.mp4" type="video/mp4">
+        </video>
+        <figcaption>Stackup scoring on L4, second view</figcaption>
       </figure>
     </div>
   </div>
@@ -139,4 +142,15 @@ summary: "The first version of our 2025 robot for Reefscape. I was the lead ment
     <p>Final assembly had to be organized, and we checked quality as it went together: Loctite, spacers, and accuracy.</p>
     <p>Putting the end effector on the robot meant double-checking clearance, optimizing weight, and integrating it with the rest of the robot.</p>
   </div>
+</div>
+
+<div class="gallery">
+  <figure>
+    <img width="1280" height="853" src="../img/frc/stackup/stackup-closeup.jpg" alt="Close-up of the Stackup robot at an event, with its end effector and the team number on the bumpers">
+    <figcaption>Stackup at an event, close up</figcaption>
+  </figure>
+  <figure>
+    <img width="1280" height="853" src="../img/frc/stackup/at-the-reef.jpg" alt="Stackup beside the reef on the field with an alliance partner">
+    <figcaption>Stackup at the reef</figcaption>
+  </figure>
 </div>

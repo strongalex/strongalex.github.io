@@ -12,7 +12,7 @@ labels:
   - Onshape
   - Scoring
   - Claw
-summary: "The second version of our 2025 robot for Reefscape, which advanced far into its division at the world championships. I added the algae claw to the end effector."
+summary: "The second version of our 2025 robot for Reefscape, which advanced far into its division at the world championships. We added the algae claw to the end effector."
 ---
 <div class="split">
   <div class="split__text">
@@ -39,7 +39,7 @@ summary: "The second version of our 2025 robot for Reefscape, which advanced far
 <div class="split split--stack">
   <div class="split__text">
     <h2 id="end-effector">End effector</h2>
-    <p>For this version I added the algae claw to the end effector and kept a similar structure for coral. The end effector now also had to manipulate algae into the barge.</p>
+    <p>For this version we added the algae claw to the end effector and kept a similar structure for coral. The end effector now also had to manipulate algae into the barge.</p>
     <p>The coral design, and the prototyping behind it, are on the <a href="frcStackup.html#end-effector">Stackup</a> page.</p>
   </div>
   <div class="split__media">
@@ -53,28 +53,6 @@ summary: "The second version of our 2025 robot for Reefscape, which advanced far
           <source src="../img/frc/redundancy/pov-l4.mp4" type="video/mp4">
         </video>
         <figcaption>Scoring on L4, from the robot's point of view</figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
-
-<div class="split split--stack">
-  <div class="split__text">
-    <h2 id="scoring-on-l4">Scoring on L4</h2>
-  </div>
-  <div class="split__media">
-    <div class="media-row" style="--sum:1.125;--row-h:620px">
-      <figure style="--ratio:0.5625">
-        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/robot-l4.jpg" aria-label="Redundancy scoring on L4">
-          <source src="../img/frc/redundancy/robot-l4.mp4" type="video/mp4">
-        </video>
-        <figcaption>Redundancy scoring on L4</figcaption>
-      </figure>
-      <figure style="--ratio:0.5625">
-        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/robot-l4-2.jpg" aria-label="Redundancy scoring on L4, second view">
-          <source src="../img/frc/redundancy/robot-l4-2.mp4" type="video/mp4">
-        </video>
-        <figcaption>Redundancy scoring on L4, second view</figcaption>
       </figure>
     </div>
   </div>
