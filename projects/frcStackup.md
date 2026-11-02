@@ -3,7 +3,7 @@ layout: project
 type: project
 parent: frcRobots
 helix: rare
-image: img/frc/stackup-cad.jpg
+image: img/frc/stackup/stackup-closeup.jpg
 title: "Stackup"
 date: "2025"
 weight: 2.35
@@ -142,4 +142,15 @@ summary: "The first version of our 2025 robot for Reefscape. My role was lead me
     <p>Final assembly had to be organized, and we checked quality as it went together: Loctite, spacers, and accuracy.</p>
     <p>Putting the end effector on the robot meant double-checking clearance, optimizing weight, and integrating it with the rest of the robot.</p>
   </div>
+</div>
+
+<div class="gallery">
+  <figure>
+    <img width="1280" height="853" src="../img/frc/stackup/stackup-closeup.jpg" alt="Close-up of the Stackup robot at an event, with its end effector and the team number on the bumpers">
+    <figcaption>Stackup at an event, close up</figcaption>
+  </figure>
+  <figure>
+    <img width="1280" height="853" src="../img/frc/stackup/at-the-reef.jpg" alt="Stackup beside the reef on the field with an alliance partner">
+    <figcaption>Stackup at the reef</figcaption>
+  </figure>
 </div>
