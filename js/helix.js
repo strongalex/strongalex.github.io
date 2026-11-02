@@ -19,7 +19,7 @@
   var TURNS = 2;                       // full rotations from the top of a strand to the bottom
   var STRANDS = 2;
   var COMMON_REPEATS = 2;              // times each ordinary project appears on a strand (rare ones: once)
-  var RARE_GAP = 5;                    // narrow screens: one rare card per this many cards
+  var RARE_GAP = 4;                    // narrow screens: one rare card per this many cards
   var DRIFT = 0.2;                     // cards per second of ambient motion
   var FRICTION = 0.94;                 // per-frame velocity decay after a flick, at 60fps
   var FLOOR = 0.3;                     // minimum opacity of far-side cards: the back strand stays visible
