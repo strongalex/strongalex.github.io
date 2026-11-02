@@ -12,7 +12,7 @@ labels:
   - Onshape
   - Scoring
   - Claw
-summary: "Our 2025 robot for Reefscape, which advanced far into its division at the world championships. My main contributions were to the scoring and claw."
+summary: "The second version of our 2025 robot for Reefscape, which advanced far into its division at the world championships. I added the algae claw to the end effector."
 ---
 <div class="split">
   <div class="split__text">
@@ -21,6 +21,7 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
 
     <p class="lead">This robot was designed for the 2025 FRC game, "Reefscape."</p>
     <p>Its primary goals were to score PVC pipes on elevated posts, launch large kickballs into a net approximately 8 feet high, and climb onto a rectangular "cage." The robot performed at a very high level, advancing far into its division at the world championships. My main contributions were to the scoring and claw subsystem. The robot was originally designed in Onshape.</p>
+    <p>This is the second version of that season's robot. The first was <a href="frcStackup.html">Stackup</a>.</p>
     <p class="links">
       <a href="https://frc190.onshape.com/documents/b6c840749d995b1ac1b29215/w/5eb3125bc19878c175f07023/e/271cc80064eb69c77815f945?configuration=default&renderMode=0&uiState=68ba3b2a2b577176a1982abb">CAD</a>
       &middot;
@@ -35,50 +36,23 @@ summary: "Our 2025 robot for Reefscape, which advanced far into its division at 
   </div>
 </div>
 
-<div class="split">
-  <div class="split__text">
-    <h2 id="end-effector">End effector</h2>
-    <p>The goal of the end effector was to score on all four levels without adding another degree of freedom. The key was getting the coral to flip up onto the vertical L4 posts, and the position of the wheels is what let us tune that.</p>
-  </div>
-  <div class="split__media">
-    <figure style="--ratio:1.9672">
-      <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/pov-l4.jpg" aria-label="Scoring on L4, from the robot's point of view">
-        <source src="../img/frc/redundancy/pov-l4.mp4" type="video/mp4">
-      </video>
-      <figcaption>Scoring on L4, from the robot's point of view</figcaption>
-    </figure>
-  </div>
-</div>
-
 <div class="split split--stack">
   <div class="split__text">
-    <h2 id="prototypes">Prototypes</h2>
-    <p>We built two prototypes, one with the wheels vertical and one with the wheels horizontal, which we called the X-wing. Both had movable wheels, so we could adjust the wheel position and the compression.</p>
+    <h2 id="end-effector">End effector</h2>
+    <p>For this version I added the algae claw to the end effector and kept a similar structure for coral. The end effector now also had to manipulate algae into the barge.</p>
+    <p>The coral design, and the prototyping behind it, are on the <a href="frcStackup.html#end-effector">Stackup</a> page.</p>
   </div>
   <div class="split__media">
-    <div class="media-row" style="--sum:2.5628;--row-h:440px">
-      <figure style="--ratio:1.1869">
-        <img width="851" height="717" src="../img/frc/redundancy/vertical-wheels-cad.jpg" alt="CAD of the prototype with vertical wheels, gripping a pipe that stands in for the coral">
-        <figcaption>Prototype with vertical wheels</figcaption>
+    <div class="media-row" style="--sum:2.7655;--row-h:460px">
+      <figure style="--ratio:0.7983">
+        <img width="839" height="1051" src="../img/frc/redundancy/end-effector-claw.jpg" alt="CAD of the end effector, a tall assembly of belts, gears and a curved arm at the bottom">
+        <figcaption>The end effector in CAD</figcaption>
       </figure>
-      <figure style="--ratio:1.3759">
-        <img width="948" height="689" src="../img/frc/redundancy/xwing-cad.jpg" alt="CAD of the X-wing prototype, with its wheels horizontal on vertical shafts">
-        <figcaption>X-wing prototype, with horizontal wheels</figcaption>
-      </figure>
-    </div>
-
-    <div class="media-row" style="--sum:2.34;--row-h:460px">
-      <figure style="--ratio:1.7778">
-        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/vertical-l4.jpg" aria-label="Vertical-wheel prototype scoring on an L4 post">
-          <source src="../img/frc/redundancy/vertical-l4.mp4" type="video/mp4">
+      <figure style="--ratio:1.9672">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/pov-l4.jpg" aria-label="Scoring on L4, from the robot's point of view">
+          <source src="../img/frc/redundancy/pov-l4.mp4" type="video/mp4">
         </video>
-        <figcaption>Vertical-wheel prototype scoring on an L4 post</figcaption>
-      </figure>
-      <figure style="--ratio:0.5625">
-        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/xwing-l4.jpg" aria-label="X-wing prototype scoring on an L4 post">
-          <source src="../img/frc/redundancy/xwing-l4.mp4" type="video/mp4">
-        </video>
-        <figcaption>X-wing prototype scoring on an L4 post</figcaption>
+        <figcaption>Scoring on L4, from the robot's point of view</figcaption>
       </figure>
     </div>
   </div>
