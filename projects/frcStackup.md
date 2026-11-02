@@ -13,7 +13,7 @@ labels:
   - End Effector
   - Prototyping
   - CNC Machining
-summary: "The first version of our 2025 robot for Reefscape. I was the lead mentor for the design, manufacturing, and assembly of its end effector."
+summary: "The first version of our 2025 robot for Reefscape. My role was lead mentor for the design, manufacturing, and assembly of its end effector."
 ---
 <div class="split">
   <div class="split__text">
@@ -21,7 +21,7 @@ summary: "The first version of our 2025 robot for Reefscape. I was the lead ment
     <p class="meta"><em>2025 season</em></p>
 
     <p class="lead">Stackup was the first version of our robot for the 2025 FRC game, "Reefscape."</p>
-    <p>I was the lead mentor for the design, manufacturing, and assembly of its end effector. The second version, <a href="frcRedundancy.html">Redundancy</a>, kept a similar structure for coral and added an algae claw.</p>
+    <p>My role was lead mentor for the design, manufacturing, and assembly of its end effector. The second version, <a href="frcRedundancy.html">Redundancy</a>, kept a similar structure for coral and added an algae claw.</p>
     <p class="links"><a href="https://www.thebluealliance.com/team/190/2025">TBA</a></p>
   </div>
   <div class="split__media">
@@ -83,25 +83,6 @@ summary: "The first version of our 2025 robot for Reefscape. I was the lead ment
       <figure style="--ratio:2.6365">
         <img width="1400" height="531" src="../img/frc/stackup/test-log.jpg" alt="Test log for the horizontal scoring bandwidth, with a bar chart of success rate by value">
         <figcaption>Test log and success-rate chart</figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
-
-<div class="split split--stack">
-  <div class="split__text">
-    <h2 id="design">Design</h2>
-    <p>I designed the end effector in Onshape, working from a master sketch. It uses lots of long belts, had tight space constraints, and needed gearing worked out.</p>
-  </div>
-  <div class="split__media">
-    <div class="media-row" style="--sum:2.0594;--row-h:460px">
-      <figure style="--ratio:0.8613">
-        <img width="658" height="764" src="../img/frc/stackup/master-sketch-1.jpg" alt="Onshape master sketch of the end effector">
-        <figcaption>Master sketch of the end effector</figcaption>
-      </figure>
-      <figure style="--ratio:1.1981">
-        <img width="895" height="747" src="../img/frc/stackup/master-sketch-2.jpg" alt="Onshape master sketch of the end effector with the elevator and the reef posts">
-        <figcaption>Master sketch with the elevator and the reef posts</figcaption>
       </figure>
     </div>
   </div>

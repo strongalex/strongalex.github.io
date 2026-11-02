@@ -12,7 +12,7 @@ labels:
   - 3D Printing
   - CNC Machining
   - Fabrication & Assembly
-summary: "A series of competitive robots that I have helped design and build throughout high school and college."
+summary: "A series of competitive robots that we have helped design and build throughout high school and college."
 ---
 <p class="meta"><em>2019-Present</em></p>
-<p class="lead">A series of competitive robots that I have helped design and build throughout high school and college.</p>
+<p class="lead">A series of competitive robots that we have helped design and build throughout high school and college.</p>
