@@ -22,7 +22,14 @@ summary: "The first version of our 2025 robot for Reefscape. My role was lead me
 
     <p class="lead">Stackup was the first version of our robot for the 2025 FRC game, "Reefscape."</p>
     <p>My role was lead mentor for the design, manufacturing, and assembly of its end effector. The second version, <a href="frcRedundancy.html">Redundancy</a>, kept a similar structure for coral and added an algae claw.</p>
-    <p class="links"><a href="https://www.thebluealliance.com/team/190/2025">TBA</a></p>
+    <p>We went into the season planning to rebuild from the start. Stackup&rsquo;s main goal was to win our Week 1 competition.</p>
+    <p class="links">
+      <a href="https://frc190.onshape.com/documents/8a2726d5d7faa8a8c8571d66/v/af97062e79a41406438e8835/e/e6d0b198899ea73519561b9f?configuration=default&amp;renderMode=0&amp;uiState=6850cf7cfc4a844fd114b7ee">CAD</a>
+      &middot;
+      <a href="https://www.thebluealliance.com/team/190/2025">TBA</a>
+      &middot;
+      <a href="https://www.chiefdelphi.com/t/190-cad-release/503355">Chief Delphi</a>
+    </p>
   </div>
   <div class="split__media">
     <figure style="--ratio:1.1336">
@@ -37,6 +44,7 @@ summary: "The first version of our 2025 robot for Reefscape. My role was lead me
     <h2 id="end-effector">End effector</h2>
     <p>The end effector had to manipulate coral onto the reef while keeping its weight and its degrees of freedom to a minimum.</p>
     <p>The goal was to score on all four levels without adding another degree of freedom. The key was getting the coral to flip up onto the vertical L4 posts, and the position of the wheels is what let us tune that.</p>
+    <p>Coral reaches the end effector through a funnel. Belts guide it, and the funnel closes to secure it when the robot moves in and out of the station quickly. We already needed that degree of freedom to move the funnel out of the way for the climb, so we used it to help with intake too. A static stopper bar keeps the coral from traveling too far out of the end effector while it intakes from the funnel.</p>
   </div>
   <div class="split__media">
       <figure style="--ratio:1.0468">
@@ -113,17 +121,20 @@ summary: "The first version of our 2025 robot for Reefscape. My role was lead me
 <div class="split split--stack">
   <div class="split__text">
     <h2 id="manufacturing">Manufacturing</h2>
-    <p>The parts were made with:</p>
+    <p>We have a well-equipped, recently built shop, and made the parts there with:</p>
     <ul>
       <li>A Haas VF-4SS CNC mill</li>
+      <li>A Bridgeport mill</li>
+      <li>Two lathes</li>
       <li>A ShopSabre CNC router</li>
-      <li>Powder coating</li>
-      <li>A lathe, a mill, a bandsaw, and other shop tools</li>
-      <li>3D printers</li>
+      <li>A laser cutter</li>
+      <li>A powder coating booth and oven</li>
+      <li>A bandsaw and other shop tools</li>
+      <li>Bambu 3D printers, a couple of Formlabs Form 2 printers, and a Markforged printer</li>
     </ul>
   </div>
   <div class="split__media">
-    <div class="media-row" style="--sum:2.5676;--row-h:480px">
+    <div class="media-row" style="--sum:3.3176;--row-h:480px">
       <figure style="--ratio:0.7494">
         <img width="936" height="1249" src="../img/frc/stackup/powder-coated-part.jpg" alt="A red powder-coated plate for the robot">
         <figcaption>A powder-coated part</figcaption>
@@ -131,6 +142,10 @@ summary: "The first version of our 2025 robot for Reefscape. My role was lead me
       <figure style="--ratio:1.8182">
         <img width="1400" height="770" src="../img/frc/stackup/milling.jpg" alt="A part being cut on the CNC mill under flood coolant">
         <figcaption>Cutting on the CNC mill</figcaption>
+      </figure>
+      <figure style="--ratio:0.75">
+        <img width="375" height="500" src="../img/frc/stackup/shopsabre.jpg" alt="The ShopSabre router bed with red and clear plastic parts cut from sheet">
+        <figcaption>Parts on the ShopSabre router</figcaption>
       </figure>
     </div>
   </div>
