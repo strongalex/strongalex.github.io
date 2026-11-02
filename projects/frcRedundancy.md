@@ -58,28 +58,6 @@ summary: "The second version of our 2025 robot for Reefscape, which advanced far
   </div>
 </div>
 
-<div class="split split--stack">
-  <div class="split__text">
-    <h2 id="scoring-on-l4">Scoring on L4</h2>
-  </div>
-  <div class="split__media">
-    <div class="media-row" style="--sum:1.125;--row-h:620px">
-      <figure style="--ratio:0.5625">
-        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/robot-l4.jpg" aria-label="Redundancy scoring on L4">
-          <source src="../img/frc/redundancy/robot-l4.mp4" type="video/mp4">
-        </video>
-        <figcaption>Redundancy scoring on L4</figcaption>
-      </figure>
-      <figure style="--ratio:0.5625">
-        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/redundancy/robot-l4-2.jpg" aria-label="Redundancy scoring on L4, second view">
-          <source src="../img/frc/redundancy/robot-l4-2.mp4" type="video/mp4">
-        </video>
-        <figcaption>Redundancy scoring on L4, second view</figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
-
 <div class="gallery">
   <figure>
     <img width="1476" height="1361" src="../img/frc/1902025.jpeg" alt="Redundancy CAD, isometric view">

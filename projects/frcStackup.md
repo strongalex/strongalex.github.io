@@ -90,6 +90,28 @@ summary: "The first version of our 2025 robot for Reefscape. My role was lead me
 
 <div class="split split--stack">
   <div class="split__text">
+    <h2 id="scoring-on-l4">Scoring on L4</h2>
+  </div>
+  <div class="split__media">
+    <div class="media-row" style="--sum:1.125;--row-h:620px">
+      <figure style="--ratio:0.5625">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/stackup/robot-l4.jpg" aria-label="Stackup scoring on L4">
+          <source src="../img/frc/stackup/robot-l4.mp4" type="video/mp4">
+        </video>
+        <figcaption>Stackup scoring on L4</figcaption>
+      </figure>
+      <figure style="--ratio:0.5625">
+        <video class="loop" muted loop playsinline controls preload="none" poster="../img/frc/stackup/robot-l4-2.jpg" aria-label="Stackup scoring on L4, second view">
+          <source src="../img/frc/stackup/robot-l4-2.mp4" type="video/mp4">
+        </video>
+        <figcaption>Stackup scoring on L4, second view</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="split split--stack">
+  <div class="split__text">
     <h2 id="manufacturing">Manufacturing</h2>
     <p>The parts were made with:</p>
     <ul>
