@@ -1,6 +1,8 @@
 # REQUIRED CHANGES
 # Edit next line to provide your own name.
 title: Alex Fenwick | Professional Portfolio
+# Shown under the title when a link to the site is shared (and as the page description for search).
+description: Robotics and mechanical engineering student at Worcester Polytechnic Institute. Projects include a SpaceX internship, FRC robots, and Formula SAE.
 # Edit next line, replacing 'techfolios' with your github username
 url: "https://strongalex.github.io"
 # Edit next line so that baseurl is "" if your repo is <username>.github.io
